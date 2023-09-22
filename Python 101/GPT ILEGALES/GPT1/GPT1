@@ -1,0 +1,23 @@
+# Crear una lista de productos con su código y stock
+productos = []
+for i in range(1, 501):
+    codigo = input(f"Ingrese el código del producto {i}: ")
+    stock = int(input(f"Ingrese el stock del producto {i}: "))
+    productos.append((codigo, stock))
+
+# Ordenar la lista de productos por stock de forma ascendente
+productos.sort(key=lambda x: x[1])
+
+# Los 2 productos con menor stock
+menor_stock_productos = productos[:2]
+
+# Encontrar el producto con mayor stock
+mayor_stock_producto = max(productos, key=lambda x: x[1])
+
+# Imprimir resultados
+print("Los 2 productos con menor stock son:")
+for codigo, stock in menor_stock_productos:
+    print(f"Código: {codigo}, Stock: {stock}")
+
+print("El producto con mayor stock es:")
+print(f"Código: {mayor_stock_producto[0]}, Stock: {mayor_stock_producto[1]}")
