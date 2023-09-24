@@ -9,6 +9,7 @@
 	Utilizando la función factorial, escriba una función que calcule el número combinatorio (m, n).
 
 """
+
 def imprimir(num):
 	print('El Resultado es ', num)
 
