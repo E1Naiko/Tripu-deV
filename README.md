@@ -10,7 +10,9 @@ Cosas mucho muy importantosas:
    - Free Code Camp (mas lore):  https://www.freecodecamp.org/
                                  https://www.youtube.com/freecodecamp
    - El verdadero Senpain't: https://openai.com/chatgpt
-   - Formateo de readme.md: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+   - Formateo de readme.md: http://bit.ly/48vpZa8
+   - Cheat Sheat de Markdown (para escribir readme): https://www.markdownguide.org/basic-syntax/
+   - Editor de Markdown: https://pandao.github.io/editor.md/en.html
    - Big Black Code: https://bbcode.ilma.dev/
 
 Compiladores piolas:
