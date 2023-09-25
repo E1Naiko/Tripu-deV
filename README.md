@@ -16,9 +16,11 @@ Cosas mucho muy importantosas:
 
 Compiladores piolas:
    - Geany (lista de lenguajes admitidos: https://bit.ly/3EYd2b3): https://www.geany.org/
+
 Librerias random:
   Pascal:
     - SysUtils: https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html
+
   Python:
     -
   
