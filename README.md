@@ -12,7 +12,7 @@ Cosas mucho muy importantosas:
                                  https://www.youtube.com/freecodecamp
    - El verdadero Senpain't: https://openai.com/chatgpt
    - Formateo de readme.md: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-   - El verdadero formateador de readme.md: https://bbcode.ilma.dev/
+   - Big Black Code: https://bbcode.ilma.dev/
 
 Compiladores piolas:
    - Geany (lista de lenguajes admitidos: https://bit.ly/3EYd2b3): https://www.geany.org/
