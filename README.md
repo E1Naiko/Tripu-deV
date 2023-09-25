@@ -29,3 +29,5 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 	- [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
 
 [![La Onee-Chan mufandola](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")
+
+[![El codigo del Naikito](https://user-images.githubusercontent.com/74038190/243328563-d0cfe7d1-0b8c-4e4a-9a66-875290ba6065.gif "El codigo del Naikito")](https://user-images.githubusercontent.com/74038190/243328563-d0cfe7d1-0b8c-4e4a-9a66-875290ba6065.gif "El codigo del Naikito")
