@@ -7,6 +7,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 [![La verdadera Onee-San Laburando](https://user-images.githubusercontent.com/74038190/212747903-e9bdf048-2dc8-41f9-b973-0e72ff07bfba.gif "La verdadera Onee-San Laburando")](https://user-images.githubusercontent.com/74038190/212747903-e9bdf048-2dc8-41f9-b973-0e72ff07bfba.gif "Usual Work Stuff")
 
 ### Cosas mucho muy importantosas:
+   - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
    - [Lore](https://www.w3schools.com/ "w3 schools") (w3 schools): hay que estudiar negro.
    - [Mas lore](https://www.freecodecamp.org/ "Free Code Camp") y su [canal de youtube](https://www.youtube.com/freecodecamp "canal de youtube") (Free Code Camp).
@@ -15,10 +16,13 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Cheat Sheat de Markdown](https://www.markdownguide.org/basic-syntax/ "Cheat Sheat de Markdown") (para escribir readme).
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
+   - Paginas en GitHub.
 
 ### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
    - [GDB compiler](https://www.onlinegdb.com/ "GDB compiler"): compilador en linea, tiene que estar en linea.
+   - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
+   - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
 
 ### Librerias random:
 - ##### Pascal: 
@@ -27,6 +31,16 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
  
 - ##### Python:
 	- [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
+
+
+### Tutos Chetos:
+   - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c "El compa que pudo bajar pascal en visual").
+   - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
+   - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (3 horas de mi vida que no van a volver).
+   - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
+------------
+
+
 
 [![La Onee-Chan mufandola](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")
 
