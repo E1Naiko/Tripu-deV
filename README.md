@@ -11,6 +11,8 @@ Cosas mucho muy importantosas:
    - Free Code Camp (mas lore):  https://www.freecodecamp.org/
                                  https://www.youtube.com/freecodecamp
    - El verdadero Senpain't: https://openai.com/chatgpt
+   - Formateo de readme.md: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+   - El verdadero formateador de readme.md: https://bbcode.ilma.dev/
 
 Librerias random:
   Pascal:
