@@ -15,7 +15,7 @@ Cosas mucho muy importantosas:
    - El verdadero formateador de readme.md: https://bbcode.ilma.dev/
 
 Compiladores piolas:
-   - Geany (lista de lenguajes admitidos: bit.ly/3EYd2b3): https://www.geany.org/
+   - Geany (lista de lenguajes admitidos: https://bit.ly/3EYd2b3): https://www.geany.org/
 Librerias random:
   Pascal:
     -
