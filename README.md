@@ -25,13 +25,13 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
    - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
+   - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
    - [GDB compiler](https://www.onlinegdb.com/ "GDB compiler"): compilador en linea, tiene que estar en linea.
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
-   - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
 
 
 ------------------------------------------------------------------------------------------------
