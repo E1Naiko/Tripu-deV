@@ -41,8 +41,10 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 ### Librerias random:
 - <details> 
    <sumary>Pascal</sumary>
+   <br>
     - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
     - [CRT](https://wiki.freepascal.org/Crt "CRT").
+  </details>
  
 - ##### Python:
 	- [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
