@@ -40,7 +40,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 <details><summary><h1>La Bodega del Lore</h1></summary>
    <img src="https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif">
 
-   <h3> Librerias Random: </h3>
+   <h3> Librerias Random: </h3> 
    - <details><summary><h4>Pascal</h4></summary>
        - <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.
        <br> <!-- ESTO-OBLIGA-A-PASAR-DE-LINEA -->
