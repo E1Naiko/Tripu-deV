@@ -48,6 +48,13 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 	- [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
 
 
+- TEST
+<details><summary>Hi</a></summary>
+
+hi
+
+</details>
+
 ### Tutos Chetos:
    - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c "El compa que pudo bajar pascal en visual").
    - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
