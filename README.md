@@ -43,21 +43,20 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <h3>Librerias Random:</h3>
    <dl>
    <!-- LISTA DE LIBRERIAS PASCAL -->
-    <dt><details><summary><h4>Pascal</h4></summary></dt>
+    <dt><h4>Pascal</h4></dt>
         <dd>- <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.</dd>
         <dd>- <a href="https://wiki.freepascal.org/Crt">CRT</a>.  </dd>
-     </details>
+     
    
    <!-- LISTA DE LIBRERIAS PYTHON -->
-   <dt><details><summary><h4>Python</h4></summary></dt> 
+   <dt><h4>Python</h4></dt> 
          <dd>- <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.</dd>
-      </details>
 
    <!-- LISTA DE LIBRERIAS HTML -->
-   <dt><details><summary><h4>HTML:</h4></summary></dt>     
+   <dt><h4>HTML:</h4></dt>     
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
        <dd>- No te hagas el piola.</dd>
-      </details>
+      
    </dl>
 
    <details><summary><h3>Tutos Chetos:</h3></summary>
