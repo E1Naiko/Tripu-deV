@@ -38,7 +38,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 ------------------------------------------------------------------------------------------------
 
 
-<details><summary><h1>La Bodega del Lore</h1></summary>
+<h1>La Bodega del Lore</h1>
    <img src="https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif">
 
    <h3>Librerias Random:</h3>
@@ -60,19 +60,18 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
       
    </dl>
 
-   <details><summary><h3>Tutos Chetos:</h3></summary>
+   <h3>Tutos Chetos:</h3>
       - <a href="https://www.youtube.com/watch?v=Ue8EhFy-N7c">El compa que pudo bajar pascal en visual</a>.<br>
       - <a href="https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ">JavaScript</a> (3 horas de mi vida que no van a volver).<br>
       - <a href="https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee">Python</a> (4 horas de mi vida que no van a volver).<br>
       - <a href="https://blogs.ead.unlp.edu.ar/programacion2/">Programacion 2 UNLP</a><br>
-      </details>
+      
 
-   <details><summary><h3>Inspiracion:</h3></summary>
+   <h3>Inspiracion:</h3>
       - <a href="https://www.youtube.com/watch?v=fUJuVE_SDU8">El luffy tiene la posta</a>.<br>
       - <a href="https://www.youtube.com/shorts/uAdV2Gb34uU">El pelado tambien</a>.<br>
       - <a href="https://youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz">El pelado parte 2</a>.<br>
-   </details>
-</details>
+   
 
 ------------------------------------------------------------------------------------------------
 
