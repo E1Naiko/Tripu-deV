@@ -31,6 +31,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [GDB compiler](https://www.onlinegdb.com/ "GDB compiler"): compilador en linea, tiene que estar en linea.
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
+   - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
 
 
 ------------------------------------------------------------------------------------------------
@@ -39,18 +40,24 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 # La Bodega del Lore
 [![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
 ### Librerias random:
-- <details><summary>Pascal</summary>
+- <details><summary><h4>Pascal</h4></summary>
     - <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.
-    <br>
+    <br> <!-- ESTO-OBLIGA-A-PASAR-DE-LINEA -->
     - <a href="https://wiki.freepascal.org/Crt">CRT</a>.
   </details>
  
-- ##### Python:
-	- [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
+<details><summary><h4>Python</h4></summary>
+   - <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.
 
+</details>
 
-- TEST
-<details><summary>Hi</a></summary>
+<details><summary><h4>HTML:</h4></summary>
+   <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
+ </details>
+<!--
+- Como hacer Dropdowns:
+
+<details><summary>Hi</summary>
 
 hi
 
