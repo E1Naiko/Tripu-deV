@@ -6,6 +6,8 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 
 [![La verdadera Onee-San Laburando](https://user-images.githubusercontent.com/74038190/212747903-e9bdf048-2dc8-41f9-b973-0e72ff07bfba.gif "La verdadera Onee-San Laburando")](https://user-images.githubusercontent.com/74038190/212747903-e9bdf048-2dc8-41f9-b973-0e72ff07bfba.gif "Usual Work Stuff")
 
+------------------------------------------------------------------------------------------------
+
 ## Cosas mucho muy importantosas:
 #### Lo minimo posible:
    - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
