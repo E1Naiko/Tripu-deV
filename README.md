@@ -39,7 +39,8 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 # La Bodega del Lore
 [![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
 ### Librerias random:
-- ##### Pascal: 
+- <details> 
+   <sumary>Pascal</sumary>
     - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
     - [CRT](https://wiki.freepascal.org/Crt "CRT").
  
