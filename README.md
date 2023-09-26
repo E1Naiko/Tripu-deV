@@ -62,6 +62,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 hi
 
 </details>
+-->
 
 ### Tutos Chetos:
    - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c "El compa que pudo bajar pascal en visual").
@@ -75,8 +76,6 @@ hi
    
 
 ------------------------------------------------------------------------------------------------
-
-
 
 
 [![La Onee-Chan mufandola](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")
