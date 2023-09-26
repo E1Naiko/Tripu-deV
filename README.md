@@ -37,43 +37,46 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 ------------------------------------------------------------------------------------------------
 
 
-# La Bodega del Lore
-[![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
-### Librerias random:
-- <details><summary><h4>Pascal</h4></summary>
-    - <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.
-    <br> <!-- ESTO-OBLIGA-A-PASAR-DE-LINEA -->
-    - <a href="https://wiki.freepascal.org/Crt">CRT</a>.
-  </details>
- 
-- <details><summary><h4>Python</h4></summary>
-   - <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.
-
-</details>
-
-- <details><summary><h4>HTML:</h4></summary>
-   <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
- </details>
-<!--
-- Como hacer Dropdowns:
-
-<details><summary>Hi</summary>
-
-hi
-
-</details>
--->
-
-### Tutos Chetos:
-   - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c "El compa que pudo bajar pascal en visual").
-   - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
-   - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (3 horas de mi vida que no van a volver).
-   - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
-
-### Inspiracion:
-   - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
-   - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
+<details><summary><h1>La Bodega del Lore</h1></summary>
+   [![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
+   ### Librerias random:
+   - <details><summary><h4>Pascal</h4></summary>
+       - <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.
+       <br> <!-- ESTO-OBLIGA-A-PASAR-DE-LINEA -->
+       - <a href="https://wiki.freepascal.org/Crt">CRT</a>.
+     </details>
    
+   - <details><summary><h4>Python</h4></summary>
+      - <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.
+
+   </details>
+
+   - <details><summary><h4>HTML:</h4></summary>
+      <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
+    </details>
+   <!--
+   ------------------------------------------------------------------------------
+   - Como hacer Dropdowns:
+
+   <details><summary>Hi</summary>
+
+   hi
+
+   </details>
+   ------------------------------------------------------------------------------
+   -->
+
+   ### Tutos Chetos:
+      - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c "El compa que pudo bajar pascal en visual").
+      - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
+      - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (3 horas de mi vida que no van a volver).
+      - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
+   
+   ### Inspiracion:
+      - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
+      - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
+   
+</details>
 
 ------------------------------------------------------------------------------------------------
 
