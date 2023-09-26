@@ -1,4 +1,4 @@
-# CANSADO DE NO PONERLA?
+# ¿CANSADO DE NO PONERLA?
 
 ## FELICIDADES, ENCONTRASTE LA EVOLUCION, NI INTENTARLO.
 
@@ -6,7 +6,8 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 
 [![La verdadera Onee-San Laburando](https://user-images.githubusercontent.com/74038190/212747903-e9bdf048-2dc8-41f9-b973-0e72ff07bfba.gif "La verdadera Onee-San Laburando")](https://user-images.githubusercontent.com/74038190/212747903-e9bdf048-2dc8-41f9-b973-0e72ff07bfba.gif "Usual Work Stuff")
 
-### Cosas mucho muy importantosas:
+## Cosas mucho muy importantosas:
+#### Lo minimo posible:
    - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
    - [Lore](https://www.w3schools.com/ "w3 schools") (w3 schools): hay que estudiar negro.
@@ -16,14 +17,18 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Cheat Sheat de Markdown](https://www.markdownguide.org/basic-syntax/ "Cheat Sheat de Markdown") (para escribir readme).
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
-   - Paginas en GitHub.
+   - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
 
-### Compiladores piolas:
+#### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
    - [GDB compiler](https://www.onlinegdb.com/ "GDB compiler"): compilador en linea, tiene que estar en linea.
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
 
+[========]
+
+## La Bodega del Lore
+[![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
 ### Librerias random:
 - ##### Pascal: 
     - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
@@ -38,8 +43,12 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
    - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (3 horas de mi vida que no van a volver).
    - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
-------------
 
+### Inspiracion:
+   - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
+   - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
+   
+[========]
 
 
 [![La Onee-Chan mufandola](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")
