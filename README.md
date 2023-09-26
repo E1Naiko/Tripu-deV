@@ -49,11 +49,12 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - <details><summary><h4>Python</h4></summary>
       - <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.
 
-   </details>
+      </details>
 
    - <details><summary><h4>HTML:</h4></summary>
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
-    </details>
+      - No te hagas el piola.
+      </details>
    <!--
    ------------------------------------------------------------------------------
    - Como hacer Dropdowns:
@@ -66,15 +67,17 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    ------------------------------------------------------------------------------
    -->
 
-   ### Tutos Chetos:
-      - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c "El compa que pudo bajar pascal en visual").
-      - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
-      - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (3 horas de mi vida que no van a volver).
-      - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
-   
-   ### Inspiracion:
-      - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
-      - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
+   <details><summary><h3>Tutos Chetos:</h3></summary>
+      - <a href="https://www.youtube.com/watch?v=Ue8EhFy-N7c">El compa que pudo bajar pascal en visual</a>
+      - <a href="https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ">JavaScript</a> (3 horas de mi vida que no van a volver).
+      - <a href="https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee">Python</a> (4 horas de mi vida que no van a volver).
+      - <a href="https://blogs.ead.unlp.edu.ar/programacion2/">Programacion 2 UNLP</a>
+      </details>
+
+   <details><summary><h3>Inspiracion:</h3></summary>
+      - <a href="https://www.youtube.com/watch?v=fUJuVE_SDU8">El luffy tiene la posta</a>
+      - <a href="https://www.youtube.com/shorts/uAdV2Gb34uU">El pelado tambien</a>
+   </details>
    
 </details>
 
