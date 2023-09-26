@@ -45,17 +45,21 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <h3>Librerias Random:</h3>
    <dl>
    <!-- LISTA DE LIBRERIAS PASCAL -->
-    <dt><h4>Pascal:</h4></dt>
+    <dt><h4>Pascal (pascal):</h4></dt>
         <dd>- <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.</dd>
         <dd>- <a href="https://wiki.freepascal.org/Crt">CRT</a>.  </dd>
      
    
    <!-- LISTA DE LIBRERIAS PYTHON -->
-   <dt><h4>Pitón .i. :snake::snake::</h4></dt> 
+   <dt><h4>:snake::snake: Pitón .i. :snake::snake: (python):</h4></dt> 
          <dd>- <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.</dd>
 
+   <!-- LISTA DE LIBRERIAS JAVA -->
+   <dt><h4>Paja (java):</h4></dt>
+      <dd>- <a href="https://www.bluej.org/tutorial/tutorial-v4.pdf/">Forito del blueJ</a>.</dd>
+      
    <!-- LISTA DE LIBRERIAS HTML -->
-   <dt><h4>HTML:</h4></dt>     
+   <dt><h4>HTML (html):</h4></dt>
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
        <dd>- No te hagas el piola.</dd>
       
@@ -71,7 +75,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <h3>Inspiracion:</h3>
       - <a href="https://www.youtube.com/watch?v=fUJuVE_SDU8">El luffy tiene la posta</a>.<br>
       - <a href="https://www.youtube.com/shorts/uAdV2Gb34uU">El pelado tambien</a>.<br>
-      - <a href="https://youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz">El pelado parte 2</a>.<br>
+      - <a href="https://www.youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz">El pelado parte 2</a>.<br>
    
 
 ------------------------------------------------------------------------------------------------
