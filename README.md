@@ -25,7 +25,10 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
 
-[========]
+
+------------
+
+
 
 ## La Bodega del Lore
 [![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
@@ -48,7 +51,10 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
    - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
    
-[========]
+
+------------
+
+
 
 
 [![La Onee-Chan mufandola](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")
