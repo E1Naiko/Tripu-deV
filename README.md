@@ -42,7 +42,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 - <details><summary>Pascal</summary>
     - <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.
     <br>
-    - [CRT](https://wiki.freepascal.org/Crt "CRT").
+    - <a href="https://wiki.freepascal.org/Crt">CRT</a>.
   </details>
  
 - ##### Python:
