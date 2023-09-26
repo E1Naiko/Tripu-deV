@@ -40,7 +40,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 [![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
 ### Librerias random:
 - <details><summary>Pascal</summary>
-    - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
+    - [SysUtils]<a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">: la verdadera Onee-San.
     - [CRT](https://wiki.freepascal.org/Crt "CRT").
   </details>
  
