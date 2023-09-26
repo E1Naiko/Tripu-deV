@@ -54,7 +54,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
          <dd>- <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.</dd>
 
    <!-- LISTA DE LIBRERIAS HTML -->
-   <dt>HTML:</dt>     
+   <dt><h4>HTML:</h4></dt>     
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
        <dd>- No te hagas el piola.</dd>
       
