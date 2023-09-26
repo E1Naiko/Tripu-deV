@@ -36,7 +36,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 ------------------------------------------------------------------------------------------------
 
 
-## La Bodega del Lore
+# La Bodega del Lore
 [![KNOLEDGE](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "KNOLEDGE")
 ### Librerias random:
 - ##### Pascal: 
