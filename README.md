@@ -46,12 +46,12 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
     - <a href="https://wiki.freepascal.org/Crt">CRT</a>.
   </details>
  
-<details><summary><h4>Python</h4></summary>
+- <details><summary><h4>Python</h4></summary>
    - <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.
 
 </details>
 
-<details><summary><h4>HTML:</h4></summary>
+- <details><summary><h4>HTML:</h4></summary>
    <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
  </details>
 <!--
