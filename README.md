@@ -68,10 +68,10 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
       </details>
 
    <details><summary><h3>Inspiracion:</h3></summary>
-      - <a href="https://www.youtube.com/watch?v=fUJuVE_SDU8">El luffy tiene la posta</a><br>
-      - <a href="https://www.youtube.com/shorts/uAdV2Gb34uU">El pelado tambien</a><br>
+      - <a href="https://www.youtube.com/watch?v=fUJuVE_SDU8">El luffy tiene la posta</a>.<br>
+      - <a href="https://www.youtube.com/shorts/uAdV2Gb34uU">El pelado tambien</a>.<br>
+      - <a href=" https://youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz">El pelado parte 2</a><br>
    </details>
-   
 </details>
 
 ------------------------------------------------------------------------------------------------
