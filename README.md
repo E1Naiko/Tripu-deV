@@ -26,8 +26,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
 
 
-------------
-
+------------------------------------------------------------------------------------------------
 
 
 ## La Bodega del Lore
@@ -52,7 +51,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
    
 
-------------
+------------------------------------------------------------------------------------------------
 
 
 
