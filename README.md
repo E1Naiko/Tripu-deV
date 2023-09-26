@@ -56,7 +56,8 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 
    <!-- LISTA DE LIBRERIAS JAVA -->
    <dt><h4>Paja (java):</h4></dt>
-      <dd>- <a href="https://www.bluej.org/tutorial/tutorial-v4.pdf/">Forito del blueJ</a>.</dd>
+      <dd>- <a href="https://www.bluej.org/">Forito del blueJ</a>.</dd>
+      <dd>- <a href="https://www.bluej.org/tutorial/tutorial-v4.pdf/">Manualito del blueJ</a>.</dd>
       
    <!-- LISTA DE LIBRERIAS HTML -->
    <dt><h4>HTML (html):</h4></dt>
