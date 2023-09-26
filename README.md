@@ -26,6 +26,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
    - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
    - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
+   - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
@@ -43,13 +44,13 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <h3>Librerias Random:</h3>
    <dl>
    <!-- LISTA DE LIBRERIAS PASCAL -->
-    <dt><h4>Pascal</h4></dt>
+    <dt><h4>Pascal:</h4></dt>
         <dd>- <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.</dd>
         <dd>- <a href="https://wiki.freepascal.org/Crt">CRT</a>.  </dd>
      
    
    <!-- LISTA DE LIBRERIAS PYTHON -->
-   <dt><h4>Python</h4></dt> 
+   <dt><h4>Pitón .i. :snake::snake::</h4></dt> 
          <dd>- <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.</dd>
 
    <!-- LISTA DE LIBRERIAS HTML -->
