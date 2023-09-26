@@ -61,7 +61,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    </dl>
 
    <details><summary><h3>Tutos Chetos:</h3></summary>
-      - <a href="https://www.youtube.com/watch?v=Ue8EhFy-N7c">El compa que pudo bajar pascal en visual</a><br>
+      - <a href="https://www.youtube.com/watch?v=Ue8EhFy-N7c">El compa que pudo bajar pascal en visual</a>.<br>
       - <a href="https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ">JavaScript</a> (3 horas de mi vida que no van a volver).<br>
       - <a href="https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee">Python</a> (4 horas de mi vida que no van a volver).<br>
       - <a href="https://blogs.ead.unlp.edu.ar/programacion2/">Programacion 2 UNLP</a><br>
