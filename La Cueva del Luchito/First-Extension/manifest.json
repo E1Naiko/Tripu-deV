@@ -1,0 +1,12 @@
+{
+    "manifest_version":3,
+    "name": "Mi primera extension",
+    "version": "1.0",
+    "description": "Mi primera extension",
+    "icons": {
+        "128":"soyesepng.png"
+    },
+    "action": {
+        "default_popup": "popup.html" 
+    }
+}
