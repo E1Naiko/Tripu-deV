@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="8"/>
+        <CursorPos X="28" Y="25"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="33" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="3" Column="50"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="19" Column="50" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="20" Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="10" Column="56" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="31" Column="29" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="48" Column="12" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="35" Column="29" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp1Ej2.lpr"/>
+        <Caret Line="10" Column="57" TopLine="4"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

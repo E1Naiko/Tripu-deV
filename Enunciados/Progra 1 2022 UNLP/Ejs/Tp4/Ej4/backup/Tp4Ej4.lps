@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Tp4Ej4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="25"/>
+        <CursorPos X="53" Y="40"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="62" Column="13" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="56" Column="32" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="45" Column="116" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="3" Column="9"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="29" Column="57" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="56" Column="23" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="69" Column="5" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="60" Column="19" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej4.pas"/>
+        <Caret Line="66" Column="74" TopLine="45"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

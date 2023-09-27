@@ -1,0 +1,132 @@
+Algoritmos, datos y programas con aplicaciones en Pascal, Delphi y Visual Da Vinci.
+
+De Giusti, Armando et al. 1er edición. Prentice Hall 2001.
+
+ Estructuras de Datos y Algoritmos.
+
+Hernández R., Dormido R., Lazaro J. Ros S. Pearson Education. 2000.
+
+ Introduction to algorithms
+
+Comen, Leiserson. MIT Press 2001.
+
+ Estructuras de Datos y Algoritmos.
+
+Aho Alfred, Hopcroft John y Ullman Jeffrey. Addison Wesley Publishing Company. EUA. 1988.
+
+ Introduction to Computer Science with applications in Pascal.
+
+Garland, S.J. Addison Wesley Publishing Company. 1986.
+
+ Fundamentos de Programación. Libro de Problemas.
+
+Joyanes Aguilar L., Fernandez M., Rodríguez L. Mc Graw Hill. 2003.
+
+ Data structures, algorithms and software principles.
+
+Standish, T. A. Addison Wesley Publishing Company. 1994.
+
+ Estructuras de Datos y Algoritmos
+
+Weiss, M.A. Addison Wesley. 1995.
+
+ Fundamentos de Programación.
+
+Joyanes Aguilar L., Fernandez M., Rodríguez L. Mc Graw Hill. 1999.
+
+ Organización y Arquitectura de Computadoras - Diseño para optimizar
+
+Prestaciones
+
+William Stallings. Ed. Prentice Hall (5ta edición)
+
+ Organización de Computadoras.
+
+ Andrew Tanenbaum. Ed. Prentice may (4ta edición).
+
+ 
+
+Bibliografía Adicional
+
+ 
+
+Introduction to Computer Science with applications in Pascal.
+
+Garland, S.J. Addison Wesley Publishing Company. 1986.
+
+ 
+
+Estructuras de Datos.
+
+Franch Gutierrez, Xavier. Alfaomega Grupo Editor Argentino.2002
+
+ 
+
+Estructura de Datos.
+
+Joyanes Aguilar C., Zahonero Martinez I. Mc Graw Hill. 1998.
+
+ 
+
+Estructuras de Datos. Libro de Problemas.
+
+Joyanes Aguilar L., Fernandez M., Rodríguez L. Mc Graw Hill. 1999.
+
+ 
+
+Estructuras de Datos.
+
+Lipschutz, S. Mc Graw Hill. 1997.
+
+ 
+
+Programación estructurada en Turbo Pascal 7.
+
+Lopez Roman, L. Alfaomega Grupo Editor Argentino. 1998.
+
+ Estructuras de Datos.
+
+Martinez Román, Quiroga Elda. Thomson International. 2002
+
+ 
+
+Estructura de Datos y Algoritmos.
+
+Sisa, Alberto Jaime. Editorial Prentice. 2002.
+
+ 
+
+Pascal  Estructurado.
+
+Tremblay, Jean Paul. Mc Graw Hill.1980.
+
+ 
+
+Data structures, algorithms and performance.
+
+Wood, D. Addison Wesley Publishing Company. 1993.
+
+ 
+
+Structures and Algorithm Analysis in Java
+
+Weiss, M.A. Data, 3rd Edition, Pearson/Addison Wesley, 2011
+
+ 
+
+Data Structures and Algorithms using C#.
+
+M. McMillan. Cambridge University Press, 2006
+
+ 
+
+Sitios de interés:
+
+http://csunplugged.org
+
+http://www.eduteka.org
+
+Proyecto Lazarus: http://sourceforge.net/projects/lazarus/?source=typ_redirect
+Proyecto astrocodigo http://www.astrocodigo.com
+
+La hora del código en http://www.code.org

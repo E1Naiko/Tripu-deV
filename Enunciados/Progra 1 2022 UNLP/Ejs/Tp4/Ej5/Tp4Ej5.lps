@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="31"/>
+        <CursorPos X="86" Y="44"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="10">
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="47" Column="64" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="4" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="12" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="25" Column="68" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="46" Column="9" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="44" Column="3" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="64" Column="26" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="53" Column="24" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="54" Column="105" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="11" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="Tp4Ej5.lpr"/>
+        <Caret Line="53" Column="96" TopLine="40"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

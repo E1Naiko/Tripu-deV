@@ -1,0 +1,72 @@
+Program EjemploClase8bCONPROVINCIA;
+uses crt;
+{En este problema se pide calcular el total de votos por participante de un concurso-- los datos se leen desde teclado ordenados por código de participante,
+y a su vez como por cada participantes están ordenados por código de provincia de donde se recibe el voto. Entonces, se pide informar el total de votos para
+cada participante por provincia}
+Const maxPart= 20; maxProv=24; fin=0;
+
+Type  codigospartic= 0.. maxPart; codigosprov= 1.. maxProv;
+         votos = record
+                   cod_participante: codigospartic;
+                   prov_votante: codigosprov;
+                 end;
+
+
+Procedure Leer (VAR v:votos);
+Begin
+    writeln('Ingresa el codigo de participante');
+    readln(v.cod_participante);
+    if (v.cod_participante <> fin)
+    then begin
+           writeln('Ingresa el codigo de provincia');
+           readln(v.prov_votante);
+         end;
+End;
+
+Procedure ProcesarUnConcursante (VAR v: votos; Var actual: codigospartic; VAR totalvotos:integer);
+ var provact:codigosprov;  total:integer;
+
+     procedure ProcesarProvincia(var actual:codigospartic; var provact: codigosprov; var v:votos; var tot:integer);
+     begin
+         While (actual = v.cod_participante) and (provact = v.prov_votante) do
+         begin
+            tot:=tot+1;
+            leer(v);
+         end;
+     end;
+
+Begin
+     actual:= v.cod_participante;
+     totalvotos:=0;
+     While (actual = v.cod_participante) do
+     Begin
+        provact:= v.prov_votante;
+        total:=0;
+        ProcesarProvincia(actual, provact, v, total);
+        writeln ('participante: ', actual, ' --provincia actual  ', provact, '---votos: ', total);
+        totalvotos:=totalvotos+ total;
+     end;
+End;
+
+Procedure InformarTotal (actual: codigospartic; totalvotos:integer);
+Begin
+    writeln('-----------------------------------------------------------');
+    Writeln('Participante ', actual, ' tiene:  ', totalvotos, ' votos');
+    writeln('-----------------------------------------------------------');
+    writeln('                  ');
+end;
+Var v: votos;
+    actual: codigospartic;
+    totalvotos: integer;
+
+Begin
+    clrscr;
+    Leer(v);
+    While (v.cod_participante<> fin) do
+    begin
+       ProcesarUnConcursante (v, actual, totalvotos);
+       InformarTotal (actual, totalvotos);
+    End;
+    readkey();
+End.
+

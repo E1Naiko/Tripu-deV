@@ -1,0 +1,99 @@
+{
+Escribir un programa que:
+
+a. Lea un número entero e invoque a un módulo que reciba dicho número y devuelva la cantidad de dígitos pares que contenga. El programa luego debe 
+   imprimir el resultado.
+b. Invoque a un módulo que lea una secuencia de caracteres terminada en '@' (debe sumarse) y devuelva la cantidad de letras minúsculas leídas, la cantidad 
+   de mayúsculas leídas, la cantidad de dígitos y la cantidad del resto de los caracteres.
+c. Invoque a un módulo que lea 10 números enteros y retorne el número más grande y el más chico.
+d. Lea un número entero e invoque a un módulo que reciba dicho número y devuelva verdadero si contiene exactamente 3 dígitos 5, o falso en caso contrario. El 
+   programa luego debe informar si cumple o no.
+
+}
+
+program ejercitacion11marzo;
+const valor = 4;
+
+function Pares (num: integer): integer;
+var cant, dig: integer;
+begin
+  cant:= 0;
+  while (num <> 0) do
+  begin
+   dig:= num mod 10;
+   if (dig mod 2 = 0) then cant:= cant + 1;
+   num:= num div 10;
+  end;
+  pares:= cant;
+end;
+
+procedure Secuencia (var minus, mayus, digitos, resto: integer);
+var car: char;
+begin
+  minus:= 0; 
+  mayus:= 0;
+  digitos:= 0;
+  resto:= 0;
+  repeat
+    write ('Ingrese un caracter: '); readln (car);
+    case car of
+      'a'..'z': minus:= minus + 1;
+      'A'..'Z': mayus:= mayus + 1;
+      '0'..'9': digitos:= digitos + 1;
+      else resto:= resto + 1;
+    end;
+  until (car = '@');
+end;
+
+procedure MayorYMenor (var max, min: integer);
+var i, num: integer;
+begin
+  max:= -1;
+  min:= 999;
+  for i:= 1 to valor do
+  begin
+    write ('Ingrese un numero: '); readln (num);
+    if (num > max) then max:= num;
+    if (num < min) then min:= num;
+  end;
+end;
+
+function Tiene3digitos5 (num: integer): boolean;
+var cant, dig: integer;
+begin
+  cant:= 0;
+  while (num <> 0) and (cant <= 3) do
+  begin
+   dig:= num mod 10;
+   if (dig = 5) then cant:= cant + 1;
+   num:= num div 10;
+  end;
+  Tiene3digitos5:= (cant = 3);
+end;
+
+var num, max, min: integer;
+    minus, mayus, digitos, resto: integer;
+begin
+  write ('Ingrese un numero: '); readln (num);
+  writeln ('Cantidad de digitos pares: ', Pares (num)); 
+  writeln;
+  writeln ('-----------------------------');
+  writeln;
+  Secuencia (minus, mayus, digitos, resto);
+  writeln ('Cantidad de minusculas: ', minus);
+  writeln ('Cantidad de mayusculas: ', mayus);
+  writeln ('Cantidad de digitos: ', digitos);
+  writeln ('Cantidad del resto: ', resto);
+  writeln;
+  writeln ('-----------------------------');
+  writeln;
+  MayorYMenor (max, min);
+  writeln ('Numero mayor: ', max, ' y numero menor: ', min);
+  writeln;
+  writeln ('-----------------------------');
+  writeln;
+  write ('Ingrese un numero: '); readln (num);
+  if (Tiene3digitos5 (num))
+  then writeln ('Cumple')
+  else writeln ('No cumple');
+end.

@@ -1,0 +1,84 @@
+program RegistrosEj1;
+uses crt;
+
+Const FIN= 'xxx'; MarcaBuscada='ford';
+Modelo='fiesta'; colorBuscado=5;
+
+Type
+  dias=1..31; meses=1..12;
+  codcolor= 1..10;
+  cadena=string[50];
+  fecha= record
+            dia:dias;
+            mes:meses;
+         end;
+
+  auto= record
+           marca:cadena;
+           modelo:cadena;
+           color:codcolor;
+           fing:fecha;
+         end;
+
+Procedure leer(VAR a:auto);
+
+  procedure leerfecha(var fing:fecha);
+  begin
+    writeln('ingresar dia');
+    readln(fing.dia);
+    writeln('ingresar mes');
+    readln(fing.mes);
+  end;
+
+begin
+   with a do         {lo veremos la proxima clase}
+   begin
+       writeln('Ingresa la marca del auto');
+       readln(marca);
+       if (marca<>FIN)
+       Then
+       begin
+         writeln('Ingresa su modelo ');
+         readln(modelo);
+         writeln ('Ingresa su color (valor entre 1 y 10');
+         readln(color);
+         writeln('cargar fecha ');
+         leerfecha(fing);
+
+       end;
+  end;
+end;
+
+Procedure Informar(cantFord,total:integer);
+Begin
+   writeln('Cantidad de Ford: ',cantFord);
+   writeln('Total cumplen condicion: ', total);
+   writeln('-----------------------');
+End;
+
+Procedure ProcesarAutos(var cantFord,cantTot:integer);
+var a: auto;
+Begin
+  leer(a);
+  while (a.marca<>FIN) do
+  begin
+     if (a.marca=MarcaBuscada) then
+                        Begin
+                           cantFord:= cantFord+1;
+                           if (a.modelo= modelo) and (a.color=colorBuscado)
+                           then   cantTot:= cantTot+1;
+                        End;
+     leer(a);
+  end;
+
+End;
+
+Var  cantFord,cantTot:integer;
+
+Begin
+     clrscr;
+     cantFord:=0; cantTot:=0;
+     ProcesarAutos(cantFord, CantTot);
+     Informar(cantFord, cantTot); {Deben implementarlo debajo del leer}
+     readkey();
+End.
