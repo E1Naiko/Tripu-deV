@@ -14,6 +14,9 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 ------------------------------------------------------------------------------------------------
 
 ## Cosas mucho muy importantosas:
+#### Tips de github:
+   - Para crear directamente carpetas desde el navegador de archivos, solo necesitas poner nombre de la carpeta/<nombre de nueva la carpeta/etc.
+
 #### Lo minimo posible:
    - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
@@ -28,6 +31,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
    - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
    - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
+   - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
