@@ -31,6 +31,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
    - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
    - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
+   - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com/s/merge+image/ "Y si Pibe") (There's An AI For That).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
