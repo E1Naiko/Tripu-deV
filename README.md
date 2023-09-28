@@ -15,7 +15,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 
 ## Cosas mucho muy importantosas:
 #### Tips de github:
-   - Para crear directamente carpetas desde el navegador de archivos, solo necesitas poner nombre de la carpeta/<nombre de nueva la carpeta>/etc.
+   - Para crear directamente carpetas desde el navegador de archivos, solo necesitas poner nombre de la carpeta/{nombre de nueva la carpeta}/etc.
 
 #### Lo minimo posible:
    - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
