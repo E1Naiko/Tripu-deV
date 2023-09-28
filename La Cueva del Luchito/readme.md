@@ -1,1 +1,2 @@
-1: el qlo te vacuno;
+1: El qlo te vacuno;
+2: Te la meto como un Dios;
