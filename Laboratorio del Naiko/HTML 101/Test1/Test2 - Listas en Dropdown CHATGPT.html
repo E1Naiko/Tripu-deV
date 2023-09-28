@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menus with Lists</title>
+</head>
+<body>
+
+<!-- Dropdown Menu 1 -->
+<select>
+    <option>Select List 1</option>
+    <option value="list1">List 1</option>
+</select>
+<ul id="list1" style="display: none;">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<!-- Dropdown Menu 2 -->
+<select>
+    <option>Select List 2</option>
+    <option value="list2">List 2</option>
+</select>
+<ul id="list2" style="display: none;">
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+</ul>
+
+<!-- Dropdown Menu 3 -->
+<select>
+    <option>Select List 3</option>
+    <option value="list3">List 3</option>
+</select>
+<ul id="list3" style="display: none;">
+    <li>Apple</li>
+    <li>Orange</li>
+    <li>Banana</li>
+</ul>
+
+<script>
+    // JavaScript to show/hide lists based on selected option
+    const selectElements = document.querySelectorAll("select");
+    selectElements.forEach(selectElement => {
+        selectElement.addEventListener("change", function() {
+            const selectedValue = this.value;
+            const allLists = document.querySelectorAll("ul");
+            allLists.forEach(list => {
+                list.style.display = "none";
+            });
+            if (selectedValue) {
+                const selectedList = document.getElementById(selectedValue);
+                selectedList.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
