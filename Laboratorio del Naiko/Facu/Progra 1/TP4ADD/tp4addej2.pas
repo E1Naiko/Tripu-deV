@@ -21,9 +21,8 @@ Type
 
   subrDias = 1 .. 31;
   subrMes = 1 .. 12;
-  subrAnio = 1998 .. 2023;
+  subrAnio = 1998 .. 2024;
   subrMin = 0 .. 59;
-  subrHora = 0 .. 23;
 
   tipoFecha = Record
     dia: subrDias;
@@ -33,7 +32,7 @@ Type
 
   tipoDura = Record
     min: subrMin;
-    hora: subrHora;
+    hora: integer;
   End;
 
   tipoDatos = Record
@@ -66,7 +65,7 @@ End;
 // ------------------------------------- MODULOS -------------------------------------
 Function sonIguales(a, b: tipoFecha): boolean;
 Begin
-  sonIguales := (a.dia = b.dia) And (a.mes = b.mes) And (a.anio = b.anio);
+  sonIguales := ((a.dia = b.dia) And (a.mes = b.mes) And (a.anio = b.anio));
 End;
 
 Function a_EsMenorFechaQue_b(a, b: tipoFecha): boolean;
@@ -97,7 +96,7 @@ End;
 Procedure leerDato(Var act: tipoDatos);
 Begin
   writeln(' --------- Introduzca la fecha de la sesión ---------');
-  With fecha Do
+  With act.fecha Do
     Begin
       writeln(' - Dia:');
       readln(dia);
@@ -107,7 +106,7 @@ Begin
       readln(anio);
     End;
 
-  If (act.fecha<>fin) Then
+  If not(sonIguales(act.fecha, fin)) Then
     Begin
       With act Do
         Begin
@@ -118,33 +117,48 @@ Begin
           writeln(' - Duracion de la sesion:');
           With dura Do
             Begin
-              writeln(' - Minutos:');
-              readln(min);
               writeln(' - Horas:');
               readln(hora);
+              writeln(' - Minutos:');
+              readln(min);
             End;
         End;
     End;
 End;
-Procedure recorrerDatos(Var artistaEjA1, artistaEjA1, artistaEjB: cadena; Var cantVisEjC: Integer);
-// --------- TERMINASTE TODOS LOS MODULOS Y LOS IMPRIMIR, FALTA IMPLEMENTAR TODAS LAS COMPARACIONES Y TESTEAR
-
+Procedure recorrerDatos(Var artistaEjA1, artistaEjA2, artistaEjB: cadena; Var cantVisEjC: Integer);
 Var 
-  act, primerLanzada: tipoDatos;
-  menorDura: tipoDura;
+  act: tipoDatos;
+  primerLanzada: tipoFecha;
+  menosDura: tipoDura;
+  
 Begin
   // INICIALIZO
-  primerLanzada.fecha := fin; // inicializo en la fecha fin, ya que es una fecha conocida que no debe estar en el reconteo, por lo tanto si aparece al final seguramente se encuentre sin cargar
-
+  with primerLanzada do Begin
+    dia:= 31;
+    mes:= 12;
+    anio:= 2024;
+  end;
+  menosDura.min:=59; menosDura.hora:=9999;
+  
   // MAIN
   leerDato(act);
-  While (act.fecha<>fin) Do
+  While not(sonIguales(act.fecha, fin)) Do
     Begin
-      artistaEjA1 := artistaEjB;
+      artistaEjA2 := artistaEjA1;
       artistaEjA1 := act.Invitado;
 
-
-
+      if (a_EsMenorFechaQue_b(act.fecha, primerLanzada)) then Begin
+        // Actualizo para informar con qué artista realizó la primera sesión que lanzó.
+        primerLanzada:= act.fecha;
+        artistaEjB:= act.Invitado;
+      end;
+      
+      if (a_DuraMasQue_b(menosDura, act.dura)) then Begin
+        menosDura:= act.dura;
+        cantVisEjC:= act.cantVis;
+      end;
+      
+      leerDato(act);
     End;
 End;
 // ------------------------------------- PROGRAMA PRINCIPAL -------------------------------------
@@ -169,3 +183,4 @@ Begin
   writeln('Cantidad de visitas de la sesión mas corta: ', cantVisEjC);
 
 End.
+
