@@ -1,0 +1,56 @@
+	----------------------------------------------------------------------------------------------
+		
+		PROGRAMACIÓN 1 - UNLP - TP3 ADDICIONAL - Ejercicio 1
+	
+		Se desea procesar la información de todos los radares de velocidad que posee la ciudad de
+	La Plata en un día. Para ello se lee de cada radar: código de radar, velocidad máxima permitida
+	y cantidad de vehículos registrados, y para de cada vehículo de cada radar, se lee patente y
+	velocidad. La lectura finaliza cuando se lee el código de radar -1 que no debe procesarse.
+		
+		Se pide:
+	a. Calcular e informar la velocidad promedio de los automóviles para cada radar.
+	b. Calcular e informar la cantidad de vehículos que fueron multados para cada radar.
+	c. Calcular e informar la patente del vehículo con mayor velocidad y la patente del vehículo con menor
+	velocidad.
+	
+	Nota: Modularizar la solución
+	
+	----------------------------------------------------------------------------------------------
+	
+	fin = -1
+	
+	tipoRadar = record
+		cod, cantReg: integer
+		velMax: real
+	
+	tipoVehi = record
+		patente: string
+		vel: real
+		
+	a) p/ calc vel prom:
+		prom = sumatoria / total; print(prom)
+		
+	b) p/ calc cant de vehi multados:
+		if vehi.vel > radar.velMax:
+			ticket =+ 1;
+		print(ticket)
+		
+	c) p/ calc patente con mayor y menor velocidad:
+		if vehi.vel > mayor:
+			mayor = vehi.vel
+			dev = vehi.patente
+		if vehi.vel < menor:
+			menor = vehi.vel
+			dev = vehi.patente
+	
+	----------------------------------------------------------------------------------------------
+	
+	1) leer datos de radar
+	2) leer todos los vehiculos que pasaron por el radar (radar.cantReg) vehiculos
+		2.1) comparar mayor y menor velocidad encontrada
+		2.2) sumatoria + 1
+		2.3) total + 1
+		2.4) si velocidad supero el max del radar entonces ticket + 1
+	3) leer radar y chequear si radar = -1
+	
+	----------------------------------------------------------------------------------------------
