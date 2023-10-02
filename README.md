@@ -32,7 +32,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
    - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
    - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
-   - [Pitos en 2d](https://old.tldraw.com/).
+   - [Pitos en 2d](https://old.tldraw.com/) (tldraw).
    - [Cursito del Tipa](https://www.programarya.com/Cursos/Python).
 
 #### Compiladores piolas:
