@@ -33,17 +33,16 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
    - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
    - [Pitos en 2d](https://old.tldraw.com/) (tldraw).
-   - [Cursito del Tipa](https://www.programarya.com/Cursos/Python).
+   - [Cursito del Tipa](https://www.programarya.com/).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
    - [GDB compiler](https://www.onlinegdb.com/ "GDB compiler"): compilador en linea, tiene que estar en linea.
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
-
+   - [Python Tutor](https://pythontutor.com) (Python, Java, C, C++ and JavaScript).
 
 ------------------------------------------------------------------------------------------------
-
 
 <h1>La Bodega del Lore</h1>
    <img src="https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif">
