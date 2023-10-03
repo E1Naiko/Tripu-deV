@@ -63,7 +63,12 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <dt><h4>Paja (java):</h4></dt>
       <dd>- <a href="https://www.bluej.org/">Forito del blueJ</a>.</dd>
       <dd>- <a href="https://www.bluej.org/tutorial/tutorial-v4.pdf/">Manualito del blueJ</a>.</dd>
-      
+
+   <!-- LISTA DE LIBRERIAS JAVASCRIPT -->
+   <dt><h4>PajaSquirt (javascript):</h4></dt>
+      <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
+       <dd>- No te hagas el piola.</dd>
+       
    <!-- LISTA DE LIBRERIAS HTML -->
    <dt><h4>HTML (html):</h4></dt>
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
