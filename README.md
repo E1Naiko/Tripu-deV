@@ -22,7 +22,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
    - [Lore](https://www.w3schools.com/ "w3 schools") (w3 schools): hay que estudiar negro.
    - [Mas lore](https://www.freecodecamp.org/ "Free Code Camp") y su [canal de youtube](https://www.youtube.com/freecodecamp "canal de youtube") (Free Code Camp).
-   - [El verdadero Senpain't](https://openai.com/chatgpt "El verdadero Senpain't") (ChatGPT).
+   - [El verdadero Senpain't](https://chat.openai.com "El verdadero Senpain't") (ChatGPT).
    - [Formateo de readme.md](http://bit.ly/48vpZa8 "Formateo de readme.md") (foro de github).
    - [Cheat Sheat de Markdown](https://www.markdownguide.org/basic-syntax/ "Cheat Sheat de Markdown") (para escribir readme).
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
