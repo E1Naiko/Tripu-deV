@@ -63,6 +63,7 @@ BEGIN
 		
 		for i:= 1 to Radar.Cant_Veiculos_Registrados do begin //Repetira la cantidad de veiculos registrados en ese radar. 
 			writeln('Veiculo ', i);
+			Leer_Datos_Veiculo_Registrado(Veiculo_Registrado);
 		end;
 		
 		Leer_Datos_Radar(Radar);
