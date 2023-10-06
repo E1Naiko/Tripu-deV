@@ -1,0 +1,147 @@
+{
+	Ejercicio 1
+	* 
+		Se desea procesar la información de todos los radares de velocidad que posee la ciudad de
+	La Plata en un día. Para ello se lee de cada radar: código de radar, velocidad máxima permitida
+	y cantidad de vehículos registrados, y para de cada vehículo de cada radar, se lee patente y
+	velocidad. La lectura finaliza cuando se lee el código de radar -1 que no debe procesarse. Se
+	pide:
+		a. Calcular e informar la velocidad promedio de los automóviles para cada radar.
+		b. Calcular e informar la cantidad de vehículos que fueron multados para cada radar.
+		c. Calcular e informar la patente del vehículo con mayor velocidad y la patente del vehículo con menor
+		velocidad.
+	Nota: Modularizar la solución
+   
+}
+
+
+program Tp4AddEj1;
+uses crt;
+const
+	fin = '-1';
+type
+	cadena = String[50];
+	tipoRadar = record
+		codigo: cadena;
+		cantVehi: integer;
+		velMax: real;
+	end;
+	tipoVehi = record
+		patente: cadena;
+		velocidad: real;
+	end;
+// -------------------------------- MODULOS --------------------------------
+
+{procedure imprimirRadar(r: tipoRadar);
+	begin
+		with r do begin
+			writeln(' - Codigo: ', codigo);
+			writeln(' - Cantidad de Vehiculos: ', cantVehi);
+			writeln(' - Velocidad Maxima: ', velMax);
+		end;
+	end;
+	
+	
+procedure imprimirVehiculo(v: tipoVehi);
+	begin
+		with v do begin
+			writeln(' - Patente: ', patente);
+			writeln(' - Velocidad: ', velocidad);
+		end;
+	end;
+}
+	
+procedure leerVehiculo(var v: tipoVehi);
+	begin
+		with v do begin
+			writeln(' Patente: '); readln(patente);
+			writeln(' Velocidad: '); readln(velocidad);
+		end;
+	end;
+	
+	
+procedure leerRadar(var r:tipoRadar);
+	begin
+		with r do begin
+			writeln(' Codigo del Radar:'); read(codigo);
+			if (codigo<>fin) then begin
+				writeln(' Velocidad maxima permitida por Radar:'); readln(velMax);
+				writeln(' Cantidad de vehiculos registrados:'); readln(cantVehi);
+			end;
+		end;
+	end;
+	
+	
+procedure recorrerRadar(var mayor, menor: cadena);
+	procedure imprimirPromedio(velProm:real);
+		begin
+			writeln; writeln('-----------------------------------------------------');
+			writeln('- Velocidad promedio del radar: ', velProm:2:2);
+			writeln; writeln('-----------------------------------------------------');
+		end;
+	procedure calcularVehiculoActual(velMax: real; actVehiculo: tipoVehi;
+							var mayor, menor: cadena; var velProm {PARAMETRO FORMAL DEL CONTADOR PARA EL EJ A},
+							menorVel, mayorVel {PARAMETRO FORMAL DEL CONTADOR PARA EL EJ C} : real;
+							var cantMultas {PARAMETRO FORMAL DEL CONTADOR PARA EL EJ B}: integer);		
+			begin
+				velProm:= velProm + actVehiculo.velocidad;
+				if (actVehiculo.velocidad > velMax) then cantMultas:= cantMultas+1;
+				if (mayorVel < actVehiculo.velocidad) then begin
+						mayorVel := actVehiculo.Velocidad;
+						mayor := actVehiculo.patente;
+				end;
+				if (menorVel > actVehiculo.velocidad) then begin
+						menorVel := actVehiculo.Velocidad;
+						menor := actVehiculo.patente;
+				end;
+			end;
+	var
+		contVehiculo, cantMultas: integer;
+		actRadar: tipoRadar;
+		actVehiculo: tipoVehi;
+		mayorVel, menorVel, velProm: real;
+	begin
+		mayorVel := -9999; menorVel := 9999;
+		leerRadar(actRadar);
+		
+		// dependo que cada radar conozca el numero total de autos que registro.
+		while (actRadar.codigo<>fin) do begin
+			// inicializo variables para calcular el promedio de velocidad y multas por radar
+			velProm := 0;
+			cantMultas := 0;
+			
+			// leo todos los autos del radar
+			for contVehiculo:=1 to actRadar.cantVehi do begin
+				leerVehiculo(actVehiculo);
+				calcularVehiculoActual(actRadar.velMax, actVehiculo, mayor, menor, velProm, menorVel, mayorVel, cantMultas);
+			end;
+			
+			// calculo velocidad promedio del radar e informo junto con multas
+			velProm := velProm / actRadar.cantVehi;
+			imprimirPromedio(velProm);
+			writeln('Cantidad de Multas en el radar: ', cantMultas);
+			
+			// actualizo radar e informo
+			leerRadar(actRadar);
+		end;
+	end;
+
+// -------------------------------- PROGRAMA PRINCIPAL --------------------------------
+const
+	error = 'ERROR';
+var
+	mayor, menor: cadena;
+BEGIN
+	// INICIALIZO
+	mayor := error; menor := error;
+	clrscr;
+	
+	// MAIN
+	recorrerRadar(mayor, menor);
+	
+	// INFORMO
+	if (mayor<>error) then writeln('Patente del vehículo con mayor velocidad: ', mayor)
+		else writeln(error);
+	if (menor<>error) then writeln('Patente del vehículo con menor velocidad: ', menor)
+		else writeln(error);
+END.
