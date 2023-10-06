@@ -22,7 +22,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
    - [Lore](https://www.w3schools.com/ "w3 schools") (w3 schools): hay que estudiar negro.
    - [Mas lore](https://www.freecodecamp.org/ "Free Code Camp") y su [canal de youtube](https://www.youtube.com/freecodecamp "canal de youtube") (Free Code Camp).
-   - [El verdadero Senpain't](https://openai.com/chatgpt "El verdadero Senpain't") (ChatGPT).
+   - [El verdadero Senpain't](https://chat.openai.com "El verdadero Senpain't") (ChatGPT).
    - [Formateo de readme.md](http://bit.ly/48vpZa8 "Formateo de readme.md") (foro de github).
    - [Cheat Sheat de Markdown](https://www.markdownguide.org/basic-syntax/ "Cheat Sheat de Markdown") (para escribir readme).
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
@@ -32,17 +32,17 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
    - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
    - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
-   - [Pitos en 2d](https://old.tldraw.com/).
+   - [Pitos en 2d](https://old.tldraw.com/) (tldraw).
+   - [Cursito del Tipa](https://www.programarya.com/).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
    - [GDB compiler](https://www.onlinegdb.com/ "GDB compiler"): compilador en linea, tiene que estar en linea.
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
-
+   - [Python Tutor](https://pythontutor.com) (Python, Java, C, C++ and JavaScript).
 
 ------------------------------------------------------------------------------------------------
-
 
 <h1>La Bodega del Lore</h1>
    <img src="https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif">
@@ -63,9 +63,17 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <dt><h4>Paja (java):</h4></dt>
       <dd>- <a href="https://www.bluej.org/">Forito del blueJ</a>.</dd>
       <dd>- <a href="https://www.bluej.org/tutorial/tutorial-v4.pdf/">Manualito del blueJ</a>.</dd>
-      
+
+<!-- LISTA DE LIBRERIAS CSS -->
+   <dt><h4>Cagon Salta Solo (CSS):</h4></dt>
+      <dd>- No te hagas el piola.</dd>
+
+   <!-- LISTA DE LIBRERIAS JAVASCRIPT -->
+   <dt><h4>PajaSquirt (javascript):</h4></dt>
+       <dd>- No te hagas el piola.</dd>
+       
    <!-- LISTA DE LIBRERIAS HTML -->
-   <dt><h4>HTML (html):</h4></dt>
+   <dt><h4>Hermana Traba Muy Lesbiana (html):</h4></dt>
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
        <dd>- No te hagas el piola.</dd>
       
