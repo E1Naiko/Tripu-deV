@@ -49,34 +49,33 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 
    <h3>Librerias Random:</h3>
    <dl>
-   <!-- LISTA DE LIBRERIAS PASCAL -->
+<!-- LISTA DE LIBRERIAS PASCAL -->
     <dt><h4>Pascal (pascal):</h4></dt>
         <dd>- <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.</dd>
         <dd>- <a href="https://wiki.freepascal.org/Crt">CRT</a>.  </dd>
      
    
-   <!-- LISTA DE LIBRERIAS PYTHON -->
+<!-- LISTA DE LIBRERIAS PYTHON -->
    <dt><h4>:snake::snake: Pitón .i. :snake::snake: (python):</h4></dt> 
          <dd>- <a href="https://www.edureka.co/blog/python-libraries/">Blog random de librerias</a>, hay que testearlas.</dd>
 
-   <!-- LISTA DE LIBRERIAS JAVA -->
+<!-- LISTA DE LIBRERIAS JAVA -->
    <dt><h4>Paja (java):</h4></dt>
       <dd>- <a href="https://www.bluej.org/">Forito del blueJ</a>.</dd>
       <dd>- <a href="https://www.bluej.org/tutorial/tutorial-v4.pdf/">Manualito del blueJ</a>.</dd>
 
+<!-- LISTA DE LIBRERIAS JAVASCRIPT -->
+   <dt><h4>PajaSquirt (javascript):</h4></dt>
+       <dd>- No te hagas el piola.</dd>
+
 <!-- LISTA DE LIBRERIAS CSS -->
    <dt><h4>Cagon Salta Solo (CSS):</h4></dt>
       <dd>- No te hagas el piola.</dd>
-
-   <!-- LISTA DE LIBRERIAS JAVASCRIPT -->
-   <dt><h4>PajaSquirt (javascript):</h4></dt>
-       <dd>- No te hagas el piola.</dd>
        
-   <!-- LISTA DE LIBRERIAS HTML -->
+<!-- LISTA DE LIBRERIAS HTML -->
    <dt><h4>Hermana Traba Muy Lesbiana (html):</h4></dt>
       <!-- <a href="ACA VA EL LINK">ACA VA EL NOMBRE AL QUE SE LO INSERTA</a> -->
        <dd>- No te hagas el piola.</dd>
-      
    </dl>
 
    <h3>Tutos Chetos:</h3>
@@ -84,7 +83,9 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
       - <a href="https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ">JavaScript</a> (3 horas de mi vida que no van a volver).<br>
       - <a href="https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee">Python</a> (4 horas de mi vida que no van a volver).<br>
       - <a href="https://blogs.ead.unlp.edu.ar/programacion2/">Programacion 2 UNLP</a><br>
-      
+
+   <h3>Arquitectura:</h3>
+      - <a href="https://www.youtube.com/watch?v=gG5-ohzSDu8">Gameplay vs lore</a>.<br>
 
    <h3>Inspiracion:</h3>
       - <a href="https://www.youtube.com/watch?v=fUJuVE_SDU8">El luffy tiene la posta</a>.<br>
@@ -93,6 +94,9 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    
 
 ------------------------------------------------------------------------------------------------
+
+
+
 
 
 [![La Onee-Chan mufandola](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")](https://user-images.githubusercontent.com/74038190/250967618-de30015f-dc5f-4ecf-a49b-ccd2b89776e4.gif "La Onee-Chan mufandola")
