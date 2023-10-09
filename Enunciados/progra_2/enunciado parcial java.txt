@@ -1,0 +1,48 @@
+TP FINAL – Módulo 2 – Programación Orientada a Objetos Programación II 2023
+Pautas de resolución y entrega
+- Lean detenidamente el enunciado. Luego descarguen del entorno el archivo PrecioPorFilayPorPlatea.zip.
+Desarrollen la solución con su compañero/a en BlueJ.
+- Para la entrega, deben exportar el proyecto con el nombre grupoXX.zip (dónde XX es el número de grupo
+asignado) y uno/a de los integrantes debe subirlo en la tarea correspondiente en el entorno Asignaturas.
+Enunciado
+El cantante Luis Miguel inició su gira 2023 y tocó durante el mes de Agosto en el Movistar Arena de Argentina. La
+gestión del Movistar Arena posee información particular de los shows brindados. De cada show se conoce: número de
+show, fecha del show (DD/MM/AAAA), si el mismo está Sold Out (con todas las localidades agotadas) o no y la
+información de las primeras 10 localidades vendidas. A su vez de cada localidad se sabe: el identificador, número de
+butaca, número de fila (1..10), platea (de la A a la K), método de pago (tarjeta de crédito o tarjeta de débito) y los datos
+del comprador DNI, apellido y nombre.
+Existen diferentes tipos de localidades:
+- VIP, de estas localidades se registra si el comprador contrató la experiencia especial, y si es así, el costo de
+contratar dicha experiencia, de lo contrario ese valor es cero.
+- Comunes, de estas localidades se sabe el tipo de entrada (física o digital) y el costo de impresión en caso que
+sea física, de lo contrario ese valor es cero.
+Se pide:
+a) Implementar la clase Localidad con sus respectivos atributos, constructores y métodos para acceder y
+modificar sus atributos (respecto a los métodos de acceso sólo implemente los que vaya a utilizar). Además de
+todos los elementos necesarios para manejar los diferentes tipos de localidades.
+b) Implementar la clase Show, la cual necesita obtener cuál es el monto total adquirido por las 10 localidades
+vendidas y que se calcula de la siguiente manera:
+- En el caso de las localidades VIP, el precio depende de lo siguiente: si el comprador contrató la
+experiencia especial, se debe acumular, al precio base de la entrada, el costo de la experiencia.
+Además, si la butaca está numerada entre los primeros 5 lugares, debe sumar el 15% sobre el valor
+base de la entrada. Por otra parte, si el comprador pagó con tarjeta de crédito, la misma tiene un
+recargo del 10% sobre el valor final de lo que hay que pagar, en cambio, si la persona pagó con tarjeta
+de débito obtiene una bonificación del 5% sobre el valor final de la entrada.
+- Para el caso de las localidades Comunes, el precio parte del siguiente cálculo: si el comprador pidió su
+entrada física, debe sumar el costo de impresión de la misma al precio base de la entrada, sin
+embargo, si el comprador solicitó la entrada digital, existe un monto fijo de servicio de 2400 pesos que
+debe acumularse al precio base de la entrada. Por otra parte, si el comprador pagó con tarjeta de
+crédito, la misma tiene un recargo del 8% sobre el valor final de lo que hay que pagar, en cambio, si
+pagó con tarjeta de débito, el comprador obtiene una bonificación del 2,5% sobre el valor final de la
+entrada.
+- Para ambos casos, además, si las localidades pertenecen al primer o segundo show (3 o 4 de Agosto
+2023) tienen una bonificación por haber accedido a la pre-venta del 3,5% sobre el precio final de la
+entrada.
+*Para ambos tipos, si se cumplen las condiciones, los gastos son acumulables.
+**Para saber el precio base de una entrada, sin importar el tipo, se dispone de la clase
+PrecioPorFilayPorPlatea, que posee un método obtenerPrecioBaseEntrada(fila, platea) el cual recibe la fila y
+la platea (como String) y devuelve el valor de la entrada.
+c) Implementar los métodos necesarios para imprimir toda la información del show y sus localidades.
+d) Implementar un programa principal que instancie un show con sus localidades donde se evalúen todos los
+casos. Después de la carga, obtener el monto del show y hacer la impresión de los datos utilizando lo
+implementado en el inciso c)
