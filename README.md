@@ -14,26 +14,14 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
 ------------------------------------------------------------------------------------------------
 
 ## Cosas mucho muy importantosas:
-#### Tips de github:
-   - Para crear directamente carpetas desde el navegador de archivos, solo necesitas poner nombre de la carpeta/{nombre de nueva la carpeta}/etc.
-
 #### Lo minimo posible:
-   - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
    - [Lore](https://www.w3schools.com/ "w3 schools") (w3 schools): hay que estudiar negro.
    - [Mas lore](https://www.freecodecamp.org/ "Free Code Camp") y su [canal de youtube](https://www.youtube.com/freecodecamp "canal de youtube") (Free Code Camp).
    - [El verdadero Senpain't](https://chat.openai.com "El verdadero Senpain't") (ChatGPT).
-   - [Formateo de readme.md](http://bit.ly/48vpZa8 "Formateo de readme.md") (foro de github).
-   - [Cheat Sheat de Markdown](https://www.markdownguide.org/basic-syntax/ "Cheat Sheat de Markdown") (para escribir readme).
-   - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
-   - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
-   - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
    - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
-   - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
-   - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
-   - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
-   - [Pitos en 2d](https://old.tldraw.com/) (tldraw).
    - [Cursito del Tipa](https://www.programarya.com/).
+   - [Cursitos cisco](https://skillsforall.com/) (skills for all): cursitos gratuitos de la empresa esa de discordn't.
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
@@ -41,6 +29,20 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
    - [Python Tutor](https://pythontutor.com) (Python, Java, C, C++ and JavaScript).
+   - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
+   - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
+
+#### Utilidades y truquitos:
+   - [Carpetas desde el navegador de github](https://www.youtube.com/watch?v=gbYgh87JwLQ): para crear directamente carpetas desde el navegador de archivos, solo necesitas poner nombre de la carpeta/{nombre de nueva la carpeta}/etc.
+   - [Comanditos del git](https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2 "Comanditos del git").
+   - [Pitos en 2d](https://old.tldraw.com/) (tldraw).
+   - [Mapita pa que te ubiques](https://roadmap.sh) (roadmap): referencia general del orden recomendado para entender programacion mas rapido.
+   - [Emojis Github](https://github.com/scotch-io/All-Github-Emoji-Icons).
+   - [Formateo de readme.md](http://bit.ly/48vpZa8 "Formateo de readme.md") (foro de github).
+   - [Cheat Sheat de Markdown](https://www.markdownguide.org/basic-syntax/ "Cheat Sheat de Markdown") (para escribir readme).
+   - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
+   - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
+   - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
 
 ------------------------------------------------------------------------------------------------
 
@@ -50,7 +52,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    <h3>Librerias Random:</h3>
    <dl>
 <!-- LISTA DE LIBRERIAS PASCAL -->
-    <dt><h4>Pascal (pascal):</h4></dt>
+    <dt><h4>Pascual (pascal):</h4></dt>
         <dd>- <a href="https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html">SysUtils</a>: la verdadera Onee-San.</dd>
         <dd>- <a href="https://wiki.freepascal.org/Crt">CRT</a>.  </dd>
      
