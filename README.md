@@ -1,4 +1,4 @@
-https://code.visualstudio.com/docs/editor/profiles ¿CANSADO DE NO PONERLA?
+¿CANSADO DE NO PONERLA?
 
 ## FELICIDADES, ENCONTRASTE LA EVOLUCION, NI INTENTARLO.
 
