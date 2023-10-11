@@ -1,4 +1,4 @@
-# ¿CANSADO DE NO PONERLA?
+¿CANSADO DE NO PONERLA?
 
 ## FELICIDADES, ENCONTRASTE LA EVOLUCION, NI INTENTARLO.
 
@@ -43,7 +43,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [La Waifu](https://waifu2x.booru.pics/) (Waifu2X).
    - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
    - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
-
+   - [Perfiles en VSC](https://code.visualstudio.com/docs/editor/profiles): visual studio admite distintos perfiles de configuración, con esto se pueden hacer perfiles segun el lenguaje y extensiones que necesitemos repetidamente.
 ------------------------------------------------------------------------------------------------
 
 <h1>La Bodega del Lore</h1>
