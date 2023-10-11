@@ -46,51 +46,51 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Perfiles en VSC](https://code.visualstudio.com/docs/editor/profiles): visual studio admite distintos perfiles de configuración, con esto se pueden hacer perfiles segun el lenguaje y extensiones que necesitemos repetidamente.
 ------------------------------------------------------------------------------------------------
 
-#La Bodega del Lore
-   [![A](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")
+# La Bodega del Lore
+[![A](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")
 
-###Librerias Random:
-####Pascual (pascal):
+### Librerias Random:
+#### Pascual (pascal):
    - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
    - [CRT](https://wiki.freepascal.org/Crt "CRT").
 
-####:snake::snake: Pitón .i. :snake::snake: (python):
+#### :snake::snake: Pitón .i. :snake::snake: (python):
  - [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
 
-####Paja (java):
+#### Paja (java):
  - [Forito del blueJ](https://www.bluej.org/ "Forito del blueJ").
  - [Manualito del blueJ](https://www.bluej.org/tutorial/tutorial-v4.pdf/" "Manualito del blueJ").
 
-####PajaSquirt (javascript):
+#### PajaSquirt (javascript):
  - No te hagas el piola.
 
-####Cagon Salta Solo (CSS):
+#### Cagon Salta Solo (CSS):
  - No te hagas el piola.
        
-####Hermana Traba Muy Lesbiana (html):
+#### Hermana Traba Muy Lesbiana (html):
  - No te hagas el piola.
 
-####Culo (C):
+#### Culo (C):
  - No te hagas el piola.
 
-####Más Culo, MÁS (C++):
+#### Más Culo, MÁS (C++):
  - No te hagas el piola.
 
-####Culo Filoso (C#):
+#### Culo Filoso (C#):
  - No te hagas el piola.
 
 ------------------------------------------------------------------------------------------------
 
-###Tutos Chetos:
+### Tutos Chetos:
  - [JavaScript](https://youtu.be/PkZNo7MFNFg?si=9uSyR6lFFAsxBPkJ "JavaScript") (3 horas de mi vida que no van a volver).
  - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (4 horas de mi vida que no van a volver).
  - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
  - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c)
 
-###Arquitectura:
+### Arquitectura:
  - [Gameplay vs lore](https://www.youtube.com/watch?v=gG5-ohzSDu8 "Gameplay vs lore").
 
-###Inspiracion:
+### Inspiracion:
  - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
  - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
  - [El pelado parte 2](https://www.youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz "El pelado parte 2").
