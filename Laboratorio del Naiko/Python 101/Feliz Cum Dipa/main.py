@@ -1,5 +1,10 @@
+from dibujitos import pintame, top1, top2, base1, base2
 from PIL import Image
-from dibujitos import pintame, base1, base2, top1, top2
+def bottom():
+	print('		 █░░░░░░░░░░░░░░░░░░░█')
+	print('		 ▀█░░░░░░░░░░░░░░░░░█▀')
+	print('	 	  ▀█░░░░░░░░░░░░░░░█▀')
+	print('		   ▀█░░░░░░░░░░░░░█▀')
 
 cum = Image.open('cum.jpg')
 num = int(input ('ingrese el numero de añitos: '))
