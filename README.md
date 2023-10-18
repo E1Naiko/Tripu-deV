@@ -117,6 +117,8 @@ Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta e
  - [Nos paso a todos pa, tranquilo 1](https://www.instagram.com/reel/CxqHOx0gEIV/?igshid=YWYwM2I1ZDdmOQ%3D%3D "Puede fallar. - Tusam").
  - [Nos paso a todos pa, tranquilo 2](https://www.instagram.com/reel/CwTq3y8uU6E/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==).
 
+ ![El Mejor Meme de la Historia](https://github.com/E1Naiko/Tripu-deV/blob/main/Laboratorio%20del%20Naiko/El%20Mejor%20meme.png)
+
 ------------------------------------------------------------------------------------------------
 
 
