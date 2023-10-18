@@ -1,4 +1,4 @@
-#¿CANSADO DE NO PONERLA?
+# ¿CANSADO DE NO PONERLA?
 
 ## FELICIDADES, ENCONTRASTE LA EVOLUCION, NI INTENTARLO.
 
@@ -18,10 +18,9 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Gameplays de git](https://learngitbranching.js.org/ "Gameplays de git") (LearnGitBranching).
    - [Lore](https://www.w3schools.com/ "w3 schools") (w3 schools): hay que estudiar negro.
    - [Mas lore](https://www.freecodecamp.org/ "Free Code Camp") y su [canal de youtube](https://www.youtube.com/freecodecamp "canal de youtube") (Free Code Camp).
+   - [Amigo, baja un cambio con el lore](https://overapi.com/) (OverAPI): cheat sheets de mas de 300 lenguajes, sistemas y estructuras.
    - [El verdadero Senpain't](https://chat.openai.com "El verdadero Senpain't") (ChatGPT).
-   - [Morcilla Feroz HTML](https://developer.mozilla.org/es/docs/Web/HTML).
-   - [Cursito del Tipa](https://www.programarya.com/).
-   - [Cursitos cisco](https://skillsforall.com/) (skills for all): cursitos gratuitos de la empresa esa de discordn't.
+   - [Morcilla Feroz](https://developer.mozilla.org/es/) (Mozilla).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
@@ -31,6 +30,18 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Python Tutor](https://pythontutor.com) (Python, Java, C, C++ and JavaScript).
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
+
+#### Cursitos:
+Aclaración: si te cobran, es mala tuya, y avisa que deberian ser gratis todos estos (el certificado no cuenta, pero tambien es mala tuya).
+   - [Dipa](https://www.programarya.com/): dale bancale el cursito al compa que está piola.
+   - [Gulu gulú](https://grow.google/intl/es/) (Grow with Google).
+   - [Cisco](https://skillsforall.com/) (skills for all): cursitos gratuitos de la empresa esa de discordn't.
+   - [Virgosoft](https://learn.microsoft.com/es-es/training/) (Microsoft Ignite): una compuerta de conocimiento, el bill estaria orgulloso (no? bueno malisimo el chiste).
+   - [Metan't](https://www.facebook.com/business/learn/certification) (Meta Blueprint): el Marcos Succion está con todo.
+   - [IBM](https://www.ibm.com/training/) (IBM training): qué? te pensaste que tenia un chiste? CON EL VIEJITO NO SE JODE LOCO.
+   - [Nuestro oráculo](https://education.oracle.com/Certification) (Oracle certification): sabias que java es una isla? KNOWLEDGE.
+   - [El audacity pero en codigo](https://www.udacity.com) (Udacity): el que sabe sabe.
+   - [Cursitera](https://www.coursera.org) (Coursera).
 
 #### Utilidades y truquitos:
    - [Carpetas desde el navegador de github](https://www.youtube.com/watch?v=gbYgh87JwLQ): para crear directamente carpetas desde el navegador de archivos, solo necesitas poner nombre de la carpeta/{nombre de nueva la carpeta}/etc.
@@ -44,31 +55,39 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Papu, sabias que un chino ya lo hizo?](https://theresanaiforthat.com "Y si Pibe") (There's An AI For That).
    - [Paginas en GitHub](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site "Paginas en GitHub"): tremendo lore el del compa.
    - [Perfiles en VSC](https://code.visualstudio.com/docs/editor/profiles): visual studio admite distintos perfiles de configuración, con esto se pueden hacer perfiles segun el lenguaje y extensiones que necesitemos repetidamente.
+   - [Blog de virgenes](https://kentcdodds.com/blog/first-timers-only), perdon el chiste se hacia solo.
+   - [Repo recomendado por la pepa (piggen't)](https://github.com/MunGell/awesome-for-beginners), [Instagram de la pepa](https://www.instagram.com/peperinadev/).
+
 ------------------------------------------------------------------------------------------------
 
 # La Bodega del Lore
 [![A](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")
 
-### Librerias Random:
+### Librerias Random y herramientas especificas:
+Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta especializado para cada lenguaje.
 #### Pascual (pascal):
    - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
    - [CRT](https://wiki.freepascal.org/Crt "CRT").
 
 #### :snake::snake: Pitón .i. :snake::snake: (python):
  - [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
+ - [Machetito de pitón](https://www.instagram.com/p/CydgbtItjvQ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==).
 
 #### Paja (java):
  - [Forito del blueJ](https://www.bluej.org/ "Forito del blueJ").
  - [Manualito del blueJ](https://www.bluej.org/tutorial/tutorial-v4.pdf/" "Manualito del blueJ").
 
 #### PajaSquirt (javascript):
- - No te hagas el piola.
+ - [Compresor de Codigo](https://www.minifier.org/).
 
 #### Cagon Salta Solo (CSS):
- - No te hagas el piola.
+ - :rainbow: [COLORES](https://cssgradient.io) :rainbow:.
+ - [Layouts y patrones](https://phuoc.ng/collection/css-layout/).
+ - [Ondas, literalmente re buena onda](https://getwaves.io).
        
 #### Hermana Traba Muy Lesbiana (html):
- - No te hagas el piola.
+ - [Compresor de Codigo](https://www.toptal.com/developers/html-minifier).
+ - :rainbow: [COLORES](https://htmlcolorcodes.com/es/) :rainbow:.
 
 #### Culo (C):
  - No te hagas el piola.
@@ -86,6 +105,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
  - [Python](https://youtu.be/rfscVS0vtbw?si=ajpL9uA66MyVX4ee "Python") (4 horas de mi vida que no van a volver).
  - [Programacion 2 UNLP](https://blogs.ead.unlp.edu.ar/programacion2/ "Programacion 2 UNLP").
  - [El compa que pudo bajar pascal en visual](https://www.youtube.com/watch?v=Ue8EhFy-N7c)
+ - [Ahhh, te queres hacer el game deV??](https://www.youtube.com/playlist?list=PLWKjhJtqVAbmh6kzCSUon-SoTaMvXnHMB) (listita de youtube con cursitos de programacion en unity).
 
 ### Arquitectura:
  - [Gameplay vs lore](https://www.youtube.com/watch?v=gG5-ohzSDu8 "Gameplay vs lore").
@@ -94,6 +114,8 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
  - [El luffy tiene la posta](https://www.youtube.com/watch?v=fUJuVE_SDU8 "El luffy tiene la posta").
  - [El pelado tambien](https://www.youtube.com/shorts/uAdV2Gb34uU "El pelado tambien").
  - [El pelado parte 2](https://www.youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz "El pelado parte 2").
+ - [Nos paso a todos pa, tranquilo 1](https://www.instagram.com/reel/CxqHOx0gEIV/?igshid=YWYwM2I1ZDdmOQ%3D%3D "Puede fallar. - Tusam").
+ - [Nos paso a todos pa, tranquilo 2](https://www.instagram.com/reel/CwTq3y8uU6E/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==).
 
 ------------------------------------------------------------------------------------------------
 

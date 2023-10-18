@@ -26,20 +26,58 @@ def division(numero1, numero2):
 	res3 = numero1 / numero2
 	return res3
 	
-def division2(numero1, numero2):
-	"""lo que tenemos que hacer: si en la multiplicacion lo que hicimos fue ir sumando constantemente el numero hasta el resultado,
+"""def division2(numero1, numero2):
+	lo que tenemos que hacer: si en la multiplicacion lo que hicimos fue ir sumando constantemente el numero hasta el resultado,
 	ahora debemos de restarlo, como lo  hacemos, ni puta idea, pero algo se me va a ocurrir :) 
 	definimos nuestra variable para que el numero empiece de 0, lo que tenemos que hacer es que el numero pase a ser = a numero1
 	para que a numero1 se le reste numero2 hasta que el resto sea menor a numero2, una vez que el resto sea menor al numero2
-	resultado = a la cantidad de veces que se resto numero2""" 
+	resultado = a la cantidad de veces que se resto numero2 
 	while(True):
 		resultado2 = 0
-		if resultado2 > numero2
+		if resultado2 > numero2:
 			numero1 - numero2
 			
-		else resultado2 < numero2
+		else resultado2 < numero2:
 			print(resultado2)
 	return resultado2
+"""
+
+def division3(numero1, numero2):
+	"""
+		--------------------------------------------
+		
+		algoritmo de la division:
+		numero1: mi numero dividendo
+		numero2: mi numero divisor
+		
+		resultado = cantidad de veces que pueda restar el n2 al n1
+		resto = el valor que sobre
+		
+		DEVUELVO SOLO EL RESULTADO
+		
+		--------------------------------------------
+		Pseudo codigo:
+		
+		resto = numero1 = dividendo
+		mientras resto>divisor:
+			resto-divisor
+			resultado + 1
+			si resto<divisor - termino mi mientras
+		
+		devuelvo el resultado
+		
+		--------------------------------------------
+	"""
+	resultado3 = 0
+	resto = numero1
+	while (True):
+		if resto>numero2:
+			resto -= numero2
+			resultado3 += 1
+		else:
+			break
+	return resultado3
+	
 	
 def resta(numero1, numero2):
 	res4 = numero1 - numero2
@@ -58,7 +96,7 @@ while(True):
 		print(numero1, "*", numero2, "=", multiplicacion2(numero1, numero2))
 	elif calcular == "div":
 		print(numero1, "/", numero2, "=", division(numero1, numero2))
-		print(numero1, "/", numero2, "=", division2(numero1, numero2))
+		print(numero1, "/", numero2, "=", division3(numero1, numero2))
 	elif calcular == "resta":
 		print(numero1, "-", numero2, "=", resta(numero1, numero2))
 	elif calcular == "apagar":
