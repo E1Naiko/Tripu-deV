@@ -1,0 +1,67 @@
+PRÁCTICA 6 (Adicional)
+Arreglos: Vectores y Matrices
+
+1. Ejercicio de imagen borrosa
+Siguiendo las tendencias en la edición de fotos, ahora deseamos de poder crear filtros con nuestro editor
+de fotos en Pascal. Se desea crear un módulo “blurrearImágen(fuente, destino, intensdidad)” el cual nos
+permita blurrear una imagen fuente y guardarla en otra imagen destino (este ejercicio es continuación del
+ejercicio 9 de la parte B de la práctica 6)
+Una imagen blurreada es aquella en la cual el color de cada pixel es el resultado del promedio de colores
+de los píxeles de su vecindad (Incluyendo el propio). La intensidad del efecto depende directamente de
+cuántos píxeles sean tomados en cuenta para este cálculo. Tenga en cuenta que la cantidad de píxeles
+que forman parte de la vecindad de un píxel puede disminuir si el mismo se encuentra en una esquina de
+la imagen.
+Por ejemplo, si se quiere calcular el nuevo valor del píxel de la fila 3 columna 3 de la imagen original, con
+una intensidad de 2, sus valores serán:
+
+2. Ejercicio: Juego de la Oca
+El juego de la Oca es un juego de mesa clásico que implica tirar dados
+y mover fichas por un tablero con casillas especiales. En este
+ejercicio, se te pide implementar una versión simplificada del juego
+de la Oca para 2 jugadores. El juego se desarrolla en un tablero lineal
+de 63 casillas, cada una de las cuales puede tener uno de los
+siguientes tipos: "libre", "impulso", "retroceso" o "trampa". Un
+casillero “libre” no produce ninguna acción; “impulso” indica un
+número que el jugador debe avanzar a partir del casillero actual;
+
+Vector 1 4 9 5 9 2
+
+“retroceso” indica un número el jugador debe retroceder a partir del casillero actual; mientras que “trampa” indica
+“perder el turno”. Una "prenda" solo se aplica si el jugador llega a ella mediante un tiro de dado, no a través de
+casillas de "impulso" o "retroceso".
+Mecánica del Juego:
+1. El tablero se debe inicializar de manera dinámica antes de cada partida, asignando a cada casilla su tipo y
+prenda correspondiente. Implementa una estrategia para asignar a cada casillero su “prenda”. Por
+ejemplo, los casilleros impares pueden ser de retroceso, los pares de avance, los casilleros múltiplos de 5
+pueden ser de tipo "perder turno", etc.
+2. Al comenzar el juego, el programa debe solicitar el nombre de los dos jugadores.
+3. En cada turno, el programa debe imprimir en pantalla el nombre del jugador cuyo turno es, el valor del
+dado arrojado y la prenda del casillero en el que se encuentra (si la hay).
+4. El juego continúa hasta que uno de los jugadores llega a la casilla 63, "el jardín de la oca". Si un jugador cae
+en un casillero con un valor mayor a 63, debe pasar su turno sin avanzar.
+5. El juego finaliza cuando un jugador llega al "jardín de la oca", y el programa debe anunciar al ganador.
+Módulo tirarDado():
+Implementa un módulo llamado tirarDado() que devuelva aleatoriamente un número del 1 al 6. Este módulo se
+utilizará para determinar el avance de los jugadores en cada turno.
+Consideraciones para futuras variaciones:
+Diseña tu implementación de manera que permita futuras expansiones, como incrementar o decrementar la
+cantidad de casilleros, aceptar más de 2 jugadores y determinar quién comienza mediante una tirada de dado
+inicial.
+Requisitos:
+
+1. Asegúrate de que el juego siga las reglas y mecánicas descritas anteriormente.
+2. Comenta tu código de manera clara para explicar cómo funciona y cómo podrían realizarse futuras
+expansiones.
+
+3 Ejercicio: Versionado de Documentos
+La empresa se encuentra desarrollando un sistema de versionado de un
+documento. Para esto, se guardan hasta un máximo de 40 versiones del
+documento. De cada versión se conoce, el título, un link al texto completo y la
+fecha en formato UNIX (un entero). Esta información se encuentra ordenada
+por fecha. Se nos asigna desarrollar:
+1. Un método que reciba las últimas versiones de un documento, y una
+fecha en formato UNIX, y retorne la versión correspondiente a esa
+fecha. En caso de no encontrar una versión retornar una versión con
+título “Inexistente”.
+2. Modificar el método del punto anterior para que, en caso de no encontrar la versión, devolver la versión
+con la fecha más cercana.
