@@ -68,6 +68,7 @@ Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta e
 #### Pascual (pascal):
    - [SysUtils](https://npascal.sourceforge.net/pdevelop/runtime/Unit_SysUtils.html "SysUtils"): la verdadera Onee-San.
    - [CRT](https://wiki.freepascal.org/Crt "CRT").
+   - [Librerias Graficas](https://wiki.freepascal.org/Graphics_libraries).
 
 #### :snake::snake: Pitón .i. :snake::snake: (python):
  - [Blog random de librerias](https://www.edureka.co/blog/python-libraries/ "Blog random de librerias"), hay que testearlas.
