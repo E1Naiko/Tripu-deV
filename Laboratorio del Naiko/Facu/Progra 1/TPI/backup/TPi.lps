@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="TPi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TPI"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="123"/>
+        <CursorPos X="21" Y="135"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="TPi.pas"/>
+        <Caret Line="113" Column="9" TopLine="101"/>
+      </Position>
+      <Position>
+        <Filename Value="TPi.pas"/>
+        <Caret Line="120" Column="26" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="TPi.pas"/>
+        <Caret Line="149" Column="11" TopLine="125"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
