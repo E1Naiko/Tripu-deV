@@ -70,10 +70,10 @@ begin
      v[9]:= 'PVCPremium';
      v[10]:= 'Ventalum';
 
-	 for i:=5+random(10) downto 1 do {for de marca}
+	 for i:= random(10) downto 1 do {for de marca}
 	 begin
 	     p.marca:= v[i];
-		 for j:=random(5) downto 1 do {for de anio}
+		 for j:= random(5) downto 1 do {for de anio}
 	     begin
 		 	p.anio:= 2016+j;
 			p.codigo:= random(10);
@@ -112,28 +112,47 @@ procedure insertarFinal(var l: listaProductosExtremos; Elemento: producto);
   var nue: listaProductos;
   begin
     new(nue); nue^.dato:= elemento; nue^.sig:= nil;
-    if (l.pri=nil) then l.pri:= nue
+    if (l.pri = nil) then l.pri:= nue
                 else l.ult^.sig:= nue;
     l.ult:=nue;
   end;
 
+procedure insertarOrdenado(var l: lsitaMarcas; Datos: producto);
+    var nue, ant, act: listaMarcas;
+    begin
+    end;
 
-
-procedure Insertarordenado (var lNueva: listaMarcas; lOriginal: listaProductos);  // ORDENA SEGUN MARCA
+procedure recorrer (var lNueva: listaMarcas; lOriginal: listaProductos);  // ORDENA SEGUN MARCA
   var
-    act: listaMarcas;
-    codAct: integer;
+    marcaAct: string;
   begin
-       act:=lNueva;
-
-       while (lOriginal <> nil) do begin
-            codAct:=lOriginal^.dato.codigo;
-            while (lOriginal <> nil) and (codAct=lOriginal^.dato.codigo) do begin
-                insertarFinal(act^.dato, lOriginal^.dato);
-                lOriginal:=lOriginal^.sig;
+       while (lOriginal <> nil) do begin // RECORRO TODA LA LISTA ORIGINAL
+       
+            marcaAct:= lOriginal^.dato.marca;
+            
+            while (lOriginal <> nil) and (marcaAct = lOriginal^.dato.marca) do begin // Mientras este en el mismo cod, inserto
+                writeln('DEBUG - Cod actual: ', marcaAct);
+                insertarOrdenado(nue^.dato, lOriginal^.dato);
+                lOriginal:= lOriginal^.sig;
             end;
+            // SIN FINIQUITAR: tas teniendo un kilombo con los nodos.
+            
         end;
   end;
+  
+  
+procedure imprimirListaMarca(l: listaMarcas);
+    begin
+        writeln ('Lista por Marcas: ');
+        if (l=nil) then writeln('Error')
+            else begin
+                while (l<>nil) do begin
+                    Writeln('Nueva Marca:');
+                    imprimirLista(l^.dato.pri);
+                    l:=l^.sig;
+                end;
+            end;
+    end;
 
 var
    l: listaProductos;
@@ -141,10 +160,13 @@ var
 begin
      Randomize;
 
-     l:= nil; lM:=nil;
+     l:= nil; lM:= nil;
      crearLista(l);
      writeln ('Lista generada: ');
      imprimirLista(l);
+     
+     recorrer(lM, l);
+     imprimirListaMarca(lM);
 
      readln;
 end.
