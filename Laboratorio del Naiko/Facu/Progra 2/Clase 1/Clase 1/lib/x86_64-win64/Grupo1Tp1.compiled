@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1317892579"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiC:\Users\alumnos\Desktop\MesaPeñalba\Clase 1\lib\x86_64-win64&quot; &quot;-FuC:\Users\alumnos\Desktop\MesaPeñalba\Clase 1\&quot; &quot;-FUC:\Users\alumnos\Desktop\MesaPeñalba\Clase 1\lib\x86_64-win64\&quot; &quot;-FEC:\Users\alumnos\Desktop\MesaPeñalba\Clase 1\&quot; &quot;-oC:\Users\alumnos\Desktop\MesaPeñalba\Clase 1\Grupo1Tp1.exe&quot; Grupo1Tp1.pas"/>
-  <Complete Value="False"/>
-</CONFIG>
