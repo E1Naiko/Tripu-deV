@@ -168,6 +168,21 @@ Begin
     nue^.sig := act;
 End;
 
+procedure insertarOrdenado(var l: lista; elemento: integer);
+var nue, ant, act: lista;
+begin
+    new(nue); nue^.datos:= elemento; nue^.sig:= nil;
+    act:=l; act:=l;
+
+    while (act<>nil) and (act^.datos < elemento) do begin
+        ant:= act; act:=act^.sig;
+    end;
+
+    if (l=act) then l:= nue
+                else ant^.sig:= nue;
+    nue^.sig:=act;
+end;
+
 
 
 
