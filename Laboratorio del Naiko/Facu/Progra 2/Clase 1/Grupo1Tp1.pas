@@ -79,7 +79,7 @@ begin
 			p.codigo:= random(10);
 			while (p.codigo <> 0) do Begin
 				p.nombre:= Concat('Producto-', IntToStr(random (200)));
-				p.precio := random(1000000);
+				p.precio := random(1000000)+1;
 				agregarAdelante(l, p);
                 p.codigo:= random(10);
 		   end;
@@ -107,35 +107,43 @@ begin
      end;
 end;
 
-{------------------------ Nosotros ------------------------}
-procedure insertarFinal(var l: listaProductosExtremos; Elemento: producto);
-  var nue: listaProductos;
-  begin
-    new(nue); nue^.dato:= elemento; nue^.sig:= nil;
-    if (l.pri = nil) then l.pri:= nue
-                else l.ult^.sig:= nue;
-    l.ult:=nue;
-  end;
-
-procedure insertarOrdenado(var l: listaMarcas; Datos: producto);
-    var nue, ant, act: listaMarcas;
-    begin
-    end;
+{------------------------ Propios ------------------------}
 
 procedure recorrer (var lNueva: listaMarcas; lOriginal: listaProductos);  // ORDENA SEGUN MARCA
+     procedure InsertarProductoEnMarca(var marca: listaProductosExtremos; productoNuevo: producto);
+     var
+       nuevoNodo: listaProductos;
+     begin
+       New(nuevoNodo);
+       nuevoNodo^.dato := productoNuevo;
+       nuevoNodo^.sig := nil;
+     
+       if marca.pri = nil then
+       begin
+         marca.pri := nuevoNodo;
+         marca.ult := nuevoNodo;
+       end
+       else
+       begin
+         marca.ult^.sig := nuevoNodo;
+         marca.ult := nuevoNodo;
+       end;
+     end;
   var
+	act: listaMarcas;
     marcaAct: string;
+    
   begin
+		act:= lNueva;
        while (lOriginal <> nil) do begin // RECORRO TODA LA LISTA ORIGINAL
-       
             marcaAct:= lOriginal^.dato.marca;
             
             while (lOriginal <> nil) and (marcaAct = lOriginal^.dato.marca) do begin // Mientras este en el mismo cod, inserto
-                writeln('DEBUG - Cod actual: ', marcaAct);
-                insertarOrdenado(nue^.dato, lOriginal^.dato);
+                writeln('DEBUG - Cod actual: ', marcaAct); // ---------- DEBUG
+                InsertarProductoEnMarca(act^.dato, lOriginal^.dato);
+                
                 lOriginal:= lOriginal^.sig;
             end;
-            // SIN FINIQUITAR: tas teniendo un kilombo con los nodos.
             
         end;
   end;
@@ -153,6 +161,29 @@ procedure imprimirListaMarca(l: listaMarcas);
                 end;
             end;
     end;
+    
+Procedure liberarMemProductos(Var l: listaProductos);
+	Var aux:   listaProductos;
+	Begin
+		While (l<>Nil) Do
+			Begin
+				aux := l;
+				l := l^.sig;
+				dispose(aux);
+			End;
+	End;
+	
+Procedure liberarMemMarcas(var l: listaMarcas);
+	var aux: listaMarcas;
+	begin
+		While (l<>Nil) Do
+			Begin
+				aux := l;
+				liberarMemProductos(l^.dato.pri);
+				l := l^.sig;
+				dispose(aux);
+			End;
+	end;
 
 var
    l: listaProductos;
@@ -169,4 +200,6 @@ begin
      imprimirListaMarca(lM);
 
      readln;
+     liberarMemProductos(l);
+     liberarMemMarcas(lM);
 end.
