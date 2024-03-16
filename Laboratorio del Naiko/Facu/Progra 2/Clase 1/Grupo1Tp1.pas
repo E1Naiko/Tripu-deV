@@ -117,13 +117,24 @@ procedure insertarFinal(var l: listaProductosExtremos; Elemento: producto);
     l.ult:=nue;
   end;
 
-procedure insertarOrdenado(var l: listaMarcas; Datos: producto);
-    var nue, ant, act: listaMarcas;
-    begin
-    end;
+procedure insertarOrdenado(var l: listaMarcas; elemento: producto);
+	var nue, ant, act: listaMarcas;
+	begin
+		new(nue); nue^.sig:= nil;
+		act:=l; act:=l;
+	
+		while (act<>nil) and (act^.dato.pri^.dato.marca < elemento.marca) do begin
+			ant:= act; act:=act^.sig;
+		end;
+	
+		if (l=act) then 
+					else ant^.sig:= nue;
+		nue^.sig:=act;
+	end;
 
 procedure recorrer (var lNueva: listaMarcas; lOriginal: listaProductos);  // ORDENA SEGUN MARCA
   var
+	nue: listaMarcas;
     marcaAct: string;
   begin
        while (lOriginal <> nil) do begin // RECORRO TODA LA LISTA ORIGINAL
@@ -132,7 +143,6 @@ procedure recorrer (var lNueva: listaMarcas; lOriginal: listaProductos);  // ORD
             
             while (lOriginal <> nil) and (marcaAct = lOriginal^.dato.marca) do begin // Mientras este en el mismo cod, inserto
                 writeln('DEBUG - Cod actual: ', marcaAct);
-                insertarOrdenado(nue^.dato, lOriginal^.dato);
                 lOriginal:= lOriginal^.sig;
             end;
             // SIN FINIQUITAR: tas teniendo un kilombo con los nodos.
