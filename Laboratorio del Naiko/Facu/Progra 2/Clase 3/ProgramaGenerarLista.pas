@@ -47,7 +47,7 @@ var
   n: integer;
 begin
  l:= nil;
- n := random (20);
+ n := random (20)+10;
  While (n <> 0) do Begin
    agregarAdelante(L, n);
    n := random (20);
@@ -202,7 +202,7 @@ ACTIVIDAD 4
 function buscar(a:arbol; elemento: integer): arbol;
 begin
   if (a=nil) then buscar:=nil
-  else if (a^.dato=elemento) then buscar:=a
+  else if (a^.dato=elemento) then buscar:= a
                            else if (a^.dato>elemento) then buscar:= buscar(a^.HI,elemento)
                                                       else buscar:= buscar(a^.HD,elemento);
 end;
@@ -215,6 +215,32 @@ ACTIVIDAD 5
 
 }
 
+function verMin(a: arbol): integer;
+const retERROR:integer=-1;
+var act: integer;
+begin
+	if (a = nil) then verMin:= retERROR
+		else begin
+			act:= verMin(a^.HI);
+			if (act = retERROR) then verMin:= a^.dato
+				else verMin:= act;
+		end;
+end;
+
+function verMax(a: arbol): integer;
+const retERROR:integer=-1;
+var act: integer;
+begin
+	if (a = nil) then verMax:= retERROR
+		else begin
+			act:= verMax(a^.HD);
+			if (act = retERROR) then verMax:= a^.dato
+				else verMax:= act;
+		end;
+end;
+
+
+{------------- Manejo de memoria -------------}
 procedure liberarMemLista(var pri:lista);
     var
         aux: lista;
@@ -241,33 +267,36 @@ end;
 Var
 
  l: lista;
- al: arbol;
+ a: arbol;
  num: integer; // actividad 4, numero a buscar
  res: arbol;
 
 begin
  Randomize;
- al:=nil;
+ a:= nil;
 
  crearLista(l);
  writeln ('Lista generada: ');
  imprimirLista(l);
 
- cargarArbol(l,al);
+ cargarArbol(l,a);
  writeln;
  writeln('Arbol generado:');
- imprimirpornivel(al);
+ imprimirpornivel(a);
 
- writeln('pre orden:'); preOrden(al); writeln;
- writeln('en orden:'); enOrden(al); writeln;
- writeln('post orden:'); postOrden(al); writeln;
+ writeln('pre orden:'); preOrden(a); writeln;
+ writeln('en orden:'); enOrden(a); writeln;
+ writeln('post orden:'); postOrden(a); writeln;
 
  writeln('Ingrese un numero a buscar en la lista: '); readln(num);
- res:= buscar(al,num);
- if (res=nil) then writeln('Elemento no encontrado')
+ res:= buscar(a,num);
+ if (res = nil) then writeln('Elemento no encontrado')
               else writeln('numero ', res^.dato, ' encontrado');
+              
+ writeln('Valor minimo encontrado: ', verMin(a));   
+ writeln('Valor maximo encontrado: ', verMax(a));           
 
  readln;
  liberarMemLista(l);
- liberarMemArbol(al);
+ liberarMemArbol(a);
 end.
