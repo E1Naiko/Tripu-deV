@@ -183,7 +183,106 @@ begin
     nue^.sig:=act;
 end;
 
+{ARBOLES}
 
+
+procedure insertarEnRama (var a: arbol; elemento: integer); // toma un elemento y lo inserta en una rama de un arbol
+begin
+ if (a = nil) then begin
+               new(a);
+               a^.dato:= elemento;
+               a^.HD:= nil;
+               a^.HI:= nil;
+   end else
+     if (a^.dato > elemento) then
+                 insertarEnRama(a^.HI, elemento)
+     else insertarEnRama(a^.HD, elemento);
+end;
+
+
+
+procedure cargarArbol(l: lista; var a: arbol);
+begin
+  while (l<>nil) do begin
+    insertarRama(a,l^.dato);
+    l:=l^.sig;
+  end;
+end;
+
+
+Procedure preOrden( a: arbol );
+begin
+  if ( a <> nil ) then begin
+    write (a^.dato, '   ');
+    preOrden (a^.HI);
+    preOrden (a^.HD)
+  end;
+end;
+
+procedure enOrden(a: arbol);
+begin
+  if (a <> nil) then begin
+    enOrden(a^.HI);
+    write (a^.dato, '   ');
+    enOrden(a^.HD);
+  end;
+end;
+
+procedure postOrden(a: arbol);
+begin
+     if (a<>nil) then begin
+       postOrden(a^.HD);
+       write (a^.dato, '   ');
+       postOrden(a^.HI);
+     end;
+end;
+
+function buscar(a:arbol; elemento: integer): arbol;
+begin
+  if (a=nil) then buscar:=nil
+  else if (a^.dato=elemento) then buscar:= a
+                           else if (a^.dato>elemento) then buscar:= buscar(a^.HI,elemento)
+                                                      else buscar:= buscar(a^.HD,elemento);
+end;
+
+function verMin(a: arbol): integer;
+const retERROR:integer=-1;
+var act: integer;
+begin
+	if (a = nil) then verMin:= retERROR
+		else begin
+			act:= verMin(a^.HI);
+			if (act = retERROR) then verMin:= a^.dato
+				else verMin:= act;
+		end;
+end;
+
+function verMax(a: arbol): integer;
+const retERROR:integer=-1;
+var act: integer;
+begin
+	if (a = nil) then verMax:= retERROR
+		else begin
+			act:= verMax(a^.HD);
+			if (act = retERROR) then verMax:= a^.dato
+				else verMax:= act;
+		end;
+end;
+
+Procedure busquedaAcotada(a: Arbol_Usuarios; inf:integer; sup:integer); 
+begin
+  if (a <> nil) then
+    if (a^.dato.id >= inf) then
+      if (a^.dato.id <= sup) then begin
+        write(a^.dato.nombre);
+        busquedaAcotada(a^.hi, inf, sup);
+        busquedaAcotada (a^.hd, inf, sup);
+      end
+      else
+        busquedaAcotada(a^.hi, inf, sup)
+    else
+      busquedaAcotada(a^.hd, inf, sup);
+end;
 
 
 Begin
