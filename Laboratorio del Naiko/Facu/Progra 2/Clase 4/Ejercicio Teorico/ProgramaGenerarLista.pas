@@ -41,7 +41,7 @@ end;
 
 
 {-----------------------------------------------------------------------------
-CREARLISTA - Genera una lista con números aleatorios }
+CREARLISTA - Genera una lista con nÃºmeros aleatorios }
 procedure crearLista(var l: Lista);
 var
   n: integer;
@@ -81,7 +81,7 @@ end;
 
 
 {-----------------------------------------------------------------------------
-AGREGARATRAS - Agrega un elemento atrás en l}
+AGREGARATRAS - Agrega un elemento atrÃ¡s en l}
 
 Procedure AgregarAtras (var l, ult: listaNivel; a:arbol);
  var nue:listaNivel;
@@ -97,7 +97,7 @@ Procedure AgregarAtras (var l, ult: listaNivel; a:arbol);
 
 
 {-----------------------------------------------------------------------------
-IMPRIMIRPORNIVEL - Muestra los datos del árbol a por niveles }
+IMPRIMIRPORNIVEL - Muestra los datos del Ã¡rbol a por niveles }
 
 Procedure imprimirpornivel(a: arbol);
 var
@@ -127,9 +127,9 @@ end;
 
 {
 ACTIVIDAD 1
- A) Implementar el módulo insertar  en un ABB de enteros
- B) Invocar al módulo insertar a partir de los elementos de la lista generada anteriormente.
- C) Invocar al módulo imprimirpornivel con el árbol generado en c).
+ A) Implementar el mÃ³dulo insertar  en un ABB de enteros
+ B) Invocar al mÃ³dulo insertar a partir de los elementos de la lista generada anteriormente.
+ C) Invocar al mÃ³dulo imprimirpornivel con el Ã¡rbol generado en c).
  D) Graficar en papel el ABB y comprobar que los datos que se muestran en d) se corresponden con la estructura generada.
 
 }
@@ -157,10 +157,10 @@ end;
 
 {
  Actividad 3
- A) Implementar el módulo preOrden que imprima los valores del ABB ya generado.
- B) Implementar el módulo enOrden que imprima los valores del ABB ya generado.
- C) Implementar el módulo postOrden que imprima los valores del ABB ya generado.
- D) Invocar cada uno de los módulos anteriores y comparar los resultados obtenidos.
+ A) Implementar el mÃ³dulo preOrden que imprima los valores del ABB ya generado.
+ B) Implementar el mÃ³dulo enOrden que imprima los valores del ABB ya generado.
+ C) Implementar el mÃ³dulo postOrden que imprima los valores del ABB ya generado.
+ D) Invocar cada uno de los mÃ³dulos anteriores y comparar los resultados obtenidos.
 }
 
 Procedure preOrden( a: arbol );
@@ -195,8 +195,8 @@ end;
 
 {
 ACTIVIDAD 4
- A) Implementar el módulo buscar que reciba un árbol y un valor y devuelva un puntero al nodo donde se encuentra dicho valor. En caso de no encontrarlo, debe retornar nil.
- B) Invocar al módulo buscar con un valor que se ingresa de teclado. Mostrar el resultado de la búsqueda.
+ A) Implementar el mÃ³dulo buscar que reciba un Ã¡rbol y un valor y devuelva un puntero al nodo donde se encuentra dicho valor. En caso de no encontrarlo, debe retornar nil.
+ B) Invocar al mÃ³dulo buscar con un valor que se ingresa de teclado. Mostrar el resultado de la bÃºsqueda.
 }
 
 function buscar(a:arbol; elemento: integer): arbol;
@@ -209,9 +209,9 @@ end;
 
 {
 ACTIVIDAD 5
- A) Implementar el módulo verMin que reciba un árbol y devuelva el valor mínimo. En caso de recibir un árbol vacío, retornar -1.
- B) Implementar el módulo verMax que reciba un árbol y devuelva el valor máximo. En caso de recibir un árbol vacío, retornar -1.
- C) Invocar a los módulos generados en a) y b). Mostrar los resultados obtenidos.
+ A) Implementar el mÃ³dulo verMin que reciba un Ã¡rbol y devuelva el valor mÃ­nimo. En caso de recibir un Ã¡rbol vacÃ­o, retornar -1.
+ B) Implementar el mÃ³dulo verMax que reciba un Ã¡rbol y devuelva el valor mÃ¡ximo. En caso de recibir un Ã¡rbol vacÃ­o, retornar -1.
+ C) Invocar a los mÃ³dulos generados en a) y b). Mostrar los resultados obtenidos.
 
 }
 
@@ -241,10 +241,10 @@ end;
 
 {
 ACTIVIDAD 7
- A) Generar un árbol de números enteros utilizando la lista ya creada.
- B) Mostrar el contenido del árbol en forma creciente.
- C) Implementar el módulo verValoresEnRango que reciba un árbol  y dos valores, que indiquen un rango, e informe los valores del árbol que se encuentren en dicho rango.
- D) Invocar al módulo verValoresEnRango con dos valores leídos de teclados.
+ A) Generar un Ã¡rbol de nÃºmeros enteros utilizando la lista ya creada.
+ B) Mostrar el contenido del Ã¡rbol en forma creciente.
+ C) Implementar el mÃ³dulo verValoresEnRango que reciba un Ã¡rbol  y dos valores, que indiquen un rango, e informe los valores del Ã¡rbol que se encuentren en dicho rango.
+ D) Invocar al mÃ³dulo verValoresEnRango con dos valores leÃ­dos de teclados.
 }
 
 procedure verValoresEnRango(a:arbol; inf,sup:integer);
@@ -264,9 +264,9 @@ end;
 
 {
  ACTIVIDAD 8
- A) Implementar el módulo borrarElemento que reciba un árbol y un valor a eliminar.
- B) Invocar al módulo borrarElemento con un valor que se ingresa de teclado.
- C) Invocar al módulo imprimirpornivel con el árbol resultante en el punto b).
+ A) Implementar el mÃ³dulo borrarElemento que reciba un Ã¡rbol y un valor a eliminar.
+ B) Invocar al mÃ³dulo borrarElemento con un valor que se ingresa de teclado.
+ C) Invocar al mÃ³dulo imprimirpornivel con el Ã¡rbol resultante en el punto b).
 
 }
 
@@ -280,30 +280,30 @@ begin
 
     // caso: Encontro el elemento
     else begin
-      sePudoEliminar:=true;
 
       {Estrategia:
-      Si el nodo tiene un hijo, el  nodo puede ser borrado después que su
+      Si el nodo tiene un hijo, el  nodo puede ser borrado despuÃ©s que su
       padre actualice el puntero al hijo del nodo que se quiere borrar.}
 
-      // subCaso (1 hijo solo): solo tiene hijo derecho
+      // subCaso (1 hijo solo): solo tiene hijo derecho, busco el verMax
       if (a^.HI = nil) and (a^.HD <> nil) then begin
 
         end
 
-         // subCaso (1 hijo solo): solo tiene hijo izquierdo
+         // subCaso (1 hijo solo): solo tiene hijo izquierdo, busco el verMin
          else if (a^.HI <> nil) and (a^.HD = nil) then
 
           // subCaso: tiene ambos hijos
            { Estrategia:
              1. Se busca el valor a borrar
              2. Se busca y selecciona  el hijo mas a la izquierda del
-                subárbol derecho del nodo a borrar
-                (o el hijo mas a la derecha del subárbol izquierdo).
+                subÃ¡rbol derecho del nodo a borrar
+                (o el hijo mas a la derecha del subÃ¡rbol izquierdo).
              3. Se intercambia el valor del nodo encontrado por el que se quiere borrar
-             4. Se llama al borrar a partir del hijo derecho con el valor del nodo encontrado. ¿Qué característica tiene ese nodo encontrado?
+             4. Se llama al borrar a partir del hijo derecho con el valor del nodo encontrado. Â¿QuÃ© caracterÃ­stica tiene ese nodo encontrado?
            }
           else
+       sePudoEliminar:= true;
     end;
 end;
 
@@ -323,11 +323,11 @@ procedure liberarMemArbol(var Al: arbol);  // GENERADO POR CHAT GPT
 var aux: arbol;
 begin
   if (Al <> nil) then begin
-    LiberarMemArbol(Al^.HI); // Liberar subárbol izquierdo
-    LiberarMemArbol(Al^.HD); // Liberar subárbol derecho
+    LiberarMemArbol(Al^.HI); // Liberar subÃ¡rbol izquierdo
+    LiberarMemArbol(Al^.HD); // Liberar subÃ¡rbol derecho
     aux:= al;
     dispose(aux); // Liberar nodo actual
-    al := nil; // Asignar nil a la raíz para indicar que el árbol está vacío
+    al := nil; // Asignar nil a la raÃ­z para indicar que el Ã¡rbol estÃ¡ vacÃ­o
   end;
 end;
 
