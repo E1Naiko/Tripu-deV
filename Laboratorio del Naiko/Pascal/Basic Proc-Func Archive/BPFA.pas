@@ -1,5 +1,5 @@
 
-Program BPFA;
+Program BPFA; // Basic Procedure-Function Archive for pascal
 
 Procedure recorrerSecuenciaDeCaracteres(devuelveCantCaracteres, devuelveCantPalabras: integer);
 // RECORRE UNA SECUENCIA DE CARACTERES Y DEVUELVE LA CANTIDAD DE PALABRAS Y CARACTERES QUE LA CONFORMAN
@@ -215,7 +215,7 @@ begin
   if ( a <> nil ) then begin
     write (a^.dato, '   ');
     preOrden (a^.HI);
-    preOrden (a^.HD)
+    preOrden (a^.HD);
   end;
 end;
 
