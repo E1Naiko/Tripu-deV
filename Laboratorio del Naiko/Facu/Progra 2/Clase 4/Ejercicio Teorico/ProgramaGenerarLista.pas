@@ -1,129 +1,171 @@
+
 Program ProgramaGenerarArbol;
-const
-  absurdo=99999;
-Type
 
-  // Lista de enteros
-  lista = ^nodoL;
-  nodoL = record
-    dato: integer;
-    sig: lista;
-  end;
+Const 
+    absurdo =   99999;
 
-  // Arbol de enteros
-  arbol= ^nodoA;
-  nodoA = Record
-    dato: integer;
-    HI: arbol;
-    HD: arbol;
-  End;
+Type 
 
-  // Lista de Arboles
-  listaNivel = ^nodoN;
-  nodoN = record
-    info: arbol;
-    sig: listaNivel;
-  end;
+    // Lista de enteros
+    lista =   ^nodoL;
+    nodoL =   Record
+        dato:   integer;
+        sig:   lista;
+    End;
+
+    // Arbol de enteros
+    arbol =   ^nodoA;
+    nodoA =   Record
+        dato:   integer;
+        HI:   arbol;
+        HD:   arbol;
+    End;
+
+    // Lista de Arboles
+    listaNivel =   ^nodoN;
+    nodoN =   Record
+        info:   arbol;
+        sig:   listaNivel;
+    End;
+
+
+
+
 
 
 {-----------------------------------------------------------------------------
 AgregarAdelante - Agrega nro adelante de l}
-procedure agregarAdelante(var l: Lista; nro: integer);
-var
-  aux: lista;
-begin
-  new(aux);
-  aux^.dato := nro;
-  aux^.sig := l;
-  l:= aux;
-end;
+Procedure agregarAdelante(Var l: Lista; nro: integer);
+
+Var 
+    aux:   lista;
+Begin
+    new(aux);
+    aux^.dato := nro;
+    aux^.sig := l;
+    l := aux;
+End;
+
+
+
+
 
 
 
 {-----------------------------------------------------------------------------
 CREARLISTA - Genera una lista con números aleatorios }
-procedure crearLista(var l: Lista);
-var
-  n: integer;
-begin
- l:= nil;
- n := random (20)+10;
- While (n <> 0) do Begin
-   agregarAdelante(L, n);
-   n := random (20);
- End;
-end;
+Procedure crearLista(Var l: Lista);
+
+Var 
+    n:   integer;
+Begin
+    l := Nil;
+    n := random (20)+10;
+    While (n <> 0) Do
+        Begin
+            agregarAdelante(L, n);
+            n := random (20);
+        End;
+End;
+
+
+
+
 
 
 {-----------------------------------------------------------------------------
 IMPRIMIRLISTA - Muestra en pantalla la lista l }
-procedure imprimirLista(l: Lista);
-begin
- While (l <> nil) do begin
-   write(l^.dato, ' - ');
-   l:= l^.sig;
- End;
-end;
+Procedure imprimirLista(l: Lista);
+Begin
+    While (l <> Nil) Do
+        Begin
+            write(l^.dato, ' - ');
+            l := l^.sig;
+        End;
+End;
+
+
+
+
 
 {-----------------------------------------------------------------------------
 CONTARELEMENTOS - Devuelve la cantidad de elementos de una lista l }
 
-function ContarElementos (l: listaNivel): integer;
-  var c: integer;
-begin
- c:= 0;
- While (l <> nil) do begin
-   c:= c+1;
-   l:= l^.sig;
- End;
- contarElementos := c;
-end;
+Function ContarElementos (l: listaNivel):   integer;
+
+Var c:   integer;
+Begin
+    c := 0;
+    While (l <> Nil) Do
+        Begin
+            c := c+1;
+            l := l^.sig;
+        End;
+    contarElementos := c;
+End;
+
+
+
+
 
 
 {-----------------------------------------------------------------------------
 AGREGARATRAS - Agrega un elemento atrás en l}
 
-Procedure AgregarAtras (var l, ult: listaNivel; a:arbol);
- var nue:listaNivel;
+Procedure AgregarAtras (Var l, ult: listaNivel; a:arbol);
 
- begin
- new (nue);
- nue^.info := a;
- nue^.sig := nil;
- if l= nil then l:= nue
-           else ult^.sig:= nue;
- ult:= nue;
- end;
+Var nue:   listaNivel;
+
+Begin
+    new (nue);
+    nue^.info := a;
+    nue^.sig := Nil;
+    If l= Nil Then l := nue
+    Else ult^.sig := nue;
+    ult := nue;
+End;
+
+
+
+
 
 
 {-----------------------------------------------------------------------------
 IMPRIMIRPORNIVEL - Muestra los datos del árbol a por niveles }
 
 Procedure imprimirpornivel(a: arbol);
-var
-   l, aux, ult: listaNivel;
-   nivel, cant, i: integer;
-begin
-   l:= nil;
-   if(a <> nil)then begin
-                 nivel:= 0;
-                 agregarAtras (l,ult,a);
-                 while (l<> nil) do begin
+
+Var 
+    l, aux, ult:   listaNivel;
+    nivel, cant, i:   integer;
+Begin
+    l := Nil;
+    If (a <> Nil)Then
+        Begin
+            nivel := 0;
+            agregarAtras (l,ult,a);
+            While (l<> Nil) Do
+                Begin
                     nivel := nivel + 1;
-                    cant:= contarElementos(l);
+                    cant := contarElementos(l);
                     write ('Nivel ', nivel, ': ');
-                    for i:= 1 to cant do begin
-                      write (l^.info^.dato, ' - ');
-                      if (l^.info^.HI <> nil) then agregarAtras (l,ult,l^.info^.HI);
-                      if (l^.info^.HD <> nil) then agregarAtras (l,ult,l^.info^.HD);
-                      aux:= l;
-                      l:= l^.sig;
-                      dispose (aux);
-                     end;
-                     writeln;
-                 end;
-               end;
-end;
+                    For i:= 1 To cant Do
+                        Begin
+                            write (l^.info^.dato, ' - ');
+                            If (l^.info^.HI <> Nil) Then agregarAtras (l,ult,l^.info^.HI);
+                            If (l^.info^.HD <> Nil) Then agregarAtras (l,ult,l^.info^.HD);
+                            aux := l;
+                            l := l^.sig;
+                            dispose (aux);
+                        End;
+                    writeln;
+                End;
+        End;
+End;
+
+
+
+
 
 {
 ACTIVIDAD 1
@@ -134,26 +176,34 @@ ACTIVIDAD 1
 
 }
 
-procedure insertarRama (var a: arbol; elemento: integer); // toma un elemento y lo inserta en una rama de un arbol
-begin
- if (a = nil) then begin
-               new(a);
-               a^.dato:= elemento;
-               a^.HD:= nil;
-               a^.HI:= nil;
-   end else
-     if (a^.dato > elemento) then
-                 insertarRama(a^.HI, elemento)
-     else insertarRama(a^.HD, elemento);
-end;
+Procedure insertarRama (Var a: arbol; elemento: integer);
+// toma un elemento y lo inserta en una rama de un arbol
+Begin
+    If (a = Nil) Then
+        Begin
+            new(a);
+            a^.dato := elemento;
+            a^.HD := Nil;
+            a^.HI := Nil;
+        End
+    Else
+        If (a^.dato > elemento) Then
+            insertarRama(a^.HI, elemento)
+    Else insertarRama(a^.HD, elemento);
+End;
 
-procedure cargarArbol(l: lista; var a: arbol);
-begin
-  while (l<>nil) do begin
-    insertarRama(a,l^.dato);
-    l:=l^.sig;
-  end;
-end;
+Procedure cargarArbol(l: lista; Var a: arbol);
+Begin
+    While (l<>Nil) Do
+        Begin
+            insertarRama(a,l^.dato);
+            l := l^.sig;
+        End;
+End;
+
+
+
+
 
 {
  Actividad 3
@@ -164,34 +214,45 @@ end;
 }
 
 Procedure preOrden( a: arbol );
-begin
-  if ( a <> nil ) then begin
-    write (a^.dato, '   ');
-    preOrden (a^.HI);
-    preOrden (a^.HD);
-  end;
-end;
+Begin
+    If ( a <> Nil ) Then
+        Begin
+            write (a^.dato, '   ');
+            preOrden (a^.HI);
+            preOrden (a^.HD);
+        End;
+End;
 
-procedure enOrden(a: arbol);
+Procedure enOrden(a: arbol);
 {Lo que hace el "enOrden" es buscar el mas chico y volver para atras en orden}
-begin
-  if (a <> nil) then begin
-    enOrden(a^.HI);
-    write (a^.dato, '   ');
-    enOrden(a^.HD);
-  end;
-end;
+Begin
+    If (a <> Nil) Then
+        Begin
+            enOrden(a^.HI);
+            write (a^.dato, '   ');
+            enOrden(a^.HD);
+        End;
+End;
 
-procedure postOrden(a: arbol);
+Procedure postOrden(a: arbol);
+
+
+
+
 {Lo mismo que enOrden pero al revez, se va pa la raiz, primero muestra el arbol derecho, despues el izquierdo
-esto lo va a ir cambiando segun corresponda, va a rrecorrer lo mas a la izquierda que puede despues mas a la derecha que puede, muestra valor, y repite}
-begin
-     if (a<>nil) then begin
-       postOrden(a^.HD);
-       write (a^.dato, '   ');
-       postOrden(a^.HI);
-     end;
-end;
+  esto lo va a ir cambiando segun corresponda, va a rrecorrer lo mas a la izquierda que puede despues mas a la derecha que puede, muestra valor, y repite}
+Begin
+    If (a<>Nil) Then
+        Begin
+            postOrden(a^.HD);
+            write (a^.dato, '   ');
+            postOrden(a^.HI);
+        End;
+End;
+
+
+
+
 
 {
 ACTIVIDAD 4
@@ -199,13 +260,17 @@ ACTIVIDAD 4
  B) Invocar al módulo buscar con un valor que se ingresa de teclado. Mostrar el resultado de la búsqueda.
 }
 
-function buscar(a:arbol; elemento: integer): arbol;
-begin
-  if (a=nil) then buscar:=nil
-  else if (a^.dato=elemento) then buscar:= a
-                           else if (a^.dato>elemento) then buscar:= buscar(a^.HI,elemento)
-                                                      else buscar:= buscar(a^.HD,elemento);
-end;
+Function buscar(a:arbol; elemento: integer):   arbol;
+Begin
+    If (a=Nil) Then buscar := Nil
+    Else If (a^.dato=elemento) Then buscar := a
+    Else If (a^.dato>elemento) Then buscar := buscar(a^.HI,elemento)
+    Else buscar := buscar(a^.HD,elemento);
+End;
+
+
+
+
 
 {
 ACTIVIDAD 5
@@ -215,29 +280,39 @@ ACTIVIDAD 5
 
 }
 
-function verMin(a: arbol): integer;
-const retERROR:integer=-1;
-var act: integer;
-begin
-	if (a = nil) then verMin:= retERROR
-		else begin
-			act:= verMin(a^.HI);
-			if (act = retERROR) then verMin:= a^.dato
-				else verMin:= act;
-		end;
-end;
+Function verMin(a: arbol):   integer;
 
-function verMax(a: arbol): integer;
-const retERROR:integer=-1;
-var act: integer;
-begin
-	if (a = nil) then verMax:= retERROR
-		else begin
-			act:= verMax(a^.HD);
-			if (act = retERROR) then verMax:= a^.dato
-				else verMax:= act;
-		end;
-end;
+Const retERROR:   integer =   -1;
+
+Var act:   integer;
+Begin
+    If (a = Nil) Then verMin := retERROR
+    Else
+        Begin
+            act := verMin(a^.HI);
+            If (act = retERROR) Then verMin := a^.dato
+            Else verMin := act;
+        End;
+End;
+
+Function verMax(a: arbol):   integer;
+
+Const retERROR:   integer =   -1;
+
+Var act:   integer;
+Begin
+    If (a = Nil) Then verMax := retERROR
+    Else
+        Begin
+            act := verMax(a^.HD);
+            If (act = retERROR) Then verMax := a^.dato
+            Else verMax := act;
+        End;
+End;
+
+
+
+
 
 {
 ACTIVIDAD 7
@@ -247,20 +322,25 @@ ACTIVIDAD 7
  D) Invocar al módulo verValoresEnRango con dos valores leídos de teclados.
 }
 
-procedure verValoresEnRango(a:arbol; inf,sup:integer);
-begin
-  if (a <> nil) then
-    if (a^.dato >= inf) then
-      if (a^.dato <= sup) then begin
-        write(a^.dato);
-        verValoresEnRango(a^.hi, inf, sup);
-        verValoresEnRango(a^.hd, inf, sup);
-      end
-      else
+Procedure verValoresEnRango(a:arbol; inf,sup:integer);
+Begin
+    If (a <> Nil) Then
+        If (a^.dato >= inf) Then
+            If (a^.dato <= sup) Then
+                Begin
+                    write(a^.dato, ' ');
+                    verValoresEnRango(a^.hi, inf, sup);
+                    verValoresEnRango(a^.hd, inf, sup);
+                End
+    Else
         verValoresEnRango(a^.hi, inf, sup)
-    else
-      verValoresEnRango(a^.hd, inf, sup);
-end;
+    Else
+        verValoresEnRango(a^.hd, inf, sup);
+End;
+
+
+
+
 
 {
  ACTIVIDAD 8
@@ -270,121 +350,151 @@ end;
 
 }
 
-procedure borrarElemento(var a:arbol; valor:integer; var sePudoEliminar: boolean);
+Procedure borrarElemento(Var a:arbol; valor:integer; Var sePudoEliminar: boolean);
 // REQUIERE UN {sePudoEliminar: boolean} EN DONDE SE LO INVOQUE
-begin
-  if (a<>nil) then
-    // caso: NO encontro el elemento
-    if (a^.dato > valor) then borrarElemento(a^.HI,valor,sePudoEliminar)
-    else if (a^.dato < valor) then borrarElemento(a^.HD,valor,sePudoEliminar)
+// REQUIERE verMin y verMax ya implementado
 
-    // caso: Encontro el elemento
-    else begin
+Var aux:   arbol;
+Begin
+    If (a = Nil) Then sePudoEliminar := false
+    Else
+        // caso: NO encontro el elemento
+        If (a^.dato > valor) Then borrarElemento(a^.HI,valor,sePudoEliminar)
 
-      {Estrategia:
-      Si el nodo tiene un hijo, el  nodo puede ser borrado después que su
-      padre actualice el puntero al hijo del nodo que se quiere borrar.}
+    Else If (a^.dato < valor) Then borrarElemento(a^.HD,valor,sePudoEliminar)
 
-      // subCaso (1 hijo solo): solo tiene hijo derecho, busco el verMax
-      if (a^.HI = nil) and (a^.HD <> nil) then begin
+             // caso: Encontro el elemento
+    Else
+        Begin
+            sePudoEliminar := true;
+            If (a^.HI = Nil) And (a^.HD = Nil) Then dispose(a);
+            // CASO NO TIENE HIJOS
 
-        end
+            // subCaso (1 hijo solo): solo tiene hijo derecho
+            If (a^.HI = Nil) And (a^.HD <> Nil) Then
+                Begin
+                    aux := a;
+                    a := a^.HD;
+                    dispose(aux);
+                End
 
-         // subCaso (1 hijo solo): solo tiene hijo izquierdo, busco el verMin
-         else if (a^.HI <> nil) and (a^.HD = nil) then
+                // subCaso (1 hijo solo): solo tiene hijo izquierdo
+            Else If (a^.HI <> Nil) And (a^.HD = Nil) Then
+                     Begin
+                         aux := a;
+                         a := a^.HI;
+                         dispose(aux);
+                     End
 
-          // subCaso: tiene ambos hijos
-           { Estrategia:
-             1. Se busca el valor a borrar
-             2. Se busca y selecciona  el hijo mas a la izquierda del
-                subárbol derecho del nodo a borrar
-                (o el hijo mas a la derecha del subárbol izquierdo).
-             3. Se intercambia el valor del nodo encontrado por el que se quiere borrar
-             4. Se llama al borrar a partir del hijo derecho con el valor del nodo encontrado. ¿Qué característica tiene ese nodo encontrado?
-           }
-          else
-       sePudoEliminar:= true;
-    end;
-end;
+                     // subCaso: tiene ambos hijos
+            Else
+                Begin
+                    a^.dato := verMin(a^.HD);
+                    borrarElemento(a^.HD, a^.dato, sePudoEliminar);
+                End;
+
+        End;
+End;
 
 {------------- Manejo de memoria -------------}
-procedure liberarMemLista(var pri:lista);
-    var
-        aux: lista;
-    begin
-        while (pri<>nil) do begin
-            aux:= pri;
-            pri:= pri^.sig;
+Procedure liberarMemLista(Var pri:lista);
+
+Var 
+    aux:   lista;
+Begin
+    While (pri<>Nil) Do
+        Begin
+            aux := pri;
+            pri := pri^.sig;
             dispose(aux);
-        end;
-    end;
+        End;
+End;
 
-procedure liberarMemArbol(var Al: arbol);  // GENERADO POR CHAT GPT
-var aux: arbol;
-begin
-  if (Al <> nil) then begin
-    LiberarMemArbol(Al^.HI); // Liberar subárbol izquierdo
-    LiberarMemArbol(Al^.HD); // Liberar subárbol derecho
-    aux:= al;
-    dispose(aux); // Liberar nodo actual
-    al := nil; // Asignar nil a la raíz para indicar que el árbol está vacío
-  end;
-end;
+Procedure liberarMemArbol(Var Al: arbol);
+// GENERADO POR CHAT GPT
 
-Var
+Var aux:   arbol;
+Begin
+    If (Al <> Nil) Then
+        Begin
+            LiberarMemArbol(Al^.HI);
+            // Liberar subárbol izquierdo
+            LiberarMemArbol(Al^.HD);
+            // Liberar subárbol derecho
+            aux := al;
+            dispose(aux);
+            // Liberar nodo actual
+            al := Nil;
+            // Asignar nil a la raíz para indicar que el árbol está vacío
+        End;
+End;
 
- l: lista;
- a: arbol;
- num, inf, sup, valEliminar: integer; // actividad 4, numero a buscar
- res: arbol;
- sePudoEliminar: boolean;
+Var 
 
-begin
- Randomize;
- a:= nil;
+    l:   lista;
+    a:   arbol;
+    num, inf, sup, valEliminar:   integer;
+    // actividad 4, numero a buscar
+    res:   arbol;
+    sePudoEliminar:   boolean;
 
- crearLista(l);
- writeln ('Lista generada: ');
- imprimirLista(l);
+Begin
+    Randomize;
+    a := Nil;
 
- // ACTIVIDAD 1
- cargarArbol(l,a);
- writeln;
- writeln('Arbol generado:');
- imprimirpornivel(a);
+    crearLista(l);
+    writeln ('Lista generada: ');
+    imprimirLista(l);
 
- // ACTIVIDAD 3
- writeln('pre orden:'); preOrden(a); writeln;
- writeln('en orden:'); enOrden(a); writeln;
- writeln('post orden:'); postOrden(a); writeln;
+    // ACTIVIDAD 1
+    cargarArbol(l,a);
+    writeln;
+    writeln('Arbol generado:');
+    imprimirpornivel(a);
 
- // ACTIVIDAD 4
- writeln('Ingrese un numero a buscar en la lista: '); readln(num);
- res:= buscar(a,num);
- if (res = nil) then writeln('Elemento no encontrado')
-              else writeln('numero ', res^.dato, ' encontrado');
+    // ACTIVIDAD 3
+    writeln('pre orden:');
+    preOrden(a);
+    writeln;
+    writeln('en orden:');
+    enOrden(a);
+    writeln;
+    writeln('post orden:');
+    postOrden(a);
+    writeln;
 
- // ACTIVIDAD 5
- writeln('Valor minimo encontrado: ', verMin(a));   
- writeln('Valor maximo encontrado: ', verMax(a));
+    // ACTIVIDAD 4
+    writeln('Ingrese un numero a buscar en la lista: ');
+    readln(num);
+    res := buscar(a,num);
+    If (res = Nil) Then writeln('Elemento no encontrado')
+    Else writeln('numero ', res^.dato, ' encontrado');
 
- // ACTIVIDAD 7
- writeln('Ingrese un rango inferior: '); readln(inf);
- writeln('Ingrese un rango superior: '); readln(sup);
- writeln('Elementos en el rango [',inf,'-',sup,']:');
- verValoresEnRango(a,inf,sup);
+    // ACTIVIDAD 5
+    writeln('Valor minimo encontrado: ', verMin(a));
+    writeln('Valor maximo encontrado: ', verMax(a));
 
- // ACTIVIDAD 8
- sePudoEliminar:= false;
- writeln('Ingrese un valor a eliminar: '); readln(valEliminar);
- borrarElemento(a,valEliminar,sePudoEliminar);
- if sePudoEliminar then Writeln(valEliminar, ' SI se pudo eliminar')
-                   else writeln(valEliminar,' NO se pudo eliminar');
- writeln('Arbol generado:');
- imprimirpornivel(a);
+    // ACTIVIDAD 7
+    writeln('Ingrese un rango inferior: ');
+    readln(inf);
+    writeln('Ingrese un rango superior: ');
+    readln(sup);
+    writeln('Elementos en el rango [',inf,'-',sup,']:');
+    verValoresEnRango(a,inf,sup);
+    writeln;
 
- writeln('Fin del programa');
- readln;
- liberarMemLista(l);
- liberarMemArbol(a);
-end.
+    // ACTIVIDAD 8
+    sePudoEliminar := false;
+    writeln('Ingrese un valor a eliminar: ');
+    readln(valEliminar);
+    borrarElemento(a,valEliminar,sePudoEliminar);
+    If sePudoEliminar Then Writeln(valEliminar, ' SI se pudo eliminar')
+    Else writeln(valEliminar,' NO se pudo eliminar');
+    writeln('Arbol generado:');
+    imprimirpornivel(a);
+
+    writeln('Fin del programa');
+    readln;
+    liberarMemLista(l);
+    liberarMemArbol(a);
+End.
