@@ -427,5 +427,24 @@ Begin
         End;
 End;
 
+Procedure liberarMemArbol(Var Al: arbol);
+// GENERADO POR CHAT GPT
+
+Var aux:   arbol;
+Begin
+    If (Al <> Nil) Then
+        Begin
+            LiberarMemArbol(Al^.HI);
+            // Liberar subárbol izquierdo
+            LiberarMemArbol(Al^.HD);
+            // Liberar subárbol derecho
+            aux := al;
+            dispose(aux);
+            // Liberar nodo actual
+            al := Nil;
+            // Asignar nil a la raíz para indicar que el árbol está vacío
+        End;
+End;
+
 Begin
 End.
