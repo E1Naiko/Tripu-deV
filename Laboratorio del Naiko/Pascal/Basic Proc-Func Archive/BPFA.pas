@@ -1,6 +1,12 @@
 
 Program BPFA; // Basic Procedure-Function Archive for pascal
 
+
+
+procedure PARA_SECUENCIAS_DE_CARACTERES_________();
+begin
+end;
+
 Procedure recorrerSecuenciaDeCaracteres(devuelveCantCaracteres, devuelveCantPalabras: integer);
 // RECORRE UNA SECUENCIA DE CARACTERES Y DEVUELVE LA CANTIDAD DE PALABRAS Y CARACTERES QUE LA CONFORMAN
 // EL ESPACIO NO ES CONCIDERADO COMO CARACTER
@@ -9,6 +15,7 @@ Procedure recorrerSecuenciaDeCaracteres(devuelveCantCaracteres, devuelveCantPala
 Const 
     termina =   'z';
     cantTotal =   500;
+
 Procedure descartarBlancos(Var act:char; Var cont:integer);
 Begin
     While (act=' ') And (cont<cantTotal) Do
@@ -67,8 +74,85 @@ Begin
 
 End;
 
+
+// ------------------------------------- Vectores -------------------------------------
+
+procedure PARA_VECTORES____________();
+begin
+end;
+
+{
+const
+	DIMF = 5;
+type
+	indice = 0..DIMF // valor minimo-1.. valor max
+	vector = array [1..dimF] of integer;
+}
+
+procedure insertarVector(var v: vector; var dimL: indice; pos: indice; elemento: integer; exito: boolean);
+	var j: indice;
+	begin
+		if (dimL < DIMF) then begin
+			for j:= dimL downto pos do v[J+1]:= v[j];
+			v[pos]:=elem;
+			dimL:= dimL+1;
+			exito:= true;
+		end else exito:= false;
+	end;
+	
+function determinarPosicionVector(v:vector; elemento: integer; dimL: indice): indice;
+	const ERROR_DPV = 0;
+	var pos: indice;
+	begin
+		pos:= 1;
+		while (pos <= dimL) and (x > v[pos]) do pos:= pos+1;
+		if (pos > dimL) then pos:= ERROR_DPV;
+		determinarPosicionVector:= pos;
+	end;
+	
+procedure insertarOrdenadoVector(var v: vector; var dimL: indice; elemento: integer; var exito: boolean);
+	const ERROR_DPV = 0;
+	var pos: indice;
+	begin
+		pos:= determinarPosicionVector(v, elemento, dimL);
+		if (pos<>ERROR_DPV) then insertar(v,dimL,pos,elemento);
+	end;
+	
+procedure ordenarVector(var v: vector; dimL: indice);
+	var i,j: indice; elemento: integer;
+	begin
+		for i:=2 to dimL do begin
+			elemento:= v[i];
+			J:=i-1;
+			while (j>0) and (v[j] > elemento) do begin
+				v[j+1]:= v[j];
+				j:= j-1;
+			end;
+			v[j+1]:= elemento;
+		end;
+	end;
+	
+procedure busquedaDicotomicaVector(var v: vector; j, dimL:indice; x: integer);
+	const ERROR_BDV = 0;
+	var pri, med, ult:= indice;
+	begin
+		j:= 0; pri:=1; ult:= dimL; med:= (pri+ult) div 2;
+		while (pri<=ult) and (x <> v[med]) do begin
+			if (x<v[med]) then ult:= med-1
+						  else pri:=med+1;
+			med:=(pri+ult) div 2
+		end;
+		
+		// se encontro?
+		if (pri < ult) then j:= med
+					   else j:= ERROR_BDV; // sino se encuentra devuelve este valor
+	end;
+	
 // ------------------------------------- Listas -------------------------------------
 
+Procedure PARA_LISTAS_SIMPLES________________();
+begin
+end;
 
 {
     lista = ^nodo;
@@ -103,7 +187,7 @@ Begin
         End;
 End;
 
-Procedure agregarFinal(Var l: Tlista; elem: integer {cambiar});
+Procedure agregarFinalLS(Var l: Tlista; elem: integer {cambiar});
 
 Var nue:   lista;
 Begin
@@ -116,7 +200,7 @@ Begin
     l.ult := nue;
 End;
 
-Procedure borrarElemento(Var l: lista; nom:cadena; Var exito: Boolean);
+Procedure borrarElementoLS(Var l: lista; nom:cadena; Var exito: Boolean);
 
 Var ant, act:   lista;
 Begin
@@ -143,7 +227,7 @@ Begin
         End;
 End;
 
-Procedure insertarElemento (Var l: lista; elem:integer);
+Procedure insertarElementoLS (Var l: lista; elem:integer);
 // ORDENADO
 
 Var nue, ant, act:   lista;
@@ -168,7 +252,7 @@ Begin
     nue^.sig := act;
 End;
 
-procedure insertarOrdenado(var l: lista; elemento: integer);
+procedure insertarOrdenadoLS(var l: lista; elemento: integer);
 var nue, ant, act: lista;
 begin
     new(nue); nue^.datos:= elemento; nue^.sig:= nil;
@@ -183,10 +267,23 @@ begin
     nue^.sig:=act;
 end;
 
-{ARBOLES}
+{ ------------------------------------- ARBOLES -------------------------------------}
 
+Procedure PARA_ARBOLES_________________________();
+begin
+end;
 
-procedure insertarEnRama (var a: arbol; elemento: integer); // toma un elemento y lo inserta en una rama de un arbol
+{
+    // Arbol de enteros
+    arbol =   ^nodoA;
+    nodoA =   Record
+        dato:   integer;
+        HI:   arbol;
+        HD:   arbol;
+    End;
+}
+
+procedure insertarEnRamaArbol (var a: arbol; elemento: integer); // toma un elemento y lo inserta en una rama de un arbol
 begin
  if (a = nil) then begin
                new(a);
@@ -237,53 +334,117 @@ begin
      end;
 end;
 
-function buscar(a:arbol; elemento: integer): arbol;
+function buscarArbol(a:arbol; elemento: integer): arbol;
 begin
-  if (a=nil) then buscar:=nil
-  else if (a^.dato=elemento) then buscar:= a
-                           else if (a^.dato>elemento) then buscar:= buscar(a^.HI,elemento)
-                                                      else buscar:= buscar(a^.HD,elemento);
+  if (a=nil) then buscarArbol:=nil
+  else if (a^.dato=elemento) then buscarArbol:= a
+                           else if (a^.dato>elemento) then buscarArbol:= buscar(a^.HI,elemento)
+                                                      else buscarArbol:= buscar(a^.HD,elemento);
 end;
 
-function verMin(a: arbol): integer;
+function verMinArbol(a: arbol): integer;
 const retERROR:integer=-1;
 var act: integer;
 begin
-	if (a = nil) then verMin:= retERROR
+	if (a = nil) then verMinArbol:= retERROR
 		else begin
-			act:= verMin(a^.HI);
-			if (act = retERROR) then verMin:= a^.dato
-				else verMin:= act;
+			act:= verMinArbol(a^.HI);
+			if (act = retERROR) then verMinArbol:= a^.dato
+				else verMinArbol:= act;
 		end;
 end;
 
-function verMax(a: arbol): integer;
+function verMaxArbol(a: arbol): integer;
 const retERROR:integer=-1;
 var act: integer;
 begin
-	if (a = nil) then verMax:= retERROR
+	if (a = nil) then verMaxArbol:= retERROR
 		else begin
-			act:= verMax(a^.HD);
-			if (act = retERROR) then verMax:= a^.dato
+			act:= verMaxArbol(a^.HD);
+			if (act = retERROR) then verMaxArbol:= a^.dato
 				else verMax:= act;
 		end;
 end;
 
-Procedure busquedaAcotada(a: Arbol_Usuarios; inf:integer; sup:integer); 
+Procedure busquedaAcotadaArbol(a: Arbol_Usuarios; inf:integer; sup:integer); 
 begin
   if (a <> nil) then
     if (a^.dato.id >= inf) then
       if (a^.dato.id <= sup) then begin
         write(a^.dato.nombre);
-        busquedaAcotada(a^.hi, inf, sup);
-        busquedaAcotada (a^.hd, inf, sup);
+        busquedaAcotadaArbol(a^.hi, inf, sup);
+        busquedaAcotadaArbol(a^.hd, inf, sup);
       end
       else
-        busquedaAcotada(a^.hi, inf, sup)
+        busquedaAcotadaArbol(a^.hi, inf, sup)
     else
-      busquedaAcotada(a^.hd, inf, sup);
+      busquedaAcotadaArbol(a^.hd, inf, sup);
 end;
 
+Procedure borrarElementoArbol(Var a:arbol; valor:integer; Var sePudoEliminar: boolean);
+// REQUIERE UN {sePudoEliminar: boolean} EN DONDE SE LO INVOQUE
+// REQUIERE verMin y verMax ya implementado
+
+Var aux:   arbol;
+Begin
+    If (a = Nil) Then sePudoEliminar := false
+    Else
+        // caso: NO encontro el elemento
+        If (a^.dato > valor) Then borrarElementoArbol(a^.HI,valor,sePudoEliminar)
+
+    Else If (a^.dato < valor) Then borrarElementoArbol(a^.HD,valor,sePudoEliminar)
+
+             // caso: Encontro el elemento
+    Else
+        Begin
+            sePudoEliminar := true;
+            If (a^.HI = Nil) And (a^.HD = Nil) Then dispose(a);
+            // CASO NO TIENE HIJOS
+
+            // subCaso (1 hijo solo): solo tiene hijo derecho
+            If (a^.HI = Nil) And (a^.HD <> Nil) Then
+                Begin
+                    aux := a;
+                    a := a^.HD;
+                    dispose(aux);
+                End
+
+                // subCaso (1 hijo solo): solo tiene hijo izquierdo
+            Else If (a^.HI <> Nil) And (a^.HD = Nil) Then
+                     Begin
+                         aux := a;
+                         a := a^.HI;
+                         dispose(aux);
+                     End
+
+                     // subCaso: tiene ambos hijos
+            Else
+                Begin
+                    a^.dato := verMin(a^.HD);
+                    borrarElementoArbol(a^.HD, a^.dato, sePudoEliminar);
+                End;
+
+        End;
+End;
+
+Procedure liberarMemArbol(Var Al: arbol);
+// GENERADO POR CHAT GPT
+
+Var aux:   arbol;
+Begin
+    If (Al <> Nil) Then
+        Begin
+            LiberarMemArbol(Al^.HI);
+            // Liberar subárbol izquierdo
+            LiberarMemArbol(Al^.HD);
+            // Liberar subárbol derecho
+            aux := al;
+            dispose(aux);
+            // Liberar nodo actual
+            al := Nil;
+            // Asignar nil a la raíz para indicar que el árbol está vacío
+        End;
+End;
 
 Begin
 End.
