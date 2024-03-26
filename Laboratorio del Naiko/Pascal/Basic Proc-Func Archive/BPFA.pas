@@ -296,13 +296,29 @@ begin
      else insertarEnRama(a^.HD, elemento);
 end;
 
-
+procedure insertarEnRamaArbolDeListas(var a: arbol; elemento: encomienda); // toma un elemento y lo inserta en una rama de un arbol
+	begin
+		if (a = nil) then begin
+					new(a);
+					a^.dato:= nil;
+					agregarAdelante(a^.dato, elemento);
+					a^.HD:= nil;
+					a^.HI:= nil;
+		end else
+			if (a^.dato^.dato.peso > elemento.peso) then
+						insertarEnRamaArbolDeListas(a^.HI, elemento)
+			else if (a^.dato^.dato.peso < elemento.peso) then
+					insertarEnRamaArbolDeListas(a^.HD, elemento)
+				else agregarAdelante(a^.dato, elemento);
+	end;
 
 procedure cargarArbol(l: lista; var a: arbol);
+var aux: lista;
 begin
-  while (l<>nil) do begin
+  aux:= l;
+  while (aux<>nil) do begin
     insertarRama(a,l^.dato);
-    l:=l^.sig;
+    aux:= aux^.sig;
   end;
 end;
 
