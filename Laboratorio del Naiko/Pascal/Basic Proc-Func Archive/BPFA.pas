@@ -317,7 +317,7 @@ var aux: lista;
 begin
   aux:= l;
   while (aux<>nil) do begin
-    insertarRama(a,l^.dato);
+    insertarRama(a,aux^.dato);
     aux:= aux^.sig;
   end;
 end;
