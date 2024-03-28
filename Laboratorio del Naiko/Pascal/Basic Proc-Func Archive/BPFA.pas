@@ -195,7 +195,7 @@ Begin
     nue^.datos := elem;
     nue^.sig := Nil;
 
-    If pri=Nil Then l.pri := nue
+    If l=Nil Then l.pri := nue
     Else l.ult^.sig := nue;
     l.ult := nue;
 End;
@@ -440,6 +440,36 @@ Begin
                     borrarElementoArbol(a^.HD, a^.dato, sePudoEliminar);
                 End;
 
+        End;
+End;
+
+Procedure imprimirpornivel(a: arbol);
+
+Var 
+    l, aux, ult:   listaNivel;
+    nivel, cant, i:   integer;
+Begin
+    l := Nil;
+    If (a <> Nil)Then
+        Begin
+            nivel := 0;
+            agregarAtras (l,ult,a);
+            While (l<> Nil) Do
+                Begin
+                    nivel := nivel + 1;
+                    cant := contarElementos(l);
+                    write ('Nivel ', nivel, ': ');
+                    For i:= 1 To cant Do
+                        Begin
+                            write (l^.info^.dato, ' - ');
+                            If (l^.info^.HI <> Nil) Then agregarAtras (l,ult,l^.info^.HI);
+                            If (l^.info^.HD <> Nil) Then agregarAtras (l,ult,l^.info^.HD);
+                            aux := l;
+                            l := l^.sig;
+                            dispose (aux);
+                        End;
+                    writeln;
+                End;
         End;
 End;
 
