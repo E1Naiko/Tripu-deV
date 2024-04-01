@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1420791944"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq &quot;-FuC:\Users\alumnos\Desktop\Peñalba\Clase 3\&quot; &quot;-FUC:\Users\alumnos\Desktop\Peñalba\Clase 3\lib\x86_64-win64\&quot; &quot;-FEC:\Users\alumnos\Desktop\Peñalba\Clase 3\&quot; &quot;-oC:\Users\alumnos\Desktop\Peñalba\Clase 3\ProgramaGenerarLista.exe&quot; ProgramaGenerarLista.pas"/>
-</CONFIG>
