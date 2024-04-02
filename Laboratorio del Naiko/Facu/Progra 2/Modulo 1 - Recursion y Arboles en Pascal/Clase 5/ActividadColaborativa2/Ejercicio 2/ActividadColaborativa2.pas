@@ -4,22 +4,20 @@
 	Contexto
 
 	Se leen desde teclado los datos correspondientes a pacientes que
-dieron positivo al examen de COVID-19 en Argentina. De cada uno de
-ellos se conoce: DNI, Código postal y nombre de la ciudad donde vive. 
+* dieron positivo al examen de COVID-19 en Argentina. De cada uno de
+* ellos se conoce: DNI, Código postal y nombre de la ciudad donde vive. 
 
-	Ejercicio 1: Con la información anterior, se quiere armar un mapa
-en el que aparezca por cada ciudad, la cantidad total de habitantes
-infectados.
+	Ejercicio 2: Con la información leída, se pide recopilar por cada
+* ciudad, los DNIs de los habitantes infectados. Esta estructura debe
+* estar ordenada por código postal para que la búsqueda por dicho
+* criterio sea eficiente.
 
-Este mapa debe estar ordenado por código postal para que la búsqueda
-por dicho criterio sea eficiente.
-
-    a) Implementen el mapa de información.
-    b) Implementen un módulo que informe la cantidad de infectados de
-    aquellas localidades que tienen código postal entre 1800 y 1900.
+a)	Implementen y completen a partir de la lectura de la información
+* la nueva estructura de datos.
+b)	Implementen un módulo que informe la cantidad de infectados de
+* aquellas localidades que tienen código postal entre 1800 y 1900.
 
 
-   
 }
 
 
@@ -34,7 +32,7 @@ type
 	
 	lista = ^nodo;
     nodo = record
-        datos: tipoPaciente;
+        datos: integer;
         sig: lista;
     end;
     Tlista = record
@@ -43,15 +41,16 @@ type
     
     arbol =   ^nodoA;
     nodoA =   Record
+		
         dato:   Tlista;
-        cantPacientes:   integer;
+        codigo, cantPacientes:   integer;
         HI:   arbol;
         HD:   arbol;
     End;
 
 
 
-{--------------------------- MANEJO DE REGISTROS ---------------------------}	
+{--------------------------- MANEJO DE PACIENTES ---------------------------}	
 
 
 
@@ -73,7 +72,7 @@ procedure leerPaciente(var act: tipoPaciente);
 
 
 
-Procedure agregarFinalLS(Var l: Tlista; elem: tipoPaciente);
+Procedure agregarFinalLS(Var l: Tlista; elem: integer);
 	Var nue:   lista;
 	Begin
 		new(nue);
@@ -90,12 +89,13 @@ Procedure agregarFinalLS(Var l: Tlista; elem: tipoPaciente);
 Procedure imprimirLista(l: lista);
 	
 	Begin
+		Writeln(' --- ');
 		While (l <> Nil) Do
 			Begin
-				with l^.datos do
-					writeln(' - DNI:', dni, ' - Codigo Postal: ', codigoPostal, ' - Ciudad: ', ciudad, ' -');
+				write('DNI:', l^.datos, ' - ');
 				l := l^.sig;
 			End;
+		writeln;
 	End;
 
 
@@ -109,19 +109,20 @@ procedure insertarEnRamaArbolDeListas(var a: arbol; elemento: tipoPaciente);
 	begin
 		if (a = nil) then begin
 					new(a);
+					a^.codigo:= elemento.codigoPostal;
 					a^.dato.pri:= nil;
 					a^.dato.ult:= nil;
 					a^.cantPacientes:= 1;
-					agregarFinalLS(a^.dato, elemento);
+					agregarFinalLS(a^.dato, elemento.dni);
 					a^.HD:= nil;
 					a^.HI:= nil;
 		end else
-			if (a^.dato.pri^.datos.codigoPostal > elemento.codigoPostal) then
+			if (a^.codigo > elemento.codigoPostal) then
 						insertarEnRamaArbolDeListas(a^.HI, elemento)
-			else if (a^.dato.pri^.datos.codigoPostal < elemento.codigoPostal) then
+			else if (a^.codigo < elemento.codigoPostal) then
 					insertarEnRamaArbolDeListas(a^.HD, elemento)
 				else begin
-					agregarFinalLS(a^.dato, elemento);
+					agregarFinalLS(a^.dato, elemento.dni);
 					a^.cantPacientes:= a^.cantPacientes + 1;
 				end;
 	end;
@@ -144,6 +145,7 @@ procedure enOrden(a: arbol);
 	begin
 		if (a <> nil) then begin
 			enOrden(a^.HI);
+			writeln; Writeln(' - Codigo: ', A^.codigo);
 			imprimirLista(a^.dato.pri);
 			enOrden(a^.HD);
 		end;
@@ -154,8 +156,8 @@ procedure enOrden(a: arbol);
 function busquedaAcotadaArbol(a: arbol; inf:integer; sup:integer): integer; 
 	begin
 		if (a <> nil) then
-			if (a^.dato.pri^.datos.codigoPostal >= inf) then
-				if (a^.dato.pri^.datos.codigoPostal <= sup) then begin
+			if (a^.codigo >= inf) then
+				if (a^.codigo <= sup) then begin
 					
 					busquedaAcotadaArbol:= busquedaAcotadaArbol(a^.hi, inf, sup) + busquedaAcotadaArbol(a^.hd, inf, sup) + a^.cantPacientes;
 				
