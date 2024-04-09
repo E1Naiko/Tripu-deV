@@ -1,0 +1,37 @@
+import machine
+import onewire
+import ds18x20
+import time
+
+
+led_pin = machine.Pin(5, machine.Pin.OUT)
+led_pin2 = machine.Pin(14, machine.Pin.OUT)
+temp_pin = machine.Pin(4)
+
+
+ds_sensor = ds18x20.DS18X20(onewire.OneWire(temp_pin))
+roms = ds_sensor.scan()
+
+
+def leer_temperatura():
+    ds_sensor.convert_temp()
+    time.sleep_ms(1000)
+    for rom in roms:
+        return ds_sensor.read_temp(rom)
+
+
+while True:
+    temperatura = leer_temperatura()
+    print("Temperatura:", temperatura)
+
+
+    if temperatura is temperatura < -30 and temperatura > -40:
+        led_pin2.on()
+        led_pin.off()
+        print("LED Verde encendido")
+    else:
+        led_pin2.off()
+        led_pin.on()
+        print("LED Rojo encendido")
+        
+    time.sleep(1)
