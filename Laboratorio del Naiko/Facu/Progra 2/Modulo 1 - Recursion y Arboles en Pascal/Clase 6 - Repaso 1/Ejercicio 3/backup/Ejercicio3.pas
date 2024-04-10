@@ -271,4 +271,5 @@ begin
      writeln('Fin del programa');
      readln;
      liberarMem(l_inicial);
+     end;
 end.

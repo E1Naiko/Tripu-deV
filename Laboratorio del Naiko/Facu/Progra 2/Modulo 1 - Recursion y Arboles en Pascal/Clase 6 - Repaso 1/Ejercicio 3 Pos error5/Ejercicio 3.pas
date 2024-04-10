@@ -199,7 +199,8 @@ Procedure busquedaAcotadaArbol(a: arbol; inf:integer; sup:integer);
      if (a <> nil) then
        if (a^.codArea >= inf) then
          if (a^.codArea <= sup) then begin
-			writeln(' Codigo: ', a^.codArea);
+            writeln(' Codigo: ', a^.codArea);
+            writeln();
             imprimirDNIs(a^.lista);
             busquedaAcotadaArbol(a^.hi, inf, sup);
             busquedaAcotadaArbol(a^.hd, inf, sup);
@@ -223,6 +224,23 @@ procedure retMenorCantPedidos(a: arbol; var codAct, res: integer);
         end;
    end;
 
+function buscarArbol(a:arbol; elemento: integer): arbol;
+   begin
+     if (a = nil) then buscarArbol:=nil
+     else if (a^.codArea=elemento) then buscarArbol:= a
+                              else if (a^.codArea>elemento) then buscarArbol:= buscarArbol(a^.HI,elemento)
+                                                            else buscarArbol:= buscarArbol(a^.HD,elemento);
+   end;
+
+procedure buscarCod(a:arbol; codBusqueda: integer);
+   var resBusqueda: arbol;
+   begin
+      resBusqueda:= buscarArbol(a,codBusqueda);
+      if (resBusqueda = nil) then writeln('Elemento no encontrado')
+         else imprimirDNIs(resBusqueda^.lista);
+   end;
+
+
 Procedure liberarMem(Var l:listaPedidos);
    Var aux:   listaPedidos;
    Begin
@@ -239,7 +257,7 @@ Procedure liberarMem(Var l:listaPedidos);
 var
    l_inicial: listaPedidos;
    a: arbol;
-   codigoMenorCant, menorCant: integer;
+   codigoMenorCant, menorCant, codBusqueda: integer;
 
 begin
      Randomize;
@@ -259,14 +277,16 @@ begin
      menorCant:= errorCANT;
      retMenorCantPedidos(a, codigoMenorCant, menorCant);
      if (menorCant = errorCANT) then writeln('ERROR')
-	 else writeln('El codigo con menor cantidad encontrada es ', codigoMenorCant, ' con ', menorCant, ' pedidos.');
+	  else writeln('El codigo con menor cantidad encontrada es ', codigoMenorCant, ' con ', menorCant, ' pedidos.');
 
 	 // Inciso C
-	 Writeln('Dni de pedidos entre ', infBusqueda, ' y ' , supBusqueda, ':');
+	  Writeln('Dni de pedidos entre ', infBusqueda, ' y ' , supBusqueda, ':');
      busquedaAcotadaArbol(a, infBusqueda, supBusqueda);
 
      // Inciso D
-     
+     writeln('Introduzca el codigo del servicio a imprimir:');
+     readln(codBusqueda);
+     buscarCod(a, codBusqueda);
 
      writeln('Fin del programa');
      readln;

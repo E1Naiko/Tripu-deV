@@ -55,17 +55,12 @@ Procedure recorrerSecuenciaDeCaracteres(devuelveCantCaracteres, devuelveCantPala
            Begin
                ant := act;
                read(act);
-   
                descartarBlancos(act,contGeneral);
-   
                // SI O SI me encuentro al prinicipio de una palabra        
                contPalabras := contPalabras+1;
-   
                // recorro el interior de la palabra
                recirrerPalabra(act,contGeneral);
-   
                // SI O SI estoy al final de una palabra
-   
            End
        Until (contGeneral=cantTotal) Or (act=termina);
    
@@ -198,16 +193,21 @@ Procedure agregarInicioLS(var l: lista; elemento: integer);
    end;
 
 
-Procedure agregarFinalLS(Var l: lista; elem: integer {cambiar}); // NO EFICIENTE
-   Var act, ant, nue:   lista;
-   Begin
-       new(nue); nue^.datos := elem; nue^.sig := Nil;
-       act:= l; ant:= l;
-       while (act<>nil) do begin
-			ant:=act; act:=act^.sig;
-       end;
-       ant^.sig:= nue;
-   End;
+Procedure agregarFinalLS(Var l: lista; elem: integer);
+        Var act, ant, nue: lista;
+        Begin
+                new(nue); nue^.dato := elem; nue^.sig := Nil;
+                if l = nil then
+                        l := nue
+                else begin
+                        act:= l; ant:= l;
+                        while (act <> nil) do begin
+                                ant := act; act := act^.sig;
+                        end;
+                        ant^.sig := nue;
+                end;
+        End;
+
 
 
 Procedure agregarFinalLS(Var l: Tlista; elem: integer {cambiar}); // EFICIENTE
@@ -222,7 +222,7 @@ Procedure agregarFinalLS(Var l: Tlista; elem: integer {cambiar}); // EFICIENTE
        l.ult := nue;
    End;
 
-Procedure borrarElementoLS(Var l: lista; nom:cadena; Var exito: Boolean);
+Procedure borrarElementoLS(Var l: lista; elemento: integer; Var exito: Boolean);
    Var ant, act:   lista;
    Begin
        exito := false;
@@ -299,6 +299,23 @@ end;
     arbol =   ^nodoA;
     nodoA =   Record
         dato:   integer;
+        HI:   arbol;
+        HD:   arbol;
+    End;
+}
+{
+* 	//ARBOL DE LISTAS
+	tipoLista = ^nodoLS;
+	nodoLS = record
+		dato: integer;
+		sig: tipoLista;
+	end;
+	
+    arbol =   ^nodoA;
+    nodoA =   Record
+		DATOCAMBIAR: integer; // ORDEN DEL ARBOL
+        REGISTROEXTRA: integer;
+		lista : tipoLista;
         HI:   arbol;
         HD:   arbol;
     End;
@@ -402,8 +419,8 @@ function buscarArbol(a:arbol; elemento: integer): arbol;
    begin
      if (a=nil) then buscarArbol:=nil
      else if (a^.dato=elemento) then buscarArbol:= a
-                              else if (a^.dato>elemento) then buscarArbol:= buscar(a^.HI,elemento)
-                                                         else buscarArbol:= buscar(a^.HD,elemento);
+                              else if (a^.dato>elemento) then buscarArbol:= buscarArbol(a^.HI,elemento)
+                                                         else buscarArbol:= buscarArbol(a^.HD,elemento);
    end;
 
 function verMinArbol(a: arbol): integer;
@@ -500,17 +517,13 @@ procedure imprimirRamaLS(a: arbol); // INVOCAR DENTRO DEL RECORRIDO PREORDEN, EN
 		if (a<>nil) then begin
 			cont:= 1;
 			with a^.pasajero do begin
-				writeln(' DNI :', DNI);
-				writeln(' -- Nombre: ', nombre);
-				writeln(' -- Apellido: ', apellido);
-				writeln(' -- Millas Totales: ', millasTot:2:2);
+				writeln(' DATO DE ORDEN :', );
+				writeln(' -- DATO DEL ARBOL: ', );
 				aux:= a^.lista;
 				while (aux <> nil) do begin
 					with aux^.dato do begin
-						writeln(' -- Vuelo  ', cont, ':');
-						writeln(' ---- Codigo: ', codigo);
-						writeln(' ---- Clase: ', clase);
-						writeln(' ---- Millas Recorridas: ', millasRecorridas:2:2);
+						writeln(' -- LISTA  ', cont, ':');
+						writeln(' ---- DATO DE LISTA: ', );
 					end;
 					cont:= cont + 1;
 					aux:= aux^.sig;
@@ -551,46 +564,46 @@ Procedure imprimirpornivel(a: arbol);
            End;
    End;
 
-Procedure liberarMemArbol(Var Al: arbol);
+Procedure liberarMemArbol(Var A: arbol);
 // GENERADO POR CHAT GPT
 
    Var aux:   arbol;
    Begin
-       If (Al <> Nil) Then
+       If (A <> Nil) Then
            Begin
-               LiberarMemArbol(Al^.HI);
+               LiberarMemArbol(A^.HI);
                // Liberar subárbol izquierdo
-               LiberarMemArbol(Al^.HD);
+               LiberarMemArbol(A^.HD);
                // Liberar subárbol derecho
                aux := al;
                dispose(aux);
                // Liberar nodo actual
-               al := Nil;
+               a := Nil;
                // Asignar nil a la raíz para indicar que el árbol está vacío
            End;
    End;
    
    
-Procedure liberarMemArbolLS(Var Al: arbol);
+Procedure liberarMemArbolLS(Var A: arbol);
     Var
 		aux:   arbol;
 		aux2: listaPartidosJugador;
     Begin
-        If (Al <> Nil) Then
+        If (A <> Nil) Then
             Begin
-                LiberarMemArbol(Al^.HI);
+                LiberarMemArbol(A^.HI);
                 // Liberar subárbol izquierdo
-                LiberarMemArbol(Al^.HD);
+                LiberarMemArbol(A^.HD);
                 // Liberar subárbol derecho
-                aux := al;
-                while al^.lista<>nil do begin
-					aux2:= al^.lista;
-					al^.lista:=al^.lista^.sig;
+                aux := a;
+                while a^.lista<>nil do begin
+					aux2:= a^.lista;
+					a^.lista:=a^.lista^.sig;
 					dispose(aux2);
                 end;
                 dispose(aux);
                 // Liberar nodo actual
-                al := Nil;
+                a := Nil;
                 // Asignar nil a la raíz para indicar que el árbol está vacío
             End;
     End;
