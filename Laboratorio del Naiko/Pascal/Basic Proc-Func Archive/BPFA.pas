@@ -78,71 +78,71 @@ end;
 
 {
 const
-	DIMF = 5;
+        DIMF = 5;
 type
-	indice = 0..DIMF // valor minimo-1.. valor max
-	vector = array [1..dimF] of integer;
+        indice = 0..DIMF // valor minimo-1.. valor max
+        vector = array [1..dimF] of integer;
 }
 
 procedure insertarVector(var v: vector; var dimL: indice; pos: indice; elemento: integer; exito: boolean);
-	var j: indice;
-	begin
-		if (dimL < DIMF) then begin
-			for j:= dimL downto pos do v[J+1]:= v[j];
-			v[pos]:=elem;
-			dimL:= dimL+1;
-			exito:= true;
-		end else exito:= false;
-	end;
-	
+        var j: indice;
+        begin
+                if (dimL < DIMF) then begin
+                        for j:= dimL downto pos do v[J+1]:= v[j];
+                        v[pos]:=elem;
+                        dimL:= dimL+1;
+                        exito:= true;
+                end else exito:= false;
+        end;
+        
 function determinarPosicionVector(v:vector; elemento: integer; dimL: indice): indice;
-	const ERROR_DPV = 0;
-	var pos: indice;
-	begin
-		pos:= 1;
-		while (pos <= dimL) and (x > v[pos]) do pos:= pos+1;
-		if (pos > dimL) then pos:= ERROR_DPV;
-		determinarPosicionVector:= pos;
-	end;
-	
+        const ERROR_DPV = 0;
+        var pos: indice;
+        begin
+                pos:= 1;
+                while (pos <= dimL) and (x > v[pos]) do pos:= pos+1;
+                if (pos > dimL) then pos:= ERROR_DPV;
+                determinarPosicionVector:= pos;
+        end;
+        
 procedure insertarOrdenadoVector(var v: vector; var dimL: indice; elemento: integer; var exito: boolean);
-	const ERROR_DPV = 0;
-	var pos: indice;
-	begin
-		pos:= determinarPosicionVector(v, elemento, dimL);
-		if (pos<>ERROR_DPV) then insertar(v,dimL,pos,elemento);
-	end;
-	
+        const ERROR_DPV = 0;
+        var pos: indice;
+        begin
+                pos:= determinarPosicionVector(v, elemento, dimL);
+                if (pos<>ERROR_DPV) then insertar(v,dimL,pos,elemento);
+        end;
+        
 procedure ordenarVector(var v: vector; dimL: indice);
-	var i,j: indice; elemento: integer;
-	begin
-		for i:=2 to dimL do begin
-			elemento:= v[i];
-			J:=i-1;
-			while (j>0) and (v[j] > elemento) do begin
-				v[j+1]:= v[j];
-				j:= j-1;
-			end;
-			v[j+1]:= elemento;
-		end;
-	end;
-	
+        var i,j: indice; elemento: integer;
+        begin
+                for i:=2 to dimL do begin
+                        elemento:= v[i];
+                        J:=i-1;
+                        while (j>0) and (v[j] > elemento) do begin
+                                v[j+1]:= v[j];
+                                j:= j-1;
+                        end;
+                        v[j+1]:= elemento;
+                end;
+        end;
+        
 procedure busquedaDicotomicaVector(var v: vector; j, dimL:indice; x: integer);
-	const ERROR_BDV = 0;
-	var pri, med, ult:= indice;
-	begin
-		j:= 0; pri:=1; ult:= dimL; med:= (pri+ult) div 2;
-		while (pri<=ult) and (x <> v[med]) do begin
-			if (x<v[med]) then ult:= med-1
-						  else pri:=med+1;
-			med:=(pri+ult) div 2
-		end;
-		
-		// se encontro?
-		if (pri < ult) then j:= med
-					   else j:= ERROR_BDV; // sino se encuentra devuelve este valor
-	end;
-	
+        const ERROR_BDV = 0;
+        var pri, med, ult:= indice;
+        begin
+                j:= 0; pri:=1; ult:= dimL; med:= (pri+ult) div 2;
+                while (pri<=ult) and (x <> v[med]) do begin
+                        if (x<v[med]) then ult:= med-1
+                                                  else pri:=med+1;
+                        med:=(pri+ult) div 2
+                end;
+                
+                // se encontro?
+                if (pri < ult) then j:= med
+                                           else j:= ERROR_BDV; // sino se encuentra devuelve este valor
+        end;
+        
 // ------------------------------------- Listas -------------------------------------
 
 Procedure PARA_LISTAS_SIMPLES________________();
@@ -304,18 +304,18 @@ end;
     End;
 }
 {
-* 	//ARBOL DE LISTAS
-	tipoLista = ^nodoLS;
-	nodoLS = record
-		dato: integer;
-		sig: tipoLista;
-	end;
-	
+*       //ARBOL DE LISTAS
+        tipoLista = ^nodoLS;
+        nodoLS = record
+                dato: integer;
+                sig: tipoLista;
+        end;
+        
     arbol =   ^nodoA;
     nodoA =   Record
-		DATOCAMBIAR: integer; // ORDEN DEL ARBOL
+                DATOCAMBIAR: integer; // ORDEN DEL ARBOL
         REGISTROEXTRA: integer;
-		lista : tipoLista;
+                lista : tipoLista;
         HI:   arbol;
         HD:   arbol;
     End;
@@ -335,20 +335,20 @@ procedure insertarEnRamaArbol (var a: arbol; elemento: integer); // toma un elem
    end;
 
 procedure insertarEnRamaArbolDeListas(var a: arbol; elemento: integer); // toma un elemento y lo inserta en una rama de un arbol
-	begin
-		if (a = nil) then begin
-					new(a);
-					a^.dato:= nil;
-					agregarAdelante(a^.dato, elemento);
-					a^.HD:= nil;
-					a^.HI:= nil;
-		end else
-			if (a^.dato > elemento) then
-						insertarEnRamaArbolDeListas(a^.HI, elemento)
-			else if (a^.dato < elemento) then
-					insertarEnRamaArbolDeListas(a^.HD, elemento)
-				else agregarAdelante(a^.dato, elemento);
-	end;
+        begin
+                if (a = nil) then begin
+                                        new(a);
+                                        a^.dato:= nil;
+                                        agregarAdelante(a^.dato, elemento);
+                                        a^.HD:= nil;
+                                        a^.HI:= nil;
+                end else
+                        if (a^.dato > elemento) then
+                                                insertarEnRamaArbolDeListas(a^.HI, elemento)
+                        else if (a^.dato < elemento) then
+                                        insertarEnRamaArbolDeListas(a^.HD, elemento)
+                                else agregarAdelante(a^.dato, elemento);
+        end;
 
 procedure cargarArbol(l: lista; var a: arbol);
    var aux: lista;
@@ -369,12 +369,12 @@ Procedure preOrden( a: arbol );
        // DE MENOR A MAYOR
        preOrden (a^.HI);
        preOrden (a^.HD);
-	   }
-	   {
+           }
+           {
        // DE MAYOR A MENOR
        preOrden (a^.HD);
        preOrden (a^.HI);
-	   }
+           }
      end;
    end;
 
@@ -405,12 +405,12 @@ procedure postOrden(a: arbol);
           // DE MAYOR A MENOR
           postOrden(a^.HD);
           postOrden(a^.HI);
-		  }
-		  {
+                  }
+                  {
           // DE MENOR A MAYOR
           postOrden(a^.HI);
           postOrden(a^.HD);
-		  }
+                  }
           write (a^.dato, '   ');
         end;
    end;
@@ -427,24 +427,24 @@ function verMinArbol(a: arbol): integer;
    const retERROR:integer=-1;
    var act: integer;
    begin
-   	  if (a = nil) then verMinArbol:= retERROR
-   		 else begin
-   			act:= verMinArbol(a^.HI);
-   			if (act = retERROR) then verMinArbol:= a^.dato
-   				else verMinArbol:= act;
-   		end;
+          if (a = nil) then verMinArbol:= retERROR
+                 else begin
+                        act:= verMinArbol(a^.HI);
+                        if (act = retERROR) then verMinArbol:= a^.dato
+                                else verMinArbol:= act;
+                end;
    end;
 
 function verMaxArbol(a: arbol): integer;
    const retERROR:integer=-1;
    var act: integer;
       begin
-   	     if (a = nil) then verMaxArbol:= retERROR
-   		 else begin
-   			  act:= verMaxArbol(a^.HD);
-   			  if (act = retERROR) then verMaxArbol:= a^.dato
-   			  else verMax:= act;
-   		end;
+             if (a = nil) then verMaxArbol:= retERROR
+                 else begin
+                          act:= verMaxArbol(a^.HD);
+                          if (act = retERROR) then verMaxArbol:= a^.dato
+                          else verMax:= act;
+                end;
    end;
 
 Procedure busquedaAcotadaArbol(a: Arbol_Usuarios; inf:integer; sup:integer); 
@@ -511,25 +511,25 @@ Procedure borrarElementoArbol(Var a:arbol; valor:integer; Var sePudoEliminar: bo
    
 procedure imprimirRamaLS(a: arbol); // INVOCAR DENTRO DEL RECORRIDO PREORDEN, ENORDEN O POSTORDEN
    var
-   	  aux: tipoLista;
-	  cont: integer;
+          aux: tipoLista;
+          cont: integer;
    begin
-		if (a<>nil) then begin
-			cont:= 1;
-			with a^.pasajero do begin
-				writeln(' DATO DE ORDEN :', );
-				writeln(' -- DATO DEL ARBOL: ', );
-				aux:= a^.lista;
-				while (aux <> nil) do begin
-					with aux^.dato do begin
-						writeln(' -- LISTA  ', cont, ':');
-						writeln(' ---- DATO DE LISTA: ', );
-					end;
-					cont:= cont + 1;
-					aux:= aux^.sig;
-				end;
-			end;
-   	  end;
+                if (a<>nil) then begin
+                        cont:= 1;
+                        with a^.pasajero do begin
+                                writeln(' DATO DE ORDEN :', );
+                                writeln(' -- DATO DEL ARBOL: ', );
+                                aux:= a^.lista;
+                                while (aux <> nil) do begin
+                                        with aux^.dato do begin
+                                                writeln(' -- LISTA  ', cont, ':');
+                                                writeln(' ---- DATO DE LISTA: ', );
+                                        end;
+                                        cont:= cont + 1;
+                                        aux:= aux^.sig;
+                                end;
+                        end;
+          end;
    end;
 
 
@@ -586,8 +586,8 @@ Procedure liberarMemArbol(Var A: arbol);
    
 Procedure liberarMemArbolLS(Var A: arbol);
     Var
-		aux:   arbol;
-		aux2: listaPartidosJugador;
+                aux:   arbol;
+                aux2: listaPartidosJugador;
     Begin
         If (A <> Nil) Then
             Begin
@@ -597,9 +597,9 @@ Procedure liberarMemArbolLS(Var A: arbol);
                 // Liberar subárbol derecho
                 aux := a;
                 while a^.lista<>nil do begin
-					aux2:= a^.lista;
-					a^.lista:=a^.lista^.sig;
-					dispose(aux2);
+                                        aux2:= a^.lista;
+                                        a^.lista:=a^.lista^.sig;
+                                        dispose(aux2);
                 end;
                 dispose(aux);
                 // Liberar nodo actual
