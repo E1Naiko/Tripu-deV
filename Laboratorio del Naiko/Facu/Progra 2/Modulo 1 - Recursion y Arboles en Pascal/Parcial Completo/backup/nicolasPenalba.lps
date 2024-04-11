@@ -8,16 +8,8 @@
       <Unit>
         <Filename Value="nicolasPenalba.pas"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="E:\Progra2\micaelataini.pas"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="176"/>
-        <CursorPos X="34" Y="225"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>

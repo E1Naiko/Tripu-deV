@@ -204,9 +204,10 @@ type
          cont:= 0;
          montoTot:= 0;
          while (aux <> nil) do begin
-            cont:=cont + 1;
-            montoTot:= montoTot + aux^.dato.monto;
-            
+            if (aux^.dato.medio = 'colectivo') then begin // TE COMISTE ESTO PELOTUDOOOOOOOO
+               cont:=cont + 1;
+               montoTot:= montoTot + aux^.dato.monto;
+            end;
             aux:= aux^.sig;
          end;
          prom:= montoTot / cont;
