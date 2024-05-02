@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=prompt\ in
+comment2.target=int\ getIntInput(java.lang.String,\ java.util.Scanner)
+comment3.params=prompt\ in
+comment3.target=double\ getDoubleInput(java.lang.String,\ java.util.Scanner)
+comment4.params=prompt\ in
+comment4.target=java.lang.String\ getStringInput(java.lang.String,\ java.util.Scanner)
+numComments=5

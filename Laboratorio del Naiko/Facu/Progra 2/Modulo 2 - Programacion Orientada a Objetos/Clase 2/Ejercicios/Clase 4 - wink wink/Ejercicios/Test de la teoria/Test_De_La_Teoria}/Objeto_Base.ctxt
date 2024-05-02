@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Objeto_Base
+comment1.params=a\ b\ c
+comment1.target=Objeto_Base(int,\ int,\ int)
+comment2.params=a\ b\ c\ XD
+comment2.target=Objeto_Base(int,\ int,\ int,\ java.lang.String)
+comment3.params=
+comment3.target=Objeto_Base()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
