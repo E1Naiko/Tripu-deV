@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ProgramaCompreSinIVA
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ProgramaCompreSinIVA\ here.\r\n\ \r\n\ @author\ (Leandro\ Romanut)\ \r\n\ @version\ (1.0)\r\n
+comment1.params=
+comment1.target=ProgramaCompreSinIVA()
+comment2.params=nombre
+comment2.target=boolean\ productoIncluido(java.lang.String)
+comment2.text=\r\n\ M\u00E9todo\ para\ saber\ si\ un\ producto\ de\ la\ canasta\ b\u00E1sica\ forma\ parte\ del\ programa\ "Compre\ sin\ IVA"\r\n\ \r\n\ @params\ nombre\ del\ producto\r\n\ @return\ verdadero\ o\ falso\r\n
+numComments=3

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Bien
+comment1.params=origen\ cantidad\ costo
+comment1.target=Bien(java.lang.String,\ int,\ double)
+comment2.params=
+comment2.target=java.lang.String\ getOrigen()
+comment3.params=
+comment3.target=int\ getCantidad()
+comment4.params=
+comment4.target=double\ getCosto()
+comment5.params=origen
+comment5.target=void\ setOrigen(java.lang.String)
+comment6.params=cantidad
+comment6.target=void\ setCantidad(int)
+comment7.params=costo
+comment7.target=void\ setCosto(double)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Figura
+comment1.params=colorR\ colorL\ p
+comment1.target=Figura(java.lang.String,\ java.lang.String,\ Punto)
+comment10.params=
+comment10.target=double\ calcularArea()
+comment11.params=
+comment11.target=double\ calcularPerimetro()
+comment2.params=
+comment2.target=Figura()
+comment3.params=
+comment3.target=java.lang.String\ getColorRelleno()
+comment4.params=nuevoColor
+comment4.target=void\ setColorRelleno(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getColorLinea()
+comment6.params=nuevoColor
+comment6.target=void\ setColorLinea(java.lang.String)
+comment7.params=nuevoPunto
+comment7.target=void\ setPunto(Punto)
+comment8.params=
+comment8.target=Punto\ getPunto()
+comment9.params=
+comment9.target=void\ dibujar()
+numComments=12
