@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq &quot;-FuC:\Users\Adm\3D Objects\NICOLAS\Tripu-deV\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Parcial Completo\&quot; &quot;-FUC:\Users\Adm\3D Objects\NICOLAS\Tripu-deV\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Parcial Completo\lib\x86_64-win64\&quot; &quot;-FEC:\Users\Adm\3D Objects\NICOLAS\Tripu-deV\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Parcial Completo\&quot; &quot;-oC:\Users\Adm\3D Objects\NICOLAS\Tripu-deV\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Parcial Completo\nicolasPenalba.exe&quot; nicolasPenalba.pas"/>
+</CONFIG>
