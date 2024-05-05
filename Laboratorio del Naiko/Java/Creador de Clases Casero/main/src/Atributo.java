@@ -26,11 +26,11 @@ public class Atributo
     }
     
     public String devolverDefGetter(){
-        return "public " + tipoAtributo + " get"+ nomAtributo.substring(0, 1).toUpperCase()+ nomAtributo.substring(1) + "(){";
+        return "public " + tipoAtributo + " get"+ nomAtributo.substring(0, 1).toUpperCase()+"(){";
     }
     
     public String devolverDefSetter(){
-        return "public void set" + nomAtributo.substring(0, 1).toUpperCase() + nomAtributo.substring(1) + "(" + tipoAtributo + " " + nomAtributo + "){";
+        return "public void set" + nomAtributo.substring(0, 1).toUpperCase() + "(" + tipoAtributo + " " + nomAtributo + "){";
     }
     
     public String devolverConstructor(){

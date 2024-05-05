@@ -14,9 +14,11 @@ public class main {
         cantAtributos = in.nextInt();
         obj = new Objeto(cantAtributos);
         
+        
+        
         // --------------------------------- Lectura de datos ---------------------------------
         for (i=0;i<cantAtributos;i++){
-            System.out.println("Ingrese el nombre del atributo " + (i+1) + "/" + cantAtributos + ":");
+            System.out.println("Ingrese el nombre del atributo " + i + "/" + cantAtributos + ":");
             nomAtributo = in.next();
             System.out.println(" - Ingrese el tipo de atributo:");
             tipoAtributo = in.next();
@@ -39,18 +41,16 @@ public class main {
         // Constructor Basico
         System.out.println("public " + nomObj + " (" + obj.devolverParametrosConstructor() + "){");
         for (i=0;i<cantAtributos;i++){
-            System.out.println("this.set" + obj.getNomAtributo(i).substring(0, 1).toUpperCase() + obj.getNomAtributo(i).substring(1) + "(" + obj.getNomAtributo(i) + ");");
+            System.out.println("this.set" + obj.getNomAtributo(i).substring(0, 1).toUpperCase() + "(" + obj.getNomAtributo(i) + ");");
         }
         System.out.println("}");
         System.out.println();
         
         // Constructor Vacio
-        System.out.println("// Constructores");
         System.out.println("public " + nomObj + " (){}");
         System.out.println();
         
         // getters
-        System.out.println("// Getters");
         for (i=0;i<cantAtributos;i++){
             System.out.println(obj.devolverDecGetter(i));
             System.out.println("return " + obj.getNomAtributo(i) + ";");
@@ -59,25 +59,12 @@ public class main {
         System.out.println();
         
         // setters
-        System.out.println("// Setters");
         for (i=0;i<cantAtributos;i++){
             System.out.println(obj.devolverDecSetter(i));
             System.out.println("this." + obj.getNomAtributo(i) + " = " + obj.getNomAtributo(i) + ";");
             System.out.println("}");
         }
         System.out.println();
-        
-        // defAbstractos
-        System.out.println("// Declaracion de metodos abstractos");
-        System.out.println();
-        
-        // toString
-        System.out.println("public String toString(){");
-        System.out.println("return");
-        for (i=0;i<cantAtributos;i++){
-            System.out.println(" , " + obj.getNomAtributo(i) + ": + " + obj.getNomAtributo(i) + " + ");
-        }
-        System.out.println("}");
         
         System.out.println("}");
 
