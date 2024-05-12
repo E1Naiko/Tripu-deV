@@ -70,6 +70,7 @@ public class main {
 
                 auxCuentaAhorro = new objCuentaAhorro(numCuenta, cbu, alias, dinero, propCUIT, propNombre, propApellido, cantTarjetasCredito, tienePlazoFijo, DIMFCUENTASAHORRO);
 
+                // Cargo el vector de transacciones
                 System.out.println("Ingrese un Concepto de Transaccion:");
                 actConcepto = in.next().toUpperCase();
                 while (!actConcepto.equals("FIN")){
