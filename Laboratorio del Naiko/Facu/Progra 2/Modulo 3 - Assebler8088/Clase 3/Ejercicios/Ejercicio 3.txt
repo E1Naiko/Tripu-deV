@@ -2,6 +2,7 @@
 ; de dos números de 32 bits almacenados en la memoria del microprocesador
 ; llamando a una subrutina SUM32, pasando los parámetros por referencia
 ; desde el programa principal a través de registros.
+; https://excalidraw.com/#json=Mjx6DqGXroajLKWmlf94x,nANL5XDYz8pxM9THqpYIbw
 
 org 1000h
   NUM1H dw 0
