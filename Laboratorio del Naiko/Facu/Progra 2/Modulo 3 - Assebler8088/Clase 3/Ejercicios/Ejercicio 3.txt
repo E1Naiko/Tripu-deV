@@ -1,0 +1,44 @@
+; TP3 Ejercicio 3: Ejercicio 3.  Escribir un programa que calcule la suma
+; de dos números de 32 bits almacenados en la memoria del microprocesador
+; llamando a una subrutina SUM32, pasando los parámetros por referencia
+; desde el programa principal a través de registros.
+
+org 1000h
+  NUM1H dw 0
+  NUM1L dw 49152
+  NUM2H dw 0
+  NUM2L dw 32768
+  RESH dw 0
+  RESL dw 0
+
+ORG 3000H
+  SUM32: ; RESERVO espacio en los registros para poder calcular
+         push cx
+         push dx
+         mov cx, 0
+         mov dx, 0
+
+         ; me guardo en bx a la direccion de NUM1H
+         push bx
+         mov bx, ax
+         pop ax
+
+         
+         
+         add ax, [bx]
+         
+         
+    ret
+
+org 2000h
+  mov ax, offset NUM1H
+  mov bx, offset NUM1L
+  mov cx, offset NUM2H
+  mov dx, offset NUM2L
+
+  call SUM32
+
+  mov RESH, ax
+  mov RESL, bx
+  hlt
+end
