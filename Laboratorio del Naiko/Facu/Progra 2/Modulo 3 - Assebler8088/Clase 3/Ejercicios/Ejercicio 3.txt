@@ -5,41 +5,60 @@
 ; https://excalidraw.com/#json=Mjx6DqGXroajLKWmlf94x,nANL5XDYz8pxM9THqpYIbw
 
 org 1000h
-  NUM1H dw 0
-  NUM1L dw 49152
-  NUM2H dw 0
-  NUM2L dw 32768
-  RESH dw 0
-  RESL dw 0
+  Num1H dw 0     ; 1000h
+  Num1L dw 49152 ; 1002h
+  Num2H dw 0     ; 1004h
+  Num2L dw 32768 ; 1006h
+  ResH dw 0      ; 1008h
+  ResL dw 0      ; 100Ah
 
 ORG 3000H
-  SUM32: ; RESERVO espacio en los registros para poder calcular
+  SUM32: ; Reserva de los Registros
+         push ax
+         push bx
+         push cx
+         push dx
+
+         ; RESERVO espacio en los registros para poder calcular
          push cx
          push dx
          mov cx, 0
          mov dx, 0
 
-         ; me guardo en bx a la direccion de NUM1H
-         push bx
+         ; calculo la suma de NumeroLow
+         add cx, [bx]
          mov bx, ax
-         pop ax
+         add cx, [bx]
+         
+         jnc SinCarry
+         inc dx
 
-         
-         
-         add ax, [bx]
-         
-         
+         ; calculo la suma de NumeroHigh
+         SinCarry:
+         pop bx
+         pop ax
+         add dx, [bx]
+         mov bx, ax
+         add dx, [bx]
+
+         ; actualizo el resultado de la suma
+         mov ResL, cx
+         mov ResH, dx
+
+         ; Devolver de los Registros
+         pop dx
+         pop cx
+         pop bx
+         pop ax
     ret
 
 org 2000h
-  mov ax, offset NUM1H
-  mov bx, offset NUM1L
-  mov cx, offset NUM2H
-  mov dx, offset NUM2L
+  mov ax, offset Num1L
+  mov bx, offset Num2L
+  mov cx, offset Num1H
+  mov dx, offset Num2H
 
   call SUM32
 
-  mov RESH, ax
-  mov RESL, bx
   hlt
 end
