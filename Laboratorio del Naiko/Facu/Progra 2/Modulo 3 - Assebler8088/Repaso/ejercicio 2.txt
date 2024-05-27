@@ -37,30 +37,30 @@ org 1000h
   sumatoria db 0
   
 org 3000h
-  ; copio los valores pre subrutina del registro en pila
-  push ax
-  push bx
-  push cx
-  push dx
-  
   SUBRUTINA:
-  mov dx, 1; voy a usar a dx como variable res
-
-  ; comienzo de la estructura repeat until
-  bucle: add dl, dl; res:= res*2
-    inc al; a:= a+1
-    cmp al, byte ptr [bx]; comparo si a=b
-    jz bucle
-
-  ; actualizo res
-  mov byte ptr [bx], dl;
+    ; copio los valores pre subrutina del registro en pila
+    push ax
+    push bx
+    push cx
+    push dx
+    
+    mov dx, 1; voy a usar a dx como variable res
+  
+    ; comienzo de la estructura repeat until
+    bucle: add dl, dl; res:= res*2
+      inc al; a:= a+1
+      cmp al, byte ptr [bx]; comparo si a=b
+      jnz bucle
+  
+    ; actualizo res
+    mov byte ptr [bx], dl;
+  
+    ; retorno los valores pre subrutina desde la pila
+    pop dx
+    pop cx
+    pop bx
+    pop ax
   ret
-
-  ; retorno los valores pre subrutina desde la pila
-  pop dx
-  pop cx
-  pop bx
-  pop ax
 
 org 2000h
   ; reservo los registros con los indices de las tablas
@@ -70,10 +70,35 @@ org 2000h
   mov dx, offset finTablaB - offset TablaB
   
   bucleMain:
-    ;mov al, a
-    ;mov bx, offset b
+    ; comparo si llegue al final de alguna de las tablas
+    cmp cx, 0
+    jz finMain
+    cmp dx, 0
+    jz finMain
 
-    call SUBRUTINA
+      ; para cargar los valores por tabla de a
+      push ax
+      push bx
+      
+      mov bx, ax
+      mov al, [bx]
+      pop bx
+      
+      cmp al, byte ptr [bx]
+      jns sigue
+      call SUBRUTINA
+
+      sigue:
+      pop ax
+      
+      inc ax
+      inc bx
+      
+      ; substraigo el indice de ambas tablas
+      dec cx
+      dec dx
+      
+      jmp bucleMain
     
   finMain:
   hlt
