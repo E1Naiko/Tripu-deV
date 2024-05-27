@@ -1,0 +1,80 @@
+;; CLASE DE REPASO Ejercicio 2: SIN TERMINAR
+; a)	Implementen una subrutina reusable que logre realizar el
+; procesamiento de la rutina en Pascal detallada a continuación.
+; El pasaje de parámetros debe ser vía registro. Consideren que los
+; datos son de tipo byte y enteros positivos. 
+
+; procedure subrutina(a: integer; var b: integer);
+;   var
+;     res: integer;
+;   begin
+;     res:=1;
+;     repeat
+;       res:= res*2;
+;       a:= a+1;
+;     until (a=b);
+;     b:= res;
+;   end;
+
+; b)	Implementen un programa en Assembler que invoque a la subrutina
+; implementada en a) para los diferentes elementos de las tablas A y B,
+; siempre que el valor de a sea menor al valor de b. Por ejemplo,
+; si tenemos: 
+	
+;TablaA -> 1, 2, 5, 4, 30,… 
+;TablaB -> 1, 7, 5, 9, 7,…
+
+; los valores finales serán: TablaB  1, 32, 5, 32, 7. 
+; El programa también debe almacenar en memoria la sumatoria de
+; los valores de TablaB menores a 10. 
+
+
+org 1000h
+  TablaA db 1, 2, 5, 4, 30
+  finTablaA db ?
+  TablaB db 1, 7, 5, 9, 7
+  finTablaB db ?
+  sumatoria db 0
+  
+org 3000h
+  ; copio los valores pre subrutina del registro en pila
+  push ax
+  push bx
+  push cx
+  push dx
+  
+  SUBRUTINA:
+  mov dx, 1; voy a usar a dx como variable res
+
+  ; comienzo de la estructura repeat until
+  bucle: add dl, dl; res:= res*2
+    inc al; a:= a+1
+    cmp al, byte ptr [bx]; comparo si a=b
+    jz bucle
+
+  ; actualizo res
+  mov byte ptr [bx], dl;
+  ret
+
+  ; retorno los valores pre subrutina desde la pila
+  pop dx
+  pop cx
+  pop bx
+  pop ax
+
+org 2000h
+  ; reservo los registros con los indices de las tablas
+  mov ax, offset tablaA
+  mov bx, offset tablaB
+  mov cx, offset finTablaA - offset TablaA
+  mov dx, offset finTablaB - offset TablaB
+  
+  bucleMain:
+    ;mov al, a
+    ;mov bx, offset b
+
+    call SUBRUTINA
+    
+  finMain:
+  hlt
+END
