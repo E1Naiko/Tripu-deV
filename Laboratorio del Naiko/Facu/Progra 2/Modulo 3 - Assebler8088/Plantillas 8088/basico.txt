@@ -1,0 +1,24 @@
+;
+org 1000h
+
+org 3000h
+  SUBRUTINA:
+  ; guardo una copia de los registros pre subrutina
+  push ax
+  push bx
+  push cx
+  push dx
+
+  ; cargo el estado de los registros pre subrutina
+  pop dx
+  pop cx
+  pop bx
+  pop ax
+ret
+
+org 2000h
+
+  call ROTARIZQ
+
+  hlt
+end
