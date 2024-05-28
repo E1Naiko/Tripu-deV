@@ -1,4 +1,4 @@
-;; Tp4 Ejercicio 1:
+;; Tp4 Ejercicio 1 SIN TERMINAR:
 ; Escribir una subrutina ROTARIZQ que haga una rotación hacia la izquierda de los
 ; bits de un byte almacenado en la memoria del microprocesador. Dicho byte y el
 ; número de posiciones a rotar deben pasarse por valor desde el programa principal
