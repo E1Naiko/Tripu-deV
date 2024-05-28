@@ -1,0 +1,79 @@
+; Factorial pasado via registro por valor
+org 1000h
+  numero db 3
+
+org 3000h
+  MULTIPLICAR:
+  ; guardo una copia de los registros pre subrutina
+  push cx
+  push dx
+
+  ; 
+  mov cx, 1
+  
+  cmp bl, 0
+    jnz distintoCero
+    mov dl, 0
+    jmp finMulti
+    
+  distintoCero:
+    mov dl, al
+    multi: cmp bl, cl
+      jz finMulti
+      add dl, al
+      inc cl
+      jmp multi
+
+  finMulti: mov al, dl
+
+  ; cargo el estado de los registros pre subrutina
+  pop dx
+  pop cx
+ret
+
+FACTORIAL: ; guardo una copia de los registros pre subrutina
+  push ax
+  push bx
+  push dx
+
+  cmp al, 0
+    jnz distinto
+    cmp al, 1
+    jnz distinto
+    mov dl, 1
+    jmp finFactorial
+
+    mov cl, 1
+    mov dl, al
+    distinto:
+      push ax
+      push cx
+      
+      mov dl, al
+      mov cl, bl
+
+      call MULTIPLICAR
+
+      pop cx
+      pop ax
+      
+      inc cl
+      cmp cl, al
+      jnz distinto
+
+  finFactorial: mov al, dl
+
+  ; cargo el estado de los registros pre subrutina
+  pop dx
+  pop cx
+  pop bx
+ret
+
+org 2000h
+  mov ax, 0
+  mov al, numero
+
+  call MULTIPLICAR
+
+  hlt
+end
