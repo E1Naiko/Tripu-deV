@@ -18,7 +18,7 @@ ret
 
 org 2000h
 
-  call ROTARIZQ
+  call SUBRUTINA
 
   hlt
 end
