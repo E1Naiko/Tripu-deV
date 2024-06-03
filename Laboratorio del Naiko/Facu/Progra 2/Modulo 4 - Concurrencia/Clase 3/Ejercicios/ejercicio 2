@@ -1,0 +1,50 @@
+programa Bloquear
+{1-  Realice un programa en el que un robot junta todas las flores de la avenida 1 y las deposite al finalizar dicha avenida. Al finalizar la avenida, debe informar la cantidad de flores depositadas y la cantidad de esquinas sin flores que encontró durante el recorrido.
+ 2-  Modifique el programa anterior para que el mismo robot trabaje en las primeras 5 avenidas impares.
+}
+areas
+  areaR1 : AreaP(1,1,10,100)
+robots 
+  robot tipo1
+  variables
+    num: numero
+    posAct: numero
+  comenzar
+    num := 0
+    posAct:= 1
+    mientras (PosAv < 9)
+      mientras (PosCa < 100)
+        si (HayFlorEnLaEsquina)
+          mientras (HayFlorEnLaEsquina)
+            tomarFlor
+        sino
+          num:= num+1
+        mover
+      si (HayFlorEnLaEsquina)
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+      sino
+        num:= num+1
+      posAct:= posAct+2
+      Pos(posAct,1)
+    mientras (PosCa < 100)
+      si (HayFlorEnLaEsquina)
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+      sino
+        num:= num+1
+      mover
+    si (HayFlorEnLaEsquina)
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+    sino
+      num:= num+1
+    Informar(num)
+  fin   
+variables 
+  robot1: tipo1
+comenzar  
+  AsignarArea(robot1,areaR1)
+  Iniciar(robot1, 1, 1)
+fin
+fin
