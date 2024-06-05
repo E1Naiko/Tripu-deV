@@ -1,0 +1,69 @@
+programa ejercicio1
+areas
+  areaR1 : AreaP(1,1,1,10)
+  areaR2 : AreaC(2,11,2,20)
+robots
+  robot fiscalizador
+  variables
+    r1: numero
+    r2: numero
+    res: numero
+  comenzar
+    r1:= 0
+    r2:= 0
+    RecibirMensaje(r1, robot1)
+    RecibirMensaje(r2, robot2)
+    si (r1 > r2)
+      res:= r1-r2
+      Informar(robot1 gano,res)
+    sino
+      res:= r2-r1
+      Informar(robot2 gano,res)
+  fin
+  robot tipo1
+  variables
+    cont: numero
+  comenzar
+    cont:= 0
+    repetir 9
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:= cont+1
+      mover
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:= cont+1
+    {EnviarMensaje(1, robotFiscal)}
+    EnviarMensaje(cont, robotFiscal)
+  fin
+  robot tipo2
+  variables
+    cont: numero
+    res: numero
+  comenzar
+    cont:= 0
+    res:= 0
+    repetir 9
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:= cont+1
+      mover
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:= cont+1
+    {EnviarMensaje(2, robotFiscal)}
+    EnviarMensaje(cont, robotFiscal)
+  fin
+variables
+  robotFiscal: fiscalizador
+  robot1: tipo1
+  robot2: tipo2
+comenzar
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robotFiscal,areaR2)
+  Iniciar(robot1, 1, 1)
+  Iniciar(robot2, 2, 11)
+  Iniciar(robotFiscal, 2, 1)
+fin
+fin
