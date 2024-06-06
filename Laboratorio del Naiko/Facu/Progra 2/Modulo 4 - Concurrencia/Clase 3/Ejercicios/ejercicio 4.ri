@@ -1,0 +1,117 @@
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+areas
+  areaR : AreaPC(5,5,50,30)
+  areaRG : AreaC(1,1,13,4)
+robots 
+  robot tipoG
+  variables
+    avOrigen: numero
+    caOrigen: numero
+    ran: numero
+    act: boolean
+    cont: numero
+    esquina: numero
+  comenzar
+    avOrigen:= PosAv
+    caOrigen:= PosCa
+    cont:= 0
+    RecibirMensaje(act, robotC)
+    mientras (act)
+      Random(ran, 5,50)
+      Pos(ran,5)
+      repetir 25
+        mientras (HayPapelEnLaEsquina)
+          tomarPapel
+          cont:= cont+1
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+          cont:= cont+1
+        mover
+      mientras (HayPapelEnLaEsquina)
+        tomarPapel
+        cont:= cont+1
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:=cont+1
+      EnviarMensaje(0, robotC) {Envio al programa que puede continuar, evita colisiones}
+      Pos(avOrigen,caOrigen)
+      RecibirMensaje(act, robotC)
+    EnviarMensaje(cont, robotC)
+  fin
+  robot tipoCoordinador
+  variables
+    act: numero
+    aux: numero
+    res: numero
+    cont1: numero
+    cont2: numero
+    cont3: numero
+    cont4: numero
+  comenzar
+    repetir 20
+      Random(act, 1,4)
+      si (act=1)
+        EnviarMensaje(V, robot1)
+        RecibirMensaje(aux, robot1)
+      sino
+        si (act=2)
+          EnviarMensaje(V, robot2)
+          RecibirMensaje(aux, robot2)
+        sino
+          si (act=3)
+            EnviarMensaje(V, robot3)
+            RecibirMensaje(aux, robot3)
+          sino
+            EnviarMensaje(V, robot4)
+            RecibirMensaje(aux, robot4)
+    EnviarMensaje(F, robot1)
+    EnviarMensaje(F, robot2)
+    EnviarMensaje(F, robot3)
+    EnviarMensaje(F, robot4)
+    RecibirMensaje(cont1, robot1)
+    RecibirMensaje(cont2, robot2)
+    RecibirMensaje(cont3, robot3)
+    RecibirMensaje(cont4, robot4)
+    res:=0
+    si ((cont1>cont2) & (cont1>cont3) & (cont1>cont4))
+      res:= 1
+    sino
+      si ((cont2>cont1) & (cont2>cont3) & (cont2>cont4))
+        res:= 2
+      sino
+        si ((cont3>cont1) & (cont3>cont2) & (cont3>cont4))
+          res:= 3
+        sino
+          si ((cont4>cont1) & (cont4>cont2) & (cont4>cont3))
+            res:= 4
+    Informar(res)
+  fin
+variables 
+  robotC: tipoCoordinador
+  robot1: tipoG
+  robot2: tipoG
+  robot3: tipoG
+  robot4: tipoG
+comenzar
+  AsignarArea(robotC,areaRG)
+  AsignarArea(robot1,areaR)
+  AsignarArea(robot2,areaR)
+  AsignarArea(robot3,areaR)
+  AsignarArea(robot4,areaR)
+  AsignarArea(robot1,areaRG)
+  AsignarArea(robot2,areaRG)
+  AsignarArea(robot3,areaRG)
+  AsignarArea(robot4,areaRG)
+  Iniciar(robotC, 1, 1)
+  Iniciar(robot1, 7, 4)
+  Iniciar(robot2, 9, 4)
+  Iniciar(robot3, 11, 4)
+  Iniciar(robot4, 13, 4)
+fin
+fin

@@ -1,0 +1,72 @@
+programa ejercicio3
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+areas
+  areaR : AreaC(1,1,100,100)
+robots 
+  robot tipo
+  variables
+    contPapel: numero
+    contFlor: numero
+    alto: numero
+    cont: numero
+  comenzar
+    cont:= 0
+    repetir 4
+      contFlor:=0
+      contPapel:=0
+      Random(alto, 1,5)
+      repetir alto
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+          contFlor:= contFlor+1
+        mientras (HayPapelEnLaEsquina)
+          tomarPapel
+          contPapel:= contPapel+1
+        mover
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        contFlor:= contFlor+1
+      mientras (HayPapelEnLaEsquina)
+        tomarPapel
+        contPapel:= contPapel+1
+      si (contFlor>contPapel)
+        cont:= cont+1
+      derecha
+      mover
+      izquierda
+    EnviarMensaje(cont, robotJefe)
+  fin
+  robot tipoJefe
+  variables
+    res: numero
+    cont1: numero
+    cont2: numero
+    cont3: numero
+  comenzar
+    RecibirMensaje(cont1, robot1)
+    RecibirMensaje(cont2, robot2)
+    RecibirMensaje(cont3, robot3)
+    res:= cont1 + cont2 + cont3
+    Informar(res)
+  fin
+variables 
+  robot1: tipo
+  robot2: tipo
+  robot3: tipo
+  robotJefe: tipoJefe
+comenzar
+  AsignarArea(robotJefe,areaR)
+  AsignarArea(robot1,areaR)
+  AsignarArea(robot2,areaR)
+  AsignarArea(robot3,areaR)
+  Iniciar(robotJefe, 1, 1)
+  Iniciar(robot1, 2, 1)
+  Iniciar(robot2, 7, 2)
+  Iniciar(robot3, 12, 3)
+fin
+fin
