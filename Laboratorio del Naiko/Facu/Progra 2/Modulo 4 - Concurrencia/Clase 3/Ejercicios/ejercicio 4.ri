@@ -1,3 +1,9 @@
+{
+cambiar:
+- se tpea a una esquina random y la limpia, no es la av completa
+- no esperes a que cada robot en orden devuelva, manda identificador y numero al general
+- inverti el pos(avOrigen, caOrigen) con el enviar mensaje, puede pasar que se choquen cuando envias al proximo robot
+}
 programa plantillaGeneral
 procesos
   proceso izquierda
