@@ -1,5 +1,10 @@
 programa plantillaGeneral
 procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
   proceso limpiar
     variables
       cont: numero

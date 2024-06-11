@@ -1,0 +1,121 @@
+{1-	Realice un programa para que 1 robot recolector de flores (florero) y 1 robot recolector de papeles (papelero)
+recorran el perímetro de la ciudad juntando los elementos que encuentren en todas las esquinas. Al finalizar, 
+deben informar la cantidad de elementos recolectados. Los robots recolectores inician en (49,50) y (50,49).}
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso juntarPapel(ES cont: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+  fin
+  proceso juntarFlor(ES cont: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:= cont+1
+  fin
+areas
+  origenR1 : AreaP(49,50,49,50)
+  origenR2 : AreaP(50,49,50,49)
+  perimetroInf : AreaPC(1,1,100,1)
+  perimetroSup : AreaPC(1,100,100,100)
+  perimetroIzq : AreaPC(1,2,1,99)
+  perimetroDer : AreaPC(100,2,100,99)
+robots 
+  robot florero
+  variables
+    rep: numero
+    cont: numero
+    actAv: numero
+    actCa: numero
+  comenzar
+    rep:= 0
+    BloquearEsquina(1,1)
+    Pos(1,1)
+    derecha
+    repetir 4
+      cont:= cont+1
+      {guardo la posicion del bloqueo}
+      actAv:= PosAv
+      actCa:= PosCa
+      {recorro la porcion de perimetro}
+      repetir 98
+        juntarFlor(cont)
+        mover
+      juntarFlor(cont)
+      {Bloqueo la esquina siguiente correspondiente}
+      si (rep = 1)
+        BloquearEsquina(100,1)
+      sino
+        si (rep = 2)
+          BloquearEsquina(100,100)
+        sino
+          si (rep = 3)
+            BloquearEsquina(1,100)
+      mover
+      izquierda
+      {Libero la esquina correspondiente}
+      LiberarEsquina(actAv, actCa)
+    Pos(49,50)
+    Informar(cont)
+  fin
+  robot papelero
+  variables
+    cont: numero
+    rep: numero
+    actAv: numero
+    actCa: numero
+  comenzar
+    BloquearEsquina(100,100)
+    Pos(100,100)
+    izquierda
+    repetir 4
+      cont:= cont+1
+      {guardo la posicion del bloqueo}
+      actAv:= PosAv
+      actCa:= PosCa
+      {recorro la porcion de perimetro}
+      repetir 98
+        juntarFlor(cont)
+        mover
+      juntarFlor(cont)
+      {Bloqueo la esquina siguiente correspondiente}
+      si (rep = 1)
+        BloquearEsquina(1,100)
+      sino
+        si (rep = 2)
+          BloquearEsquina(1,1)
+        sino
+          si (rep = 3)
+            BloquearEsquina(100,1)
+      mover
+      izquierda
+      {Libero la esquina correspondiente}
+      LiberarEsquina(actAv, actCa)
+    Pos(50,49)
+    Informar(cont)
+  fin
+variables 
+  robot1: florero
+  robot2: papelero
+comenzar  
+  AsignarArea(robot1,origenR1)
+  AsignarArea(robot1,perimetroInf)
+  AsignarArea(robot1,perimetroSup)
+  AsignarArea(robot1,perimetroIzq)
+  AsignarArea(robot1,perimetroDer)
+  AsignarArea(robot2,origenR2)
+  AsignarArea(robot2,perimetroInf)
+  AsignarArea(robot2,perimetroSup)
+  AsignarArea(robot2,perimetroIzq)
+  AsignarArea(robot2,perimetroDer)
+  Iniciar(robot1, 49, 50)
+  Iniciar(robot2, 50, 49)
+fin
+fin

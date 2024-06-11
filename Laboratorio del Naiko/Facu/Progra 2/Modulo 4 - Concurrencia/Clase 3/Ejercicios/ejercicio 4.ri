@@ -1,8 +1,6 @@
 {
 cambiar:
-- se tpea a una esquina random y la limpia, no es la av completa
-- no esperes a que cada robot en orden devuelva, manda identificador y numero al general
-- inverti el pos(avOrigen, caOrigen) con el enviar mensaje, puede pasar que se choquen cuando envias al proximo robot
+- no esperes a que cada robot en orden devuelva, manda identificador y numero al general, ahora como chota hacer esto? no se
 }
 programa plantillaGeneral
 procesos
@@ -10,6 +8,21 @@ procesos
   comenzar
     repetir 3
       derecha
+  fin
+  proceso limpiarEsquina(ES cont: numero)
+  variables
+    ranAv: numero
+    ranCa: numero
+  comenzar
+    Random(ranAv,5,50)
+    Random(ranCa,5,30)
+    Pos(ranAv,ranCa)
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:= cont+1
   fin
 areas
   areaR : AreaPC(5,5,50,30)
@@ -19,7 +32,6 @@ robots
   variables
     avOrigen: numero
     caOrigen: numero
-    ran: numero
     act: boolean
     cont: numero
     esquina: numero
@@ -29,24 +41,9 @@ robots
     cont:= 0
     RecibirMensaje(act, robotC)
     mientras (act)
-      Random(ran, 5,50)
-      Pos(ran,5)
-      repetir 25
-        mientras (HayPapelEnLaEsquina)
-          tomarPapel
-          cont:= cont+1
-        mientras (HayFlorEnLaEsquina)
-          tomarFlor
-          cont:= cont+1
-        mover
-      mientras (HayPapelEnLaEsquina)
-        tomarPapel
-        cont:= cont+1
-      mientras (HayFlorEnLaEsquina)
-        tomarFlor
-        cont:=cont+1
-      EnviarMensaje(0, robotC) {Envio al programa que puede continuar, evita colisiones}
+      limpiarEsquina(cont)
       Pos(avOrigen,caOrigen)
+      EnviarMensaje(0, robotC) {Envio al programa que puede continuar, evita colisiones}
       RecibirMensaje(act, robotC)
     EnviarMensaje(cont, robotC)
   fin
