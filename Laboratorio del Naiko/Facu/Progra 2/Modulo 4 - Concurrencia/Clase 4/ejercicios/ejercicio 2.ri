@@ -1,0 +1,139 @@
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  {}
+  {}
+  {}
+  proceso vaciarPapelDeBolsa
+  comenzar
+    mientras (HayPapelEnLaBolsa)
+      depositarPapel
+  fin
+  {}
+  {}
+  {}
+  proceso vaciarFloresDeBolsa
+  comenzar
+    mientras (HayFlorEnLaBolsa)
+      depositarFlor
+  fin
+  {}
+  {}
+  {}
+  proceso juntarPapel
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+  {}
+  {}
+  {}
+  proceso juntarFlor
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+  {}
+  {}
+  {}
+  proceso recorridoFlores(E origenAv: numero E origenCa: numero)
+  variables
+    av: numero
+    ca: numero
+  comenzar
+    repetir 5
+      Random(av, 1,5)
+      Random(ca, 1,10)
+      BloquearEsquina(av,ca)
+      Pos(av,ca)
+      juntarFlor
+      Pos(origenAv,origenCa)
+      LiberarEsquina(av,ca)
+  fin
+  {}
+  {}
+  {}
+  proceso recorridoPapeles(E origenAv: numero E origenCa: numero)
+  variables
+    av: numero
+    ca: numero
+  comenzar
+    repetir 5
+      Random(av, 6,10)
+      Random(ca, 1,9)
+      BloquearEsquina(av,ca)
+      Pos(av,ca)
+      juntarPapel
+      Pos(origenAv,origenCa)
+      LiberarEsquina(av,ca)
+  fin
+  {}
+  {}
+  {}
+  proceso final(E origenAv: numero E origenCa: numero E tipo: boolean)
+  comenzar
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    si (tipo)
+      vaciarPapelDeBolsa
+    sino
+      vaciarFloresDeBolsa
+    Pos(origenAv, origenCa)
+    LiberarEsquina(10,10)
+  fin
+  {}
+  {}
+  {}
+areas
+  areaFin: AreaPC(10,10,10,10)
+  areaFloreros : AreaC(1,1,5,10)
+  areaPapeleros : AreaC(6,1,10,9)
+  inicioFlorero1 : AreaC(6,10,6,10)
+  inicioFlorero2 : AreaC(7,10,7,10)
+  inicioPapelero1 : AreaC(8,10,8,10)
+  inicioPapelero2 : AreaC(9,10,9,10)
+robots 
+  robot tipoF
+  comenzar
+    recorridoFlores(PosAv, PosCa)
+    final(PosAv, PosCa, F)
+  fin
+  {}
+  {}
+  {}
+  robot tipoP
+  comenzar
+    recorridoPapeles(PosAv, PosCa)
+    final(PosAv, PosCa, V)
+  fin
+  {}
+  {}
+  {}
+variables 
+  robotF1: tipoF
+  robotF2: tipoF
+  robotP1: tipoP
+  robotP2: tipoP
+comenzar  
+  AsignarArea(robotF1,areaFin)
+  AsignarArea(robotF1,areaFloreros)
+  AsignarArea(robotF1,inicioFlorero1)
+  AsignarArea(robotF2,areaFin)
+  AsignarArea(robotF2,areaFloreros)
+  AsignarArea(robotF2,inicioFlorero2)
+  AsignarArea(robotP1,areaFin)
+  AsignarArea(robotP1,areaPapeleros)
+  AsignarArea(robotP1,inicioPapelero1)
+  AsignarArea(robotP2,areaFin)
+  AsignarArea(robotP2,areaPapeleros)
+  AsignarArea(robotP2,inicioPapelero2)
+  Iniciar(robotF1, 6, 10)
+  Iniciar(robotF2, 7, 10)
+  Iniciar(robotP1, 8, 10)
+  Iniciar(robotP2, 9, 10)
+fin
+fin

@@ -1,3 +1,0 @@
-- [ ] Cambiar los recorridos a modulos que tomen un valor 1 o -1 para avanzar o retroceder en las calles/avenidas
-- [ ] Cambiar los bloqueos a "fila india", bloqueas esquina siguiente, moves, liberas anterior
-- [ ] Re pensar el recorrido de los robots para que sea modularizable

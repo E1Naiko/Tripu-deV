@@ -8,99 +8,131 @@ procesos
     repetir 3
       derecha
   fin
+  {}
+  {}
+  {}
   proceso juntarPapel(ES cont: numero)
   comenzar
     mientras (HayPapelEnLaEsquina)
       tomarPapel
       cont:= cont+1
   fin
+  {}
+  {}
+  {}
   proceso juntarFlor(ES cont: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
       tomarFlor
       cont:= cont+1
   fin
+  {}
+  {}
+  {}
+  proceso recorrerCalle(E tipoDeRecorrido: boolean E signo: numero ES cont: numero)
+  {Requiere SI O SI que se bloquee la primer esquina y se libere la ultima}
+  comenzar
+    si (tipoDeRecorrido) {junta Papeles}
+      repetir 99
+        juntarPapel(cont)
+        BloquearEsquina(PosAv+signo, PosCa)
+        mover
+        LiberarEsquina(PosAv-signo, PosCa)
+    sino {junta Flores}
+      repetir 99
+        juntarFlor(cont)
+        BloquearEsquina(PosAv+signo, PosCa)
+        mover
+        LiberarEsquina(PosAv-signo, PosCa)
+  fin
+  {}
+  {}
+  {}
+  proceso recorrerAvenida(E tipoDeRecorrido: boolean E signo: numero ES cont: numero)
+  {Requiere SI O SI que se bloquee la primer esquina y se libere la ultima}
+  comenzar
+    si (tipoDeRecorrido) {junta Papeles}
+      repetir 99
+        juntarPapel(cont)
+        BloquearEsquina(PosAv, PosCa+signo)
+        mover
+        LiberarEsquina(PosAv, PosCa-signo)
+    sino {junta Flores}
+      repetir 99
+        juntarFlor(cont)
+        BloquearEsquina(PosAv, PosCa+signo)
+        mover
+        LiberarEsquina(PosAv, PosCa-signo)
+  fin
+  {}
+  {}
+  {}
 areas
   origenR1 : AreaP(49,50,49,50)
   origenR2 : AreaP(50,49,50,49)
-  perimetroInf : AreaPC(1,1,100,1)
-  perimetroSup : AreaPC(1,100,100,100)
-  perimetroIzq : AreaPC(1,2,1,99)
-  perimetroDer : AreaPC(100,2,100,99)
+  perimetroInf : AreaC(1,1,100,1)
+  perimetroSup : AreaC(1,100,100,100)
+  perimetroIzq : AreaC(1,2,1,99)
+  perimetroDer : AreaC(100,2,100,99)
+  {}
+  {}
+  {}
 robots 
   robot florero
   variables
-    rep: numero
     cont: numero
-    actAv: numero
-    actCa: numero
+    signoCalle: numero
+    signoAvenida: numero
   comenzar
-    rep:= 0
+    cont:=0
+    signoCalle:=1
+    signoAvenida:=1
     BloquearEsquina(1,1)
     Pos(1,1)
     derecha
-    repetir 4
-      cont:= cont+1
-      {guardo la posicion del bloqueo}
-      actAv:= PosAv
-      actCa:= PosCa
-      {recorro la porcion de perimetro}
-      repetir 98
-        juntarFlor(cont)
-        mover
-      juntarFlor(cont)
-      {Bloqueo la esquina siguiente correspondiente}
-      si (rep = 1)
-        BloquearEsquina(100,1)
-      sino
-        si (rep = 2)
-          BloquearEsquina(100,100)
-        sino
-          si (rep = 3)
-            BloquearEsquina(1,100)
-      mover
+    repetir 2
+      recorrerCalle(F,signoCalle,cont)
       izquierda
-      {Libero la esquina correspondiente}
-      LiberarEsquina(actAv, actCa)
+      signoCalle:=-1
+      recorrerAvenida(F,signoAvenida,cont)
+      izquierda
+      signoAvenida:=-1
     Pos(49,50)
+    LiberarEsquina(1,1)
+    izquierda
     Informar(cont)
   fin
+  {}
+  {}
+  {}
   robot papelero
   variables
     cont: numero
     rep: numero
-    actAv: numero
-    actCa: numero
+    signoCalle: numero
+    signoAvenida: numero
   comenzar
+    cont:=0
+    signoCalle:=-1
+    signoAvenida:=-1
     BloquearEsquina(100,100)
     Pos(100,100)
     izquierda
-    repetir 4
-      cont:= cont+1
-      {guardo la posicion del bloqueo}
-      actAv:= PosAv
-      actCa:= PosCa
-      {recorro la porcion de perimetro}
-      repetir 98
-        juntarFlor(cont)
-        mover
-      juntarFlor(cont)
-      {Bloqueo la esquina siguiente correspondiente}
-      si (rep = 1)
-        BloquearEsquina(1,100)
-      sino
-        si (rep = 2)
-          BloquearEsquina(1,1)
-        sino
-          si (rep = 3)
-            BloquearEsquina(100,1)
-      mover
+    repetir 2
+      recorrerCalle(V,signoCalle,cont)
       izquierda
-      {Libero la esquina correspondiente}
-      LiberarEsquina(actAv, actCa)
+      signoCalle:=1
+      recorrerAvenida(V,signoAvenida,cont)
+      izquierda
+      signoAvenida:=1
     Pos(50,49)
+    LiberarEsquina(100,100)
+    derecha
     Informar(cont)
   fin
+  {}
+  {}
+  {}
 variables 
   robot1: florero
   robot2: papelero
