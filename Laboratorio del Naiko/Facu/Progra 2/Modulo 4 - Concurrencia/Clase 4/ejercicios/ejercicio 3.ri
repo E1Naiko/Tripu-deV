@@ -1,76 +1,94 @@
-Realice un programa donde 4 robots colaboren para recoger todas las flores de una esquina indicada por un robot jefe, seleccionada de manera aleatoria dentro del cuadrante (2,2) y (10,10). Para ello el jefe determina inicialmente una esquina y los robots deben accederla, tomar de a una las flores y volver a su posición inicial. Cuando los robots terminan el jefe deberá informar cuál de ellos logró recoger más flores. Las esquinas de inicio de los robots deberán ser jefe (1,1) y robots (2,1), (3, 1), (4,1) y (5,1).
+{Realice un programa donde 4 robots colaboren para recoger todas las flores de una esquina
+indicada por un robot jefe, seleccionada de manera aleatoria dentro del cuadrante (2,2) y (10,10).
+Para ello el jefe determina inicialmente una esquina y los robots deben accederla, tomar de a una
+las flores y volver a su posición inicial. Cuando los robots terminan el jefe deberá informar cuál
+de ellos logró recoger más flores. Las esquinas de inicio de los robots deberán ser jefe (1,1) y
+robots (2,1), (3, 1), (4,1) y (5,1).}
 
 
 programa plantillaGeneral
 procesos
-  proceso izquierda
+  proceso general(ES cont: numero)
+  variables
+    avOrigen: numero
+    caOrigen: numero
+    ranAv: numero
+    ranCa: numero
   comenzar
-    repetir 3
-      derecha
-  fin
-  proceso limpiar(ES cont: numero)
-    comenzar
-      repetir 99
-        mientras (HayPapelEnLaEsquina)
-          tomarPapel
-          cont:= cont+1
-        mientras (HayFlorEnLaEsquina)
-          tomarFlor
-          cont:= cont+1
-        mover
-      mientras (HayPapelEnLaEsquina)
-        tomarPapel
-        cont:= cont+1
-      mientras (HayFlorEnLaEsquina)
-        tomarFlor
-        cont:=cont+1
-      Informar(cont)
-    fin
-  proceso juntarPapel(ES cont: numero)
-  comenzar
-    repetir 99
-      mientras (HayFlorEnLaEsquina)
-        tomarFlor
-        cont:= cont+1
-      mover
-    mientras (HayPapelEnLaEsquina)
-      tomarPapel
-      cont:= cont+1
-  fin
-  proceso juntarFlor(ES cont: numero)
-  comenzar
-    repetir 99
-      mientras (HayFlorEnLaEsquina)
-        tomarFlor
-        cont:= cont+1
-      mover
-    mientras (HayFlorEnLaEsquina)
-      tomarFlor
-      cont:= cont+1
+    avOrigen:= PosAv
+    caOrigen:= PosCa
+    {}
+    RecibirMensaje(act, robotC)
+    RecibirMensaje(ranAv, robotC)
+    RecibirMensaje(ranCa, robotC)
+    mientras (act)
+      juntarFlor(cont)
+      Pos(avOrigen,caOrigen)
+      EnviarMensaje(0, robotC) {Envio al programa que puede continuar, evita colisiones}
+      RecibirMensaje(act, robotC)
+      RecibirMensaje(ranAv, robotC)
+      RecibirMensaje(ranCa, robotC)
   fin
 areas
-  areaR1 : AreaP(1,1,100,1)
-  areaR2 : AreaP(1,2,100,2)
-  areaR3 : AreaP(1,3,100,3)
-  areaR4 : AreaP(1,4,100,4)
-robots 
-  robot tipo1
-  {variables}
+  cuadrante : AreaC(2, 2, 10, 10)
+  origenC : AreaP(1, 1, 1, 1)
+  origenR1 : AreaP(2, 1, 2, 1)
+  origenR2 : AreaP(3, 1, 3, 1)
+  origenR3 : AreaP(4, 1, 4, 1)
+  origenR4 : AreaP(5, 1, 5, 1)
+robots
+  {}
+  {}
+  {}
+  robot robot0
+  variables
+    ID: numero
+    cont: numero
   comenzar
-    derecha
+    ID:= 0
+    cont:= 0
+    {}
   fin
-  robot tipo2
-  {variables}
+  {}
+  {}
+  {}
+  robot robot1
+  variables
+    ID: numero
+    cont: numero
   comenzar
-    derecha
+    ID:= 1
+    cont:= 0
+    {}
   fin
-  robot tipo3
-  {variables}
+  {}
+  {}
+  {}
+  robot robot2
+  variables
+    ID: numero
+    cont: numero
   comenzar
-    derecha
-    limpiarCalle
+    ID:= 2
+    cont:= 0
+    {}
   fin
-  robot tipo4
+  {}
+  {}
+  {}
+  robot robot3
+  variables
+    ID: numero
+    cont: numero
+  comenzar
+    ID:= 3
+    cont:= 0
+    {}
+  fin
+  {}
+  {}
+  {}
+  robot tipoCoordinador
   {variables}
   comenzar
     derecha
