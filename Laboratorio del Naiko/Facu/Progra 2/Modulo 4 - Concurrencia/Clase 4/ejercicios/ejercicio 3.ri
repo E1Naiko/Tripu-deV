@@ -4,31 +4,57 @@ Para ello el jefe determina inicialmente una esquina y los robots deben accederl
 las flores y volver a su posición inicial. Cuando los robots terminan el jefe deberá informar cuál
 de ellos logró recoger más flores. Las esquinas de inicio de los robots deberán ser jefe (1,1) y
 robots (2,1), (3, 1), (4,1) y (5,1).}
-
-
-programa plantillaGeneral
+{Completar:
+  - Manejo de los recolectores
+  - Testear manejo de los recolectores
+  - Manejo del jefe
+  - testear el jefe
+  - programar el jefe
+}
+programa ejercicio3
 procesos
-  proceso general(ES cont: numero)
+  proceso general(ES cont: numero E ID: numero)
   variables
+    continuar: boolean
+    idCheck: numero
     avOrigen: numero
     caOrigen: numero
     ranAv: numero
     ranCa: numero
   comenzar
+    continuar:= V
     avOrigen:= PosAv
     caOrigen:= PosCa
     {}
-    RecibirMensaje(act, robotC)
-    RecibirMensaje(ranAv, robotC)
-    RecibirMensaje(ranCa, robotC)
-    mientras (act)
-      juntarFlor(cont)
+    RecibirMensaje(idCheck, *) {Comienzo }
+    mientras (idCheck = ID)
+      RecibirMensaje(ranAv, *) {Recivo Avenida}
+      RecibirMensaje(ranCa, *) {Recivo Calle}
+      {}
+      {}
+      BloquearEsquina(ranAv,ranCa)
+      Pos(ranAv,ranCa)
+      {}
+      si (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:= cont+1
+        EnviarMensaje(1, *) {Envio al programa que puede continuar}
+      sino
+        EnviarMensaje(0, *) {Envio al programa que debe cambiar de esquina}
+      {}
+      {}
       Pos(avOrigen,caOrigen)
-      EnviarMensaje(0, robotC) {Envio al programa que puede continuar, evita colisiones}
-      RecibirMensaje(act, robotC)
-      RecibirMensaje(ranAv, robotC)
-      RecibirMensaje(ranCa, robotC)
+      LiberarEsquina(ranAv,ranCa)
+      {}
+      RecibirMensaje(idCheck, *)
+    {}
+    {}
+    EnviarMensaje(ID, *)
+    EnviarMensaje(cont, *)
   fin
+  {}
+  {}
+  {}
 areas
   cuadrante : AreaC(2, 2, 10, 10)
   origenC : AreaP(1, 1, 1, 1)
@@ -48,6 +74,7 @@ robots
     ID:= 0
     cont:= 0
     {}
+    general(cont, ID)
   fin
   {}
   {}
@@ -60,6 +87,7 @@ robots
     ID:= 1
     cont:= 0
     {}
+    general(cont, ID)
   fin
   {}
   {}
@@ -72,6 +100,7 @@ robots
     ID:= 2
     cont:= 0
     {}
+    general(cont, ID)
   fin
   {}
   {}
@@ -84,14 +113,30 @@ robots
     ID:= 3
     cont:= 0
     {}
+    general(cont, ID)
   fin
   {}
   {}
   {}
   robot tipoCoordinador
-  {variables}
+  variables
+    {Estado Calle}
+    estado: numero
+    {Posicion de Calle/Avenida}
+    ranAv: numero
+    ranCa: numero
+    {Maximos Y Minimos}
+    contMax: numero
+    idMax: numero
+    contAct: numero
+    idAct: numero
   comenzar
-    derecha
+    idMax:= -1
+    contMax:= -1
+    estado:=1
+    mientras (estado = 1)
+      Random(ranAv, 2,10)
+      Random(ranCa, 2,10)
   fin
 variables 
   robot1: tipo1
