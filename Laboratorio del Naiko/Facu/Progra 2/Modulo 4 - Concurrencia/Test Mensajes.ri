@@ -1,30 +1,29 @@
-{ Test intercambio de mensajes:
-La verdad tenia pinta de ser un ejercicio piola asi que vamos a inventarle una consigna.
- - Consigna: Se disponen de 4 robots recorredores y 1 robot coordinador, los robots
-recorredores se encargarán de dar n cantidad de vueltas al rededor de un area designada
-donde n es un valor entre 0 y 30, SI N=0 entonces el robot debe enviar el mensaje "-1"
-al coordinador el cual procedera a finalizar el programa. Para finalizar el programa
-el robot coordinador le pedira a todos los robots recorredores que le envien la cantidad
-de vueltas que dieron al rededor de su respectivo circuito e informara cual robot dio
-mas vueltas.
- - Cada robot tiene un area origen correspondiente y un circuito correspondiente de 2x2.
-Areas de Inicio: robotJefe(1,1), robot1(2,1), robot2(3,1), robot3(4,1), robot4(5,1)
-Areas de Recorrido: robot1(1,2,2,4), robot2(3,2,4,4), robot3(5,2,6,4), robot4(7,2,8,4)
-}
 programa plantillaGeneral
 procesos
-  {
-  
-  }
+  { Test intercambio de mensajes:}
+  {La verdad tenia pinta de ser un ejercicio piola asi que vamos a inventarle una consigna.}
+  { - Consigna: Se disponen de 4 robots recorredores y 1 robot coordinador, los robots}
+  {recorredores se encargarán de dar n cantidad de vueltas al rededor de un area designada}
+  {donde n es un valor entre 0 y 30, SI N=0 entonces el robot debe enviar el mensaje "-1"}
+  {al coordinador el cual procedera a finalizar el programa. Para finalizar el programa}
+  {el robot coordinador le pedira a todos los robots recorredores que le envien la cantidad}
+  {de vueltas que dieron al rededor de su respectivo circuito e informara cual robot dio}
+  {mas vueltas.}
+  { - Cada robot tiene un area origen correspondiente y un circuito correspondiente de 2x2.}
+  {Areas de Inicio: robotJefe(1,1), robot1(2,1), robot2(3,1), robot3(4,1), robot4(5,1)}
+  {Areas de Recorrido: robot1(1,2,2,4), robot2(3,2,4,4), robot3(5,2,6,4), robot4(7,2,8,4)}
+  {}
+  {}
+  {}
   proceso izquierda
   comenzar
     repetir 3
       derecha
   fin
-  {
-  
-  }
-  proceso recorrido(E n, id: numero)
+  {}
+  {}
+  {}
+  proceso recorrido(E n: numero E id: numero)
   variables
     cont, origenAv, origenCa: numero
   comenzar
@@ -34,23 +33,51 @@ procesos
     si (ID = 0)
       Pos(1,2)
     sino
-      si (ID = 0)
+      si (ID = 1)
         Pos(3,2)
       sino
-        si (ID = 0)
+        si (ID = 2)
           Pos(5,2)
         sino
           Pos(7,2)
     derecha
     mientras (cont<n)
-      mover
-      izquierda
+      repetir 4
+        mover
+        izquierda
       cont:=cont+1
-    Iniciar(origenAv, origenCa)
+    izquierda
+    Pos(origenAv, origenCa)
   fin
-  {
-  
-  }
+  {}
+  {}
+  {}
+  proceso manejoGeneral(E ID: numero ES cont: numero)
+  variables
+    actCoordinador, n: numero
+  comenzar
+    RecibirMensaje(actCoordinador, robotJefe) {Turno inicial}
+    mientras (actCoordinador<>-1)
+      si (actCoordinador = ID)
+        Random(n, 0,30)
+        si (n>0)
+          cont:=cont+1
+          recorrido(n, id)
+        sino
+          EnviarMensaje(-1, robotJefe)
+      RecibirMensaje(actCoordinador, robotJefe) {Turno siguiente}
+  fin
+  {}
+  {}
+  {}
+  proceso manejoFin(E ID: numero E cont: numero)
+  comenzar
+    EnviarMensaje(ID, robotJefe)
+    EnviarMensaje(cont, robotJefe)
+  fin
+  {}
+  {}
+  {}
 areas
   origenRJ : AreaP(1,1,1,1)
   origenR0 : AreaP(2,1,2,1)
@@ -64,84 +91,109 @@ areas
 robots 
   robot tipo1
   variables
-    ID, coord: numero
+    ID, cont: numero
   comenzar
     ID:=0
-    RecibirMensaje(coord,*)
-    mientras (coord<>-1)
-      RecibirMensaje(coord,*)
+    cont:=0
+    manejoGeneral(ID, cont)
   fin
-  {
-  
-  }
+  {}
+  {}
+  {}
   robot tipo2
   variables
-    ID: numero
+    ID, cont: numero
   comenzar
     ID:=1
+    cont:=0
+    manejoGeneral(ID, cont)
   fin
-  {
-  
-  }
+  {}
+  {}
+  {}
   robot tipo3
   variables
-    ID: numero
+    ID, cont: numero
   comenzar
     ID:=2
+    cont:=0
+    manejoGeneral(ID, cont)
   fin
-  {
-  
-  }
+  {}
+  {}
+  {}
   robot tipo4
   variables
-    ID: numero
+    ID, cont: numero
   comenzar
     ID:=3
+    cont:=0
+    manejoGeneral(ID, cont)
   fin
-  {
-  
-  }
+  {}
+  {}
+  {}
   robot tipoJefe
   variables
     cont0, cont1, cont2, cont3: numero {contadores de resultados}
     idAct, idAux, continuar : numero {controles de los robots}
+    valAct, maxAct, maxId: numero {Comparacion final}
     i: numero
   comenzar
     continuar:= 1
     i:= 0
+    maxAct:=-1
+    maxId:=-1
     mientras (continuar=1)
       {Recorrido n-simo}
       Random(idAct,0,3)
-      EnviarMensaje(idAct, *)
+      si (idAct = 0)
+        EnviarMensaje(idAct, robot0)
+      sino
+        si (idAct = 1)
+          EnviarMensaje(idAct, robot1)
+        sino
+          si (idAct = 2)
+            EnviarMensaje(idAct, robot2)
+          sino
+            EnviarMensaje(idAct, robot3)
       {Reconozco si el programa termina}
-      RecibirMensaje(idAux, *)
-      mientras (idAux<>idAct)
-        RecibirMensaje(idAux, *)
       RecibirMensaje(continuar, *)
+    {Envio mensaje a terminar}
     mientras (i<4)
       EnviarMensaje(i,*)
       EnviarMensaje(-1,*)
       i:=i+1
+    i:=0
+    {Comparo resultados}
+    mientras (i<4)
+      RecibirMensaje(idAux,*)
+      RecibirMensaje(valAct,*)
+      si (maxAct<valAct)
+        maxAct:= valAct
+        idAct:= idAux
+      i:=i+1
+    Informar(maxId)
   fin
-  {
-  
-  }
+  {}
+  {}
+  {}
 variables 
-  robot1: tipo1
-  robot2: tipo2
-  robot3: tipo3
-  robot0: tipo4
+  robot0: tipo1
+  robot1: tipo2
+  robot2: tipo3
+  robot3: tipo4
   robotJefe: tipoJefe
 comenzar
   AsignarArea(robotJefe,origenRJ)
-  AsignarArea(robot0,origenR0)
-  AsignarArea(robot1,origenR1)
-  AsignarArea(robot2,origenR2)
-  AsignarArea(robot3,origenR3)
-  AsignarArea(robot1,areaR1)
-  AsignarArea(robot2,areaR2)
-  AsignarArea(robot3,areaR3)
-  AsignarArea(robot4,areaR4)
+  AsignarArea(robot0, origenR0)
+  AsignarArea(robot1, origenR1)
+  AsignarArea(robot2, origenR2)
+  AsignarArea(robot3, origenR3)
+  AsignarArea(robot0, areaR0)
+  AsignarArea(robot1, areaR1)
+  AsignarArea(robot2, areaR2)
+  AsignarArea(robot3, areaR3)
   Iniciar(robotJefe, 1, 1)
   Iniciar(robot0, 2, 1)
   Iniciar(robot1, 3, 1)
