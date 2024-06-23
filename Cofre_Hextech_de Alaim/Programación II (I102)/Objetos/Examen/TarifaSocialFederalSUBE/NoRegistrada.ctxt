@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=NoRegistrada
+comment0.text=\r\n\ No\ Registradas,\ aquellas\ personas\ que\ no\ registraron\ la\ tarjeta\ SUBE\ en\ el\ sitio\ MiArgentina,\ de\ estas\ se\r\nconoce\ si\ es\ estudiante\ universitario\ o\ no..\r\n\ En\ el\ caso\ de\ las\ personas\ No\ Registradas,\ el\ costo\ final\ del\ viaje\ depende\ de\ lo\ siguiente\:\ si\ viaja\ en\r\nSubte\ o\ en\ Colectivo\ al\ monto\ base\ del\ viaje\ se\ le\ aumenta\ un\ 60%,\ mientras\ que\ si\ viaja\ en\ Tren\ el\r\nmonto\ base\ del\ viaje\ duplica\ su\ valor.\ Sin\ embargo,\ si\ la\ persona\ es\ estudiante\ universitaria,\ percibe\r\nmenos\ aumentos\:\ el\ monto\ del\ viaje\ en\ Colectivo\ es\ el\ precio\ base\ (sin\ ninguna\ modificaci\u00F3n)\ mientras\r\nque\ para\ Subte\ es\ del\ 30%\ m\u00E1s\ al\ precio\ base\ y\ para\ trenes\ es\ s\u00F3lo\ un\ 10%\ m\u00E1s.\r\n\ @author\ (MezaAlam)\ \r\n\ @version\ (6/5/2024)\r\n
+comment1.params=esEstudiante\ nombre\ apellido\ cuit\ numTarjeta\ cantViajes
+comment1.target=NoRegistrada(boolean,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int)
+comment2.params=
+comment2.target=NoRegistrada()
+comment3.params=
+comment3.target=boolean\ getEsEstudiante()
+comment4.params=esEstudiante
+comment4.target=void\ setEsEstudiante(boolean)
+comment5.params=
+comment5.target=double\ CostoFinal()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

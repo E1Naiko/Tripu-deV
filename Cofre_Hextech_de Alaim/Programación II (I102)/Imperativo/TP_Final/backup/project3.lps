@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project3.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="143"/>
+        <CursorPos X="32" Y="203"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\..\AppData\Local\Temp\e8c8e929-ab79-4e2a-b824-6775585f1775_Fuentes (1).zip.775\Ejercicio3.pas"/>
+        <UnitName Value="ejercicio3"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="96"/>
+        <CursorPos X="5" Y="117"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\..\AppData\Local\Temp\9e2bc888-32c8-44d3-80cd-5b6fb9b6deaf_EjerciciosRepaso.zip.eaf\tp_compras.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\..\AppData\Local\Temp\9df6682a-6989-46b9-a8e1-a48d3d3934fc_TP_Final (1).zip.4fc\TP_Final\Olimpico.pas"/>
+        <UnitName Value="juegos"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="74"/>
+        <CursorPos X="43" Y="80"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\Libreria.lpr"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="379"/>
+        <CursorPos X="23" Y="388"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="6">
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="226" Column="31" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="192" Column="50" TopLine="183"/>
+      </Position>
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="197" Column="49" TopLine="188"/>
+      </Position>
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="205" Column="38" TopLine="188"/>
+      </Position>
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="197" Column="13" TopLine="188"/>
+      </Position>
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="243" Column="32" TopLine="230"/>
+      </Position>
+      <Position>
+        <Filename Value="project3.lpr"/>
+        <Caret Line="223" Column="37" TopLine="207"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

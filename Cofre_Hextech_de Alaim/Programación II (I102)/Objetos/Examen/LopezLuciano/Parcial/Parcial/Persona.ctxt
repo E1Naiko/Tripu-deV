@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Persona
+comment0.text=\r\nEl\ Ministerio\ de\ Econom\u00EDa\ de\ la\ Naci\u00F3n\ desea\ realizar\ unas\ estad\u00EDsticas\ a\ partir\ de\ la\ informaci\u00F3n\ de\ los\ viajes\r\nrealizados\ por\ las\ personas\ a\ trav\u00E9s\ de\ sus\ tarjetas\ SUBE.\ De\ cada\ persona\ se\ conoce\:\ nombre\ y\ apellido,\ CUIT,\ n\u00FAmero\r\nde\ tarjeta\ SUBE,\ y\ sus\ \u00FAltimos\ viajes\ (a\ lo\ sumo\ 8).\ De\ cada\ viaje\ se\ registra\:\ identificador,\ fecha\ del\ viaje\r\n(DD/MM/AAAA),\ monto\ base\ y\ el\ medio\ de\ transporte\ (Tren,\ Colectivo\ o\ Subte).\r\n
+comment1.params=
+comment1.target=Persona()
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=nombre\ CUIT\ SUBE
+comment2.target=Persona(java.lang.String,\ int,\ int)
+comment3.params=i\ V
+comment3.target=void\ setViaje(int,\ Viaje)
+comment4.params=i
+comment4.target=double\ getMonto(int)
+comment5.params=i
+comment5.target=java.lang.String\ getMedio(int)
+comment6.params=i
+comment6.target=java.lang.String\ getFecha(int)
+comment7.params=i
+comment7.target=int\ getID(int)
+comment8.params=
+comment8.target=java.lang.String\ calcular()
+comment9.params=i
+comment9.target=java.lang.String\ infoViajes(int)
+numComments=11

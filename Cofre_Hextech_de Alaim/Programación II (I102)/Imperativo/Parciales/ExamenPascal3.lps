@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="242"/>
+        <CursorPos X="13" Y="228"/>
+        <FoldState Value=" T3iH08V"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ExamenPascal2.lpr"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="204"/>
+        <CursorPos X="21" Y="215"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="21">
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="210" Column="4" TopLine="210"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="241" TopLine="220"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="246" Column="45" TopLine="232"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="12" Column="30"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="17" Column="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="88" Column="28" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="132" Column="47" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="153" Column="11" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="188" Column="32" TopLine="183"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="97" Column="15" TopLine="77"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="127" Column="14" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="123" Column="28" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="127" Column="14" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="126" Column="37" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="90" Column="28" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="88" Column="32" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="45" Column="28" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="198" Column="5" TopLine="188"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="73" Column="8" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="90" Column="28" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="210" Column="29" TopLine="199"/>
+      </Position>
+      <Position>
+        <Filename Value="ExamenPascal3.lpr"/>
+        <Caret Line="230" Column="13" TopLine="220"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
