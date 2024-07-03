@@ -1,0 +1,240 @@
+program Ejerciciointegrador;
+const
+  MAX_MATERIA= 38;
+  FIN_ALUMNO='zzz';
+  VACIO= '';
+type
+  cadena=string[50];
+  rango= 0..MAX_MATERIA;
+  rangomateria= 1..MAX_MATERIA;
+
+  materia=record
+    codigo: cadena;
+    nombre: cadena;
+  end;
+
+  materias= array [rangomateria] of materia;
+
+  mateapro= record
+    codigo: materias;
+    nota: integer;
+  end;
+
+  materiasaprobada= record
+    mate: array[rangomateria] of mateapro;
+    diml: rango;
+  end;
+
+  alumno= record
+    nombre: cadena;
+    legajo: cadena;
+    mateap: materiasaprobada;
+  end;
+
+  lista= ^nodo;
+  nodo= record
+    datos: alumno;
+    sig: lista;
+  end;
+  const
+ m: materias = (
+ (codigo: 'E0228'; nombre: 'Practica Profesional Supervisada'),
+ (codigo: 'E0282'; nombre: 'Electrotecnia y Electronica'),
+ (codigo: 'E0301'; nombre: 'Introduccion al Diseno Logico'),
+ (codigo: 'E0302'; nombre: 'Introduccion al Procesamiento de Senales'),
+ (codigo: 'E0303'; nombre: 'Redes de Datos 1'),
+ (codigo: 'E0304'; nombre: 'Instrumentacion y Control'),
+ (codigo: 'E0305'; nombre: 'Circuitos Digitales y Microcontroladores'),
+ (codigo: 'E0306'; nombre: 'Taller de Proyecto I'),
+ (codigo: 'F0301'; nombre: 'Matematica A'),
+ (codigo: 'F0302'; nombre: 'Matematica B'),
+ (codigo: 'F0304'; nombre: 'Matematica C'),
+ (codigo: 'F0307'; nombre: 'Estadistica'),
+ (codigo: 'F0310'; nombre: 'Matematica D'),
+ (codigo: 'F0312'; nombre: 'Probabilidades'),
+ (codigo: 'F0316'; nombre: 'Fisica I'),
+ (codigo: 'F0317'; nombre: 'Fisica II'),
+ (codigo: 'I101'; nombre: 'Programacion I'),
+ (codigo: 'I102'; nombre: 'Programacion II'),
+ (codigo: 'I103'; nombre: 'Programacion III'),
+ (codigo: 'I104'; nombre: 'Taller de Lenguajes I'),
+ (codigo: 'I105'; nombre: 'Conceptos de Arquitectura de Computadoras'),
+ (codigo: 'I106'; nombre: 'Conceptos de Sistemas Operativos'),
+ (codigo: 'I107'; nombre: 'Taller de Lenguajes II'),
+ (codigo: 'I108'; nombre: 'Conceptos de Bases de Datos'),
+ (codigo: 'I109'; nombre: 'Taller de Arquitectura'),
+ (codigo: 'I110'; nombre: 'Ingenieria de Software'),
+ (codigo: 'I111'; nombre: 'Concurrencia y Paralelismo'),
+ (codigo: 'I112'; nombre: 'Bases de Datos'),
+ (codigo: 'I113'; nombre: 'Economia y Emprendedorismo'),
+ (codigo: 'I114'; nombre: 'Redes de Datos II'),
+ (codigo: 'I115'; nombre: 'Sistemas de Tiempo Real'),
+ (codigo: 'I116'; nombre: 'Sistemas Distribuidos y Paralelos'),
+ (codigo: 'I117'; nombre: 'Aspectos Legales de Ingenieria Informatica'),
+ (codigo: 'I118'; nombre: 'Taller de Proyecto II'),
+ (codigo: 'INFIN'; nombre: 'Ingles (Prueba de Suficiencia)'),
+ (codigo: 'M0670'; nombre: 'Sistemas de Representacion'),
+ (codigo: 'S0012'; nombre: 'Seminario de Redaccion de Textos Profesionales'),
+ (codigo: 'U0902'; nombre: 'Quimica')
+ );
+
+procedure Busquedamateria (cod:cadena; var nom:cadena);
+var
+  izq,der,med: rango;
+begin
+  izq:= 1;
+  der:= MAX_MATERIA;
+  med:= (izq+der) div 2;
+  while (izq <= der) and (cod <> m[med].codigo) do begin
+        if(cod < m[med].codigo) then der:= med-1
+                                else izq:= med +1;
+        med:=(izq+der) div 2;
+  end;
+  if( izq <= der) then nom:= m[med].nombre
+                  else nom:= VACIO;
+end;
+Function ExisteMateria (cod:cadena):boolean;
+var
+  ok:boolean;
+  nom:cadena;
+begin
+  ok:=false;
+  Busquedamateria(cod,nom);
+  if( nom <> VACIO )  then begin
+      ok:= true;
+  end;
+  ExisteMateria:= ok;
+end;
+procedure InsertarOrdenado (var pri:lista; a:alumno);
+var
+   nue,ant,act:lista;
+   ok:boolean;
+begin
+     ok:= false;
+     new(nue);
+     nue^.datos:= a;
+     ant:= pri;
+     act:= pri;
+     while (act <> nil) and not (ok) do begin
+           if(a.nombre < act^.datos.nombre) then begin
+               ok:=true;
+           end else begin
+                 ant:= act;
+                 act:= act^.sig;
+           end;
+     end;
+     if (ant = pri) then begin
+         pri:= nue;
+     end else begin
+           ant^.sig:= nue;
+     end;
+     nue^.sig:= act;
+end;
+procedure CargarAlumno (var a:alumno);
+   procedure CargarMateria (var mateap:materiasaprobada);
+   var
+      cod,nom:cadena; nota:integer;
+   begin
+        mateap.diml:= 1;
+        writeln('Codigo de la materia aprobada');
+        readln(cod);
+        while (mateap.diml < MAX_MATERIA) and (cod <> FIN_ALUMNO) do begin
+              nom:='';
+              if(ExisteMateria(cod) = true) then begin
+                    Busquedamateria(cod,nom);
+                    writeln('La materia es: ',nom);
+                    writeln('Nota de la materia:');
+                    readln(nota);
+                    if (nota >=6) then begin
+                       mateap.mate[mateap.diml].codigo[mateap.diml].codigo:= cod;
+                       mateap.mate[mateap.diml].nota:= nota;
+                       mateap.diml:= mateap.diml + 1;
+                    end;
+              end else begin
+                    writeln('Codigo no valido');
+              end;
+              writeln('Codigo de la materia aprobada');
+              readln(cod);
+        end;
+   end;
+begin
+     with a do begin
+           writeln('Nombre');
+           readln(nombre);
+           if( nombre <> FIN_ALUMNO) then begin
+               writeln('Legajo');
+               readln(legajo);
+               writeln('Materias Aprobadas');
+               CargarMateria(mateap);
+           end;
+     end;
+end;
+procedure CargarLista (var pri:lista);
+var
+   a:alumno;
+begin
+     Cargaralumno(a);
+     while (a.nombre <> FIN_ALUMNO) do begin
+           InsertarOrdenado(pri,a);
+           Cargaralumno(a);
+     end;
+end;
+procedure Maximo (l:lista; var nom,cod:cadena; var maxnota:integer);
+  var
+     i:rango;
+  begin
+       maxnota:=-1; nom:=''; cod:='';
+       for i:=1 to l^.datos.mateap.diml do begin;
+           if (l^.datos.mateap.mate[i].nota > maxnota) then begin
+               cod:= l^.datos.mateap.mate[i].codigo[i].codigo;
+               Busquedamateria(cod,nom);
+               maxnota:= l^.datos.mateap.mate[i].nota;
+           end;
+       end;
+  end;
+Function NotaPromedio (l:lista):real;
+   var
+      tot: integer; i:rango;
+      prom:real;
+   begin
+        tot:=0; prom:=0;
+        for i:=1 to l^.datos.mateap.diml do begin
+              tot:= tot + l^.datos.mateap.mate[i].nota;
+        end;
+        prom:= tot/l^.datos.mateap.diml;
+        NotaPromedio:= prom;
+   end;
+procedure MostrarLista (l:lista);
+var
+   nom,cod:cadena;
+   maxnota:integer;
+begin
+     writeln('Lista de Alumnos');
+     writeln('----------------------');
+     while (l <> nil) do begin
+          writeln('Nombre alumno: ',l^.datos.nombre);
+          writeln('Nota promedio de ',l^.datos.nombre,' es: ',NotaPromedio(l):2:0);
+          Maximo(l,nom,cod,maxnota);
+          writeln('La materia con mejor nota es: ',cod,' | ',nom,' con nota: ',maxnota);
+          l:=l^.sig;
+    end;
+end;
+procedure LiberarMemoria (var l:lista);
+var
+   aux:lista;
+begin
+    while (l <> nil) do begin
+        aux:= l;
+        dispose(aux);
+        l:= l^.sig;
+    end;
+end;
+var
+   l:lista;
+begin
+  l:= nil;
+  CargarLista(l);
+  MostrarLista(l);
+  LiberarMemoria(l);
+  readln;
+end. 

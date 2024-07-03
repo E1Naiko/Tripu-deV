@@ -1,0 +1,60 @@
+programa tpromogrupo01 
+procesos 
+  proceso depositarFlores(ES flores:numero) 
+  comenzar  
+    mientras(HayFlorEnLaEsquina) 
+      tomarFlor 
+      flores:= flores - 1 
+  fin
+areas 
+  recorridoL: AreaC(50,70,90,80) 
+  areaCor: AreaP(1,1,1,1)
+  avenidaL1: AreaP(1,2,100,2)
+  avenidaL2: AreaP(1,3,100,3)
+  avenidaL3: AreaP(1,4,100,4)
+  fuente: AreaPC(100,100,100,100)
+robots
+  robot coordinador 
+  variables  
+    avenida,id: numero
+    flores,totalFlores:numero
+  comenzar
+    {Enviar id a los robotsL}
+    EnviarMensaje(1,l1) 
+    EnviarMensaje(2,l2) 
+    EnviarMensaje(3,l3) 
+    Random(avenida,50,90)
+    repetir 3
+      {Recepcion y envio de avenida al robotL que solicite}
+      RecibirMensaje(id,*) 
+      Informar('SolicitarAvenida',id)
+      si(id=1) 
+        EnviarMensaje(avenida,l1) 
+      sino 
+        si(id=2) 
+          EnviarMensaje(avenida,l2) 
+        sino 
+          si(id=3) 
+            EnviarMensaje(avenida,l3) 
+          sino
+            Informar('error',00)
+  fin
+variables 
+  l1,l2,l3: robotL 
+  cor: coordinador 
+comenzar
+  AsignarArea(cor,areaCor)
+  AsignarArea(l1,avenidaL1)
+  AsignarArea(l1,recorridoL)
+  AsignarArea(l1,fuente)
+  AsignarArea(l2,avenidaL1)
+  AsignarArea(l2,recorridoL)
+  AsignarArea(l2,fuente)
+  AsignarArea(l3,avenidaL1)
+  AsignarArea(l3,recorridoL)
+  AsignarArea(l3,fuente)   
+  Iniciar(cor,1,1) 
+  Iniciar(l1,2,1) 
+  Iniciar(l2,3,1) 
+  Iniciar(l3,4,1)     
+fin 

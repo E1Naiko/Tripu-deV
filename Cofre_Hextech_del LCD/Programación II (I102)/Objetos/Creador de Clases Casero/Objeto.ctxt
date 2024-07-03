@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Objeto
+comment1.params=cantAtributos
+comment1.target=Objeto(int)
+comment2.params=nomAtributo\ tipoAtributo
+comment2.target=void\ agregarAtributo(java.lang.String,\ java.lang.String)
+comment3.params=i
+comment3.target=java.lang.String\ getNomAtributo(int)
+comment4.params=i
+comment4.target=java.lang.String\ getTipoAtributo(int)
+comment5.params=i
+comment5.target=java.lang.String\ devolverDeclaraciones(int)
+comment6.params=i
+comment6.target=java.lang.String\ devolverDecGetter(int)
+comment7.params=i
+comment7.target=java.lang.String\ devolverDecSetter(int)
+comment8.params=
+comment8.target=java.lang.String\ devolverParametrosConstructor()
+numComments=9

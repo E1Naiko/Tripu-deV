@@ -1,0 +1,31 @@
+programa Bloquear
+areas
+  areaR1 : AreaPC(1,1,11,100)
+robots 
+  robot tipo1
+  variables
+    cant:numero
+    cant2:numero 
+  comenzar
+    Pos(1,1)
+    cant:= 0
+    cant2:= 0
+    repetir 5
+      repetir 99
+        si (HayFlorEnLaEsquina)
+          tomarFlor 
+          cant:= cant + 1
+          depositarFlor 
+        si ~(HayFlorEnLaEsquina)
+          cant2:= cant2 + 1  
+        mover
+      Pos(PosAv + 2,1) 
+    Informar(cant)
+    Informar(cant2)    
+  fin 
+variables 
+  robot1: tipo1 
+comenzar 
+  AsignarArea(robot1,areaR1)
+  Iniciar(robot1, 1, 1) 
+fin
