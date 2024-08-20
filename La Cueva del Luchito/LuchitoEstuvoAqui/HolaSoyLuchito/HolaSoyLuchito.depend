@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1724071134 source:d:\users\asus\desktop\luchitoestuvoaqui\holasoyluchito\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

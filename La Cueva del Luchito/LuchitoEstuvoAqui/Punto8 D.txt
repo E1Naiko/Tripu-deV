@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int x, y;
+    printf("Ingrese X\n");
+    scanf("%d",&x);
+    printf("Ingrese Y\n");
+    scanf("%d",&y);
+    printf("x + y = %d",x+y);
+    return 0;
+}

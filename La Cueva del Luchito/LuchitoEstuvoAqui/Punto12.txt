@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(){
+    double i,aux;
+     for (i = 1; i <= 10; i++){
+        printf("<----INICIO----->\n");
+        printf("Numero: %f\n",i);
+        aux =pow(i,2);
+        printf("<---- Cuadrado del numero ----->\n");
+        printf("Cuadrado: %f\n",aux);
+        printf("<---- Cubo del numero ----->\n");
+        aux =pow(i,3);
+        printf("Cubo: %f\n",aux);
+        printf("<---- Raiz del numero ----->\n");
+        aux = sqrt(i);
+        printf("Raiz Cuadrada: %f\n",aux);
+        aux=0;
+    }
+    return 0;
+}
