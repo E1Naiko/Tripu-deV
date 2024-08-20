@@ -9,37 +9,35 @@ estructuras de control que puede utilizar.
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TERMINAR -999
+#define TERMINAR -999 // como usar constantes
 int main()
 {
     int x,y, res;
     char c;
     res=0;
 
-    do{
-        scanf("%d %d %c", &x, &y, &c);
-        printf("x=%d y=%d c=%c", x, y, c);
-        switch(c){
-            case 's':
-                res = x+y;
-                printf("Resultado = %d", res);
-                break;
-            case 'r':
-                res = x-y;
-                printf("Resultado = %d", res);
-                break;
-            case 'p':
-                res = x*y;
-                printf("Resultado = %d", res);
-                break;
-            case 'd':
-                res = x/y;
-                printf("Resultado = %d", res);
-                break;
-            default:
-                res= TERMINAR;
-                printf("ERROR - caracter %d no valido", c);
-        }
-    } while (res != TERMINAR);
+    printf("Introduzca un x, un y y un caracter valido: s,r,p,d.\n");
+    scanf("%d %d %c", &x, &y, &c);
+    printf("\nx=%d y=%d c=%c", x, y, c);
+
+    switch(c){
+        case 's':
+            res = x+y;
+            break;
+        case 'r':
+            res = x-y;
+            break;
+        case 'p':
+            res = x*y;
+            break;
+        case 'd':
+            res = x/y;
+            break;
+        default:
+            res = (int) TERMINAR; // las tuve que reconvertir a entero por alguna razon
+    }
+
+    printf("\nResultado = %d\n", res);
+    printf("ERROR - caracter %d no valido, terminando programa.\n", c);
     return 0;
 }
