@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int x, y;
+    x= 20;
+    y = 2;
+    char c;
+    printf("Ingrese Operador \n");
+    scanf("%c",&c);
+    switch (c){
+    case '+': printf("X + Y = %d", x+y);
+    break;
+    case '-': printf("X - Y = %d", x-y);
+    break;
+    case '*': printf("X * Y = %d", x*y);
+    break;
+    case '/': printf("X / Y = %d", x/y);
+    break;
+    }
+    return 0;
+}
