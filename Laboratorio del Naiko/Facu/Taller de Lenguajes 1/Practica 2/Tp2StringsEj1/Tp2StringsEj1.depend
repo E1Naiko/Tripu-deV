@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1725624994 source:d:\laboratorio del naiko\facu\taller de lenguajes 1\practica 2\tp2stringsej1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

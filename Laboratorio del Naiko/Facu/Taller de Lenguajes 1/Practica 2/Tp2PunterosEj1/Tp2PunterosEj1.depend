@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1725452180 source:d:\laboratorio del naiko\facu\taller de lenguajes 1\practica 2\tp2punterosej1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<FLOAT.H>
+	<math.h>
+
