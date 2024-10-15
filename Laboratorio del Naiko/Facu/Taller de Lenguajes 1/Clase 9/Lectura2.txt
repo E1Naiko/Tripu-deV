@@ -1,0 +1,13 @@
+El Lenguaje C
+C es un lenguaje de programación creado en 1972 por Dennis M. Ritchie en los Laboratorios Bell.
+Fue una evolución del anterior lenguaje B, a su vez basado en BCPL.
+Al igual que B, no es un lenguaje orientado a la implementación de Sistemas Operativos, concretamente Unix. 
+C es apreciado por la eficiencia del código que produce.
+Es el lenguaje de programación más popular para crear software de sistemas, aunque también se utiliza para crear aplicaciones.
+Se trata de un lenguaje débilmente tipificado de medio nivel pero con muchas características de bajo nivel. 
+Dispone de las estructuras típicas de los lenguajes de alto nivel pero, a su vez, dispone de construcciones del lenguaje que permiten un control a muy bajo nivel. 
+Los compiladores suelen ofrecer extensiones al lenguaje que posibilitan mezclar código en ensamblador con código C o acceder directamente a memoria o dispositivos periféricos.
+La primera estandarización del lenguaje C fue en ANSI, con el estándar X3.159-1989. 
+El lenguaje que define este estándar fue conocido vulgarmente como ANSI C. 
+Posteriormente, en 1990, fue ratificado como estándar ISO (ISO/IEC 9899:1990). 
+La adopción de este estándar es muy amplia por lo que, si los programas creados lo siguen, el código es portátil entre plataformas y/o arquitecturas.
