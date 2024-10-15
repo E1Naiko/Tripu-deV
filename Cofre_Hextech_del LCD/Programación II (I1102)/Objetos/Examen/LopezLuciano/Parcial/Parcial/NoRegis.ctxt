@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=NoRegis
+comment0.text=\r\n\ No\ Registradas,\ aquellas\ personas\ que\ no\ registraron\ la\ tarjeta\ SUBE\ en\ el\ sitio\ MiArgentina,\ de\ estas\ se\r\nconoce\ si\ es\ estudiante\ universitario\ o\ no.\r\n
+comment1.params=
+comment1.target=NoRegis()
+comment2.params=nombre\ CUIT\ SUBE\ estudiante
+comment2.target=NoRegis(java.lang.String,\ int,\ int,\ boolean)
+comment3.params=
+comment3.target=java.lang.String\ calcular()
+comment3.text=\r\n\ \ \ \ \ \ \ En\ el\ caso\ de\ las\ personas\ No\ Registradas,\ el\ costo\ final\ del\ viaje\ depende\ de\ lo\ siguiente\:\ si\ viaja\ en\r\n\ \ \ \ Subte\ o\ en\ Colectivo\ al\ monto\ base\ del\ viaje\ se\ le\ aumenta\ un\ 60%,\ mientras\ que\ si\ viaja\ en\ Tren\ el\r\n\ \ \ \ monto\ base\ del\ viaje\ duplica\ su\ valor.\ Sin\ embargo,\ si\ la\ persona\ es\ estudiante\ universitaria,\ percibe\r\n\ \ \ \ menos\ aumentos\:\ el\ monto\ del\ viaje\ en\ Colectivo\ es\ el\ precio\ base\ (sin\ ninguna\ modificaci\u00F3n)\ mientras\r\n\ \ \ \ que\ para\ Subte\ es\ del\ 30%\ m\u00E1s\ al\ precio\ base\ y\ para\ trenes\ es\ s\u00F3lo\ un\ 10%\ m\u00E1s.\r\n\ \ \ \ \r\n\ \ \ \ Para\ ambos\ casos,\ adem\u00E1s,\ si\ alg\u00FAn\ viaje\ fue\ realizado\ durante\ los\ siguientes\ feriados\ nacionales\:\r\n\ \ \ \ 12/02/2024,\ 13/02/2024,\ 24/03/2024,\ 29/03/2024,\ el\ mismo\ tiene\ un\ costo\ adicional\ del\ 5%\ del\r\n\ \ \ \ monto\ del\ viaje\ (con\ aumentos\ y/o\ descuentos\ aplicados)\ en\ cualquier\ medio\ de\ transporte.\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

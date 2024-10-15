@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="actividad.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="63"/>
+        <CursorPos X="21" Y="70"/>
+        <UsageCount Value="23"/>
+        <Bookmarks Count="1">
+          <Item0 Y="74"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\Downloads\ProgramaEncomiendas_2021.pas"/>
+        <UnitName Value="encomiendas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="35" Y="37"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="16">
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="10" Column="6" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="56" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="77" Column="10" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="52" Column="32" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="37" Column="11" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="33" Column="28" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="41" Column="16" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="50" Column="30" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="36" Column="27" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="74" Column="4" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="35" Column="5" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="33" Column="34" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="35" Column="33" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="43" Column="53" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="46" Column="47" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="50" Column="22" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="actividad.lpr"/>
+        <Caret Line="21" Column="20" TopLine="13"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

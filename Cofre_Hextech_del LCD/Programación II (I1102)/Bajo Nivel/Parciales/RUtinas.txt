@@ -1,0 +1,35 @@
+org 3000h
+subr: push bx
+´push dx
+mov bx,sp
+add bx,6
+mov bx, [bx] ;traigo el valor de tabla_b
+add bx,2
+mov bx,[bx] ;offset de la tabla_a
+if: cmp dx,[bx]
+jns fins
+mov[bx],dx ;guardo resultado
+fins: pop dx
+pop bx
+ret
+
+org 2000h
+mov cx, offset tabla_a
+mov bx, offset tabla_b
+mov ah, offset tabla_b - offset tabla_a
+mov al,0
+
+itera: cmp al,ah
+jz fin
+push cx
+mov dx, [bx] ;traigo el valor de la tabla_b
+push dx
+call subr
+pop dx
+pop bx
+add bx,2
+add cx, 2 ;muevo al sgte valor tabla
+inc al
+jmp itera
+fin:htl
+end

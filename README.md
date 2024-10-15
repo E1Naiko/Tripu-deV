@@ -30,6 +30,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Python Tutor](https://pythontutor.com) (Python, Java, C, C++ and JavaScript).
    - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
+   - [Sublime loco](https://www.sublimetext.com/ "Sublime Text") (SublimeText): lector de archivos y editor de texto con acceso a consola.
 
 #### Cursitos:
 Aclaración: si te cobran, es mala tuya, y avisa que deberian ser gratis todos estos (el certificado no cuenta, pero tambien es mala tuya).

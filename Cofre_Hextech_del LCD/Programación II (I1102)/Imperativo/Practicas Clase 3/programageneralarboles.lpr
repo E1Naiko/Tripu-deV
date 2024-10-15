@@ -1,0 +1,327 @@
+Program programaarboles;
+Type
+
+  // Lista de enteros
+  lista = ^nodoL;
+  nodoL = record
+    dato: integer;
+    sig: lista;
+  end;
+
+  // Arbol de enteros
+  arbol= ^nodoA;
+  nodoA = Record
+    dato: integer;
+    HI: arbol;
+    HD: arbol;
+  End;
+
+  // Lista de Arboles
+  listaNivel = ^nodoN;
+  nodoN = record
+    info: arbol;
+    sig: listaNivel;
+  end;
+
+
+{-----------------------------------------------------------------------------
+AgregarAdelante - Agrega nro adelante de l LISTAS}
+procedure agregarAdelante(var l: Lista; nro: integer);
+var
+  aux: lista;
+begin
+  new(aux);
+  aux^.dato := nro;
+  aux^.sig := l;
+  l:= aux;
+end;
+
+
+
+{-----------------------------------------------------------------------------
+CREARLISTA - Genera una lista con números aleatorios LISTAS }
+procedure crearLista(var l: Lista);
+var
+  n: integer;
+begin
+ l:= nil;
+ n := random (20);
+ While (n <> 0) do Begin
+   agregarAdelante(L, n);
+   n := random (20);
+ End;
+end;
+
+
+{-----------------------------------------------------------------------------
+IMPRIMIRLISTA - Muestra en pantalla la lista l LISTAS }
+procedure imprimirLista(l: Lista);
+begin
+ While (l <> nil) do begin
+   write(l^.dato, ' - ');
+   l:= l^.sig;
+ End;
+ writeln(' ' )   ;
+end;
+
+{-----------------------------------------------------------------------------
+CONTARELEMENTOS - Devuelve la cantidad de elementos de una lista l LISTAS }
+
+function ContarElementos (l: listaNivel): integer;
+  var c: integer;
+begin
+ c:= 0;
+ While (l <> nil) do begin
+   c:= c+1;
+   l:= l^.sig;
+ End;
+ contarElementos := c;
+end;
+
+
+{-----------------------------------------------------------------------------
+AGREGARATRAS - Agrega un elemento atrás en l}
+
+Procedure AgregarAtras (var l, ult: listaNivel; a:arbol);
+ var nue:listaNivel;
+
+ begin
+ new (nue);
+ nue^.info := a;
+ nue^.sig := nil;
+ if l= nil then l:= nue
+           else ult^.sig:= nue;
+ ult:= nue;
+ end;
+
+
+{-----------------------------------------------------------------------------
+IMPRIMIRPORNIVEL - Muestra los datos del árbol a por niveles }
+
+Procedure imprimirpornivel(a: arbol);
+var
+   l, aux, ult: listaNivel;
+   nivel, cant, i: integer;
+begin
+   l:= nil;
+   if(a <> nil)then begin
+                 nivel:= 0;
+                 agregarAtras (l,ult,a);
+                 while (l<> nil) do begin
+                    nivel := nivel + 1;
+                    cant:= contarElementos(l);
+                    write ('Nivel ', nivel, ': ');
+                    for i:= 1 to cant do begin
+                      write (l^.info^.dato, ' - ');
+                      if (l^.info^.HI <> nil) then agregarAtras (l,ult,l^.info^.HI);
+                      if (l^.info^.HD <> nil) then agregarAtras (l,ult,l^.info^.HD);
+                      aux:= l;
+                      l:= l^.sig;
+                      dispose (aux);
+                     end;
+                     writeln;
+                 end;
+               end;
+end;
+ {-----------------------------------------------------------------------------
+Agregar Arbol - Agrega un entero a un arbol ABO, sin repetidos }
+
+Procedure insertar(var a: arbol; num:integer);
+begin
+   if (a = nil)then
+    begin
+      new (a);
+      a^.dato:= num;
+      a^.HI := nil;
+      a^.HD := nil;
+    end
+   else
+     if a^.dato> num then
+      insertar(a^.HI, num)
+    else
+      if a^.dato< num then
+       insertar(a^.HD, num)
+  end;
+
+Procedure enOrden (a:arbol);
+begin
+  if ( a <> nil ) then begin
+    enOrden (a^.HI);
+    write (a^.dato, '   ');
+    enOrden (a^.HD)
+  end;
+  end;
+
+procedure preOrden (a:arbol);
+begin
+ if (a <> nil) then begin
+   write(a^.dato,'   ');
+   preOrden(a^.HI);
+   preOrden(a^.HD);
+ end;
+end;
+
+procedure postOrden (a:arbol);
+begin
+ if (a<>nil) then begin
+   postOrden(a^.HI);
+   postOrden(a^.HD);
+   write(a^.dato,'   ');
+ end;
+end;
+
+function Buscar (a:arbol; dato:integer): arbol;
+begin
+ if (a = nil) then begin
+  Buscar:= nil
+ end
+ else if (a^.dato = dato) then begin
+  Buscar:= a;
+ end
+ else begin
+   if(a^.dato > dato)  then
+      buscar:= Buscar(a^.HI,dato)
+else
+   begin
+     if( a^.dato < dato) then
+      buscar:= Buscar(a^.HD, dato);
+   end;
+ end;
+end;
+
+function min (a:arbol): integer;
+var
+   der,izq: integer;
+begin
+ if(a <> nil) then begin
+  izq:= min(a^.HI);
+  der:= min(a^.HD);
+  if (izq <> -1) and (der = -1) or (izq < der) then
+      min:= izq
+      else if (der <> -1) and (izq = -1) or (der < izq) then
+           min:= der
+      else min:= a^.dato;
+           end
+  else
+    min:= -1;
+ end;
+
+procedure busquedacotada (a:arbol; min,max:integer);
+begin
+ if (a <> nil) then
+   if(a^.dato >= min) then
+      if (a^.dato <= max) then begin
+         write('  ',a^.dato);
+         busquedacotada (a^.HI,min,max);
+         busquedacotada (a^.HD,min,max)
+      end
+      else
+         busquedacotada (a^.Hi,min,max)
+   else
+      busquedacotada(a^.HD,min,max);
+   end;
+
+procedure borrar (a:arbol; num: integer; encontre:boolean);
+var
+   minimo: integer;
+   aux: arbol;
+begin
+ minimo:= 999;
+ if (a = nil) then
+    encontre:= false
+ else
+    if (a^.dato > num) then
+       borrar(a^.HI,num,encontre)
+    else
+        if (a^.dato < num) then
+           borrar(a^.HD,num,encontre)
+        else
+           if (a^.HI = nil) then begin
+              a:= a^.HD;
+              aux:= a;
+              dispose(aux);
+           end
+           else
+              if (a^.HD = nil) then begin
+                 a:= a^.HD;
+                 aux:= a;
+                 dispose(aux)
+              end
+              else
+              minimo:= min(a^.HD);
+              borrar(a^.HD,minimo,encontre);
+end;
+ {--------------- procedimiento busca la cant maxima mensajes por usuario}
+
+
+
+  procedure postOrden ( a : arbol ; var max :integer ; var nomb :string);
+  begin
+       if (a<>nil) then begin
+        if ( a^.cant  > max )then  begin
+           max :=   a^.cant;
+           nomb := a^.nombre;
+        end;
+         postOrden(a^.HI, max, nomb);
+         postOrden(a^.HD, max, nomb);
+
+       end;
+  end;
+
+
+Var
+
+ l: lista;
+ a,bus: arbol;
+ num,mini,max: integer;
+ encontre:boolean;
+
+begin
+ Randomize;
+ a:= nil;
+ encontre:= false;
+ crearLista(l);
+ writeln ('Lista generada: ');
+ imprimirLista(l);
+ while l <> nil do
+ begin
+   insertar(a,l^.dato);
+   l:=l^.sig;
+ end;
+  Writeln  ('Arbol');
+  imprimirpornivel (a);
+  Writeln  ('Recorrido enOrden del Arbol');
+  enOrden(a);
+  writeln;
+  Writeln  ('Recorrido postOrden del Arbol');
+  postOrden(a);
+  writeln;
+  Writeln  ('Recorrido preOrden del Arbol');
+  preOrden(a);
+  writeln;
+  Writeln  ('Escribir un numero para buscarlo');
+  readln(num);
+  Bus:= Buscar(a,num);
+  if (Bus <> nil) then
+     writeln('EL Numero: ',Bus^.dato,' fue encontrado')
+  else
+      writeln('Numero no encontrado');
+  writeln('El valor minimo encontrado: ',min(a));
+  writeln(' Escribir un rango de valores ');
+  writeln('Minimo');
+  readln(mini);
+  writeln('Maximo');
+  readln(max);
+  writeln('Datos encontrados dentro del rango ',mini, ' y ',max);
+  busquedacotada(a,mini,max);
+  writeln(' Escribir un valor a eliminar ');
+  readln(num);
+  borrar(a,num,encontre);
+  if( encontre ) then
+      writeln('Se borro el valor: ',num)
+  else
+      writeln('No se encontro el valor a borrar');
+  imprimirpornivel(a);
+ readln;
+end.
+

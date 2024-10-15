@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1725020930 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 2\practica2ej1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

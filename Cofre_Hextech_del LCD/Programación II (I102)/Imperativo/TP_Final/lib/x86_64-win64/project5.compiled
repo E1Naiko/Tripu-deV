@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq &quot;-FiC:\Users\matia\OneDrive\Escritorio\Universidad\Programación II (I102)\Imperativo\TP_Final\lib\x86_64-win64&quot; &quot;-FuC:\Users\matia\OneDrive\Escritorio\Universidad\Programación II (I102)\Imperativo\TP_Final\&quot; &quot;-FUC:\Users\matia\OneDrive\Escritorio\Universidad\Programación II (I102)\Imperativo\TP_Final\lib\x86_64-win64\&quot; &quot;-FEC:\Users\matia\OneDrive\Escritorio\Universidad\Programación II (I102)\Imperativo\TP_Final\&quot; &quot;-oC:\Users\matia\OneDrive\Escritorio\Universidad\Programación II (I102)\Imperativo\TP_Final\project5.exe&quot; project5.lpr"/>
-</CONFIG>

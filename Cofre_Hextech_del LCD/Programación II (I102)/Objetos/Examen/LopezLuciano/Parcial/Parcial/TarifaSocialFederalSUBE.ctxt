@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=TarifaSocialFederalSUBE
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TarifaSocialFederalSUBE\ here.\r\n\ \r\n\ @author\ (Leandro\ Romanut)\ \r\n\ @version\ (1.0)\r\n
-comment1.params=
-comment1.target=TarifaSocialFederalSUBE()
-comment2.params=zona\ grupo
-comment2.target=boolean\ esBeneficiario(java.lang.String,\ int)
-comment2.text=\r\n\ M\u00E9todo\ para\ saber\ si\ una\ persona\ es\ beneficiaria\ o\ no\ de\ la\ tarifa\ social\ seg\u00FAn\ zona\ y\ grupo\ social\r\n\ \r\n\ @params\ zona\ y\ grupo\r\n\ @return\ boolean\r\n
-numComments=3

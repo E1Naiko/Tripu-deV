@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\i386-win32\fpc.exe" Date="1449426723"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq &quot;-FuE:\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Clase 6 - Repaso 1\Ejercicio 1\&quot; &quot;-FUE:\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Clase 6 - Repaso 1\Ejercicio 1\lib\i386-win32\&quot; &quot;-FEE:\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Clase 6 - Repaso 1\Ejercicio 1\&quot; &quot;-oE:\Laboratorio del Naiko\Facu\Progra 2\Modulo 1 - Recursion y Arboles en Pascal\Clase 6 - Repaso 1\Ejercicio 1\Ejercicio1.exe&quot; Ejercicio1.pas"/>
-  <Complete Value="False"/>
-</CONFIG>

@@ -1,0 +1,21 @@
+; ¡Bienvenido a VonSim!
+;ETIQUETAS   INSTRUCCIONES   COMENTARIOS
+			;Inicio de memoria de datos
+ORG 1000H
+    NUM1 DW 105
+    NUM2 DW 2
+ORG 2000H
+MOV AX, NUM1
+MOV BX, NUM2
+MOV CX, 100
+ADD BX,AX
+SUMA: CMP BX,CX
+      JZ FIN
+      DEC BX
+      JMP SUMA
+FIN: HLT     
+
+END
+
+
+

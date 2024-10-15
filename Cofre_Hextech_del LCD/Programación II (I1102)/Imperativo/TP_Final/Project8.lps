@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Project8.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="223"/>
+        <CursorPos X="21" Y="235"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\..\AppData\Local\Temp\5557bdd0-f15e-4f73-bf43-3f012f6f213d_TP_Final (1).zip.13d\TP_Final\Olimpico.pas"/>
+        <UnitName Value="juegos"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="74"/>
+        <CursorPos X="5" Y="95"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\Libreria.lpr"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="380"/>
+        <CursorPos Y="386"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="4">
+      <Position>
+        <Filename Value="Project8.lpr"/>
+        <Caret Line="212" Column="21" TopLine="191"/>
+      </Position>
+      <Position>
+        <Filename Value="Project8.lpr"/>
+        <Caret Line="185" Column="42" TopLine="168"/>
+      </Position>
+      <Position>
+        <Filename Value="Project8.lpr"/>
+        <Caret Line="188" Column="38" TopLine="178"/>
+      </Position>
+      <Position>
+        <Filename Value="Project8.lpr"/>
+        <Caret Line="261" Column="21" TopLine="241"/>
+      </Position>
+      <Position>
+        <Filename Value="Project8.lpr"/>
+        <Caret Line="221" Column="3" TopLine="209"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

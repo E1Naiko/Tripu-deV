@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Viaje
+comment0.text=\r\nDe\ cada\ viaje\ se\ registra\:\ identificador,\ fecha\ del\ viaje\r\n(DD/MM/AAAA),\ monto\ base\ y\ el\ medio\ de\ transporte\ (Tren,\ Colectivo\ o\ Subte)\r\n
+comment1.params=
+comment1.target=Viaje()
+comment2.params=ID\ fecha\ monto\ medio
+comment2.target=Viaje(int,\ java.lang.String,\ double,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getMedio()
+comment4.params=
+comment4.target=double\ getMonto()
+comment5.params=
+comment5.target=java.lang.String\ getFecha()
+comment6.params=
+comment6.target=int\ getID()
+numComments=7

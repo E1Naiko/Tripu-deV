@@ -1,0 +1,87 @@
+programa Bloquear
+procesos
+  proceso Atras
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso ColocarFlor
+  comenzar 
+    mientras (HayFlorEnLaBolsa)
+      depositarFlor
+  fin
+  proceso ColocarPapel
+  comenzar 
+    mientras (HayPapelEnLaBolsa)
+      depositarPapel
+  fin
+  proceso RecorrerCalleImpar
+  comenzar
+    repetir 99
+      ColocarFlor
+      mover
+  fin
+  proceso RecorrerCallePar
+  comenzar
+    repetir 99
+      ColocarPapel
+      mover
+  fin
+areas
+  areaR1 : AreaC(1,1,100,100)
+robots 
+  robot tipo1
+  variables
+    cantflor:numero
+    cantpapel:numero
+  comenzar
+    Atras
+    repetir 49
+      RecorrerCalleImpar
+      Pos(100,PosCa + 2)   
+  fin
+  robot tipo2
+  variables
+    cantflor:numero
+    cantpapel:numero
+  comenzar
+    Atras
+    repetir 49
+      RecorrerCallePar
+      Pos(100,PosCa + 2)   
+  fin
+  robot tipo3
+  variables
+    cantflor:numero
+    cantpapel:numero
+  comenzar
+    Atras
+    repetir 49
+      RecorrerCalleImpar
+      Pos(100,PosCa + 2)   
+  fin
+  robot tipo4
+  variables
+    cantflor:numero
+    cantpapel:numero
+  comenzar
+    Atras
+    repetir 49
+      RecorrerCallePar
+      Pos(100,PosCa + 2)   
+  fin
+variables 
+  robot1: tipo1 
+  robot2: tipo2
+  robot3: tipo3
+  robot4: tipo4
+comenzar 
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR1)
+  AsignarArea(robot3,areaR1)
+  AsignarArea(robot4,areaR1)
+  Iniciar(robot1, 100, 1) 
+  Iniciar(robot2, 100, 2) 
+  Iniciar(robot3, 100, 3) 
+  Iniciar(robot4, 100, 4) 
+fin
