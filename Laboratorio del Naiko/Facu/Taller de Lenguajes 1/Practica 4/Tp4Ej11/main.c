@@ -6,7 +6,6 @@
 
     Nota: modularice la reserva de memoria, la inicialización, la impresión de las posiciones con valores
     múltiplo de 3 y la liberación de memoria.
-
 */
 
 #include <stdio.h>
@@ -50,9 +49,8 @@ void imprimirMultiplos3(int *a, int n, int m){
     int i, j;
     for (i=0; i<n; i++){
         for (j=0; j<n; j++){
-            printf("%d,", *(a+i*j+j));
-            //if (!(*(a+i*j+j) % 3))
-            //    printf("%d,", *(a+i*j+j));
+            if (!(*(a+i*j+j) % 3))
+                printf("%d,", *(a+i*j+j));
         }
     }
 }
