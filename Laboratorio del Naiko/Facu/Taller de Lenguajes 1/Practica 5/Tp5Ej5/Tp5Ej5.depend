@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1729553546 source:d:\escritorio\ultra nerd\programas\la tripu dev\laboratorio del naiko\facu\taller de lenguajes 1\practica 5\tp5ej5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
