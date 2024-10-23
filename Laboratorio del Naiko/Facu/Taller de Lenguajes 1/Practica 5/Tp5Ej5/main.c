@@ -17,7 +17,7 @@
 #define DIMF_C 50
 #define FIN "ZZZ"
 
-void cargarMatriz(FILE *, char **, int *);
+void cargarMatriz(FILE *, char ***, int *);
 int palabraExiste(char **, int , char []);
 void recorrer(char**, int);
 void imprimirMatriz(char **, int );
@@ -27,21 +27,28 @@ int main()
     int dimf_f = 0;
     FILE * arch;
     arch = fopen("pruebatp5.txt", "r");
-
     char **diccionarioDin;
+    if(arch){
+        printf("APERTURA\n");
 
-    diccionarioDin = (char**) malloc(sizeof(char*));
-    cargarMatriz(arch, diccionarioDin, &dimf_f);
-    printf("\nDIMF_F %d:", dimf_f);
+        diccionarioDin = (char**) malloc(sizeof(char*));
 
-    imprimirMatriz(diccionarioDin, dimf_f);
+        cargarMatriz(arch, &diccionarioDin, &dimf_f);
 
-    recorrer(diccionarioDin, dimf_f);
+        imprimirMatriz(diccionarioDin, dimf_f);
+
+        recorrer(diccionarioDin, dimf_f);
+
+        fclose(arch);
+    }else{
+        printf("ERROR APERTURA\n");
+    }
 
     return 0;
 }
 
-void cargarMatriz(FILE * arch, char ** diccionarioDin, int * DIMF_F){
+void cargarMatriz(FILE * arch, char * ** diccionarioDin, int * DIMF_F){
+    // USO UN PUNTERO TRIPLE PORQUE ESTOY PASANDO POR REFERENCIA UN PUNTERO DOBLE
     char palAct[DIMF_C];
     int i = *DIMF_F;
     if (arch){
@@ -50,56 +57,24 @@ void cargarMatriz(FILE * arch, char ** diccionarioDin, int * DIMF_F){
             i++;
 
             *diccionarioDin = realloc(*diccionarioDin, (i+DIMF_C)*sizeof(char*));
-            diccionarioDin[i] = (char*) malloc(DIMF_C*sizeof(char));
-            strcpy(diccionarioDin[i], palAct);
+            (*diccionarioDin)[i] = (char*) malloc(DIMF_C*sizeof(char));
+            strcpy((*diccionarioDin)[i], palAct);
         }while (!feof(arch));
-
-        fclose(arch);
+        i++;
     }
     *(DIMF_F) = i;
 }
 
-/* PREGUNTAR */
-/*void cargarMatriz(FILE * arch, char *** diccionarioDin, int * DIMF_F) {
-    char palAct[DIMF_C];
-    int i = *DIMF_F;
-
-    if (arch) {
-        // Read words from file
-        while (fscanf(arch, "%s", palAct) == 1) {
-            i++;
-            // Reallocate memory for the new word
-            *diccionarioDin = realloc(*diccionarioDin, i * sizeof(char*));
-            if (*diccionarioDin == NULL) {
-                // Handle memory allocation error
-                printf("Error reallocating memory.\n");
-                return;
-            }
-
-            // Allocate memory for the new word and copy it
-            (*diccionarioDin)[i-1] = (char*) malloc(DIMF_C * sizeof(char));
-            if ((*diccionarioDin)[i-1] == NULL) {
-                // Handle memory allocation error
-                printf("Error allocating memory for word.\n");
-                return;
-            }
-            strcpy((*diccionarioDin)[i-1], palAct);
-        }
-        fclose(arch);
-    }
-
-    // Update the number of words
-    *DIMF_F = i;
-}
-*/
-
 int palabraExiste(char **dicc, int dimf_f, char palabra[]){
     int i, res = 0;
-    for (i=0;i<dimf_f; i++)
-        if(strcmp(palabra, dicc[i])){
+    for (i=0;i<dimf_f; i++){
+        if(!strcmp(palabra, dicc[i])){
+            printf("\nPalabra %s = %s", palabra, dicc[i]);
             res = 1;
             break;
         }
+        printf("\nPalabra %s != %s", palabra, dicc[i]);
+    }
     return res;
 }
 
@@ -109,14 +84,16 @@ void recorrer(char** dicc, int dimf_f){
     scanf("%s", palabra);
     while (strcmp(palabra, FIN)){
         fflush(stdin);
-        printf("La palabra %s", palabraExiste(dicc, dimf_f, palabra) ? "EXISTE" : "NO EXISTE");
-        printf("Ingrese una palabra (%s=FIN): ", FIN);
+        printf("\nLa palabra %s", palabraExiste(dicc, dimf_f, palabra) ? "EXISTE" : "NO EXISTE");
+        printf("\nIngrese una palabra (%s=FIN): ", FIN);
         scanf("%s", palabra);
     }
 }
 
 void imprimirMatriz(char **dicc, int dimf_f){
     int i;
+    printf("\n");
     for (i=0; i<dimf_f; i++)
-        printf("%s", dicc[i]);
+        printf("%s, ", dicc[i]);
+    printf("\n");
 }
