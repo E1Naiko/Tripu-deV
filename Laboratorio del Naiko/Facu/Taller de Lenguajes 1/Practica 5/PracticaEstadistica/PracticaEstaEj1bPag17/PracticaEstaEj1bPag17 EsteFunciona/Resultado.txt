@@ -1,0 +1,12 @@
+Intervalos y frecuencias:
+---------------------------------
+Intervalo: (1900.0, 2900.0] | Marca de clase: 2400.0 | Frecuencia: 18
+Intervalo: (2900.0, 3900.0] | Marca de clase: 3400.0 | Frecuencia: 23
+Intervalo: (3900.0, 4900.0] | Marca de clase: 4400.0 | Frecuencia: 15
+Intervalo: (4900.0, 5900.0] | Marca de clase: 5400.0 | Frecuencia: 17
+Intervalo: (5900.0, 6900.0] | Marca de clase: 6400.0 | Frecuencia: 7
+Intervalo: (6900.0, 7900.0] | Marca de clase: 7400.0 | Frecuencia: 2
+Intervalo: (7900.0, 8900.0] | Marca de clase: 8400.0 | Frecuencia: 1
+Intervalo: (8900.0, 9900.0] | Marca de clase: 9400.0 | Frecuencia: 1
+---------------------------------
+ CANTIDAD TOTAL DE ELEMENTOS :85/85 CANTIDAD DE SUBINTERVALOS :8 INTERVALO : (1900.0,9900.0)
