@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1730135624 source:c:\users\matia\onedrive\escritorio\gordo trolo\tp5ej8\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Convertidor.h"
+
+1730134785 c:\users\matia\onedrive\escritorio\gordo trolo\tp5ej8\convertidor.h
+
+1730135074 source:c:\users\matia\onedrive\escritorio\gordo trolo\tp5ej8\funcionconvertidor.c
+	<stdio.h>
+
