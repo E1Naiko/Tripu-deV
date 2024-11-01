@@ -19,7 +19,9 @@
 #include <stdlib.h>
 #include "Convertidor.h"
 
-#define ERROR_MSJ_FOPEN(x) (printf("ERROR - " #x " no se abrio correctamente")) // PREGUNTAR
+#define ERROR_MSJ_FOPEN(x) (printf("ERROR - " #x " no se abrio correctamente")) // PREGUNTAR:
+// como reemplaza directamente en el preprocesador si le paso una constante definida me va a
+// pasar el nombre de la constante y no el valor definido en la constante
 #define ERROR_MSJ_LECTURA(Y) (printf("ERROR - %d excede el rango", (Y))) // PREGUNTAR
 
 #define NOMBRE_ARCHIVO1 "numeros.txt"
