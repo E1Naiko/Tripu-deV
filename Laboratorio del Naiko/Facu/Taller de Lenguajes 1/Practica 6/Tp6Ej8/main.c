@@ -16,9 +16,81 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int main()
+#define DIMF 10
+#define LIM_RANDOM 20
+#define CLAVE_DEPURACION "ACT_DEPURACION"
+
+void generarVector(int []);
+int verificarModoDepuracion(int argc, char * argv[]);
+int devolverPosicionEntero(int [], int, int);
+void imprimirVector(int const[]);
+
+int main(int argc, char *argv[])
 {
-    printf("Hello world!\n");
+    int vector[DIMF],
+        buscar,
+        modoDepuracion = verificarModoDepuracion(argc, argv);
+
+    if (!modoDepuracion)
+        printf("MODO DEPURACION ACTIVADO\n");
+    generarVector(vector);
+    imprimirVector(vector);
+
+    printf("Ingrese una entero a buscar: ");
+    scanf("%d", &buscar);
+    printf("Entero encontrado en la posicion %d\n", devolverPosicionEntero(vector, buscar, modoDepuracion));
+
+
     return 0;
+}
+
+void generarVector(int v[]){
+    int i;
+    for (i=0; i<DIMF; i++)
+        v[i] = rand()%LIM_RANDOM;
+}
+
+int verificarModoDepuracion(int argc, char * argv[]){
+    int res = 1,
+        i;
+
+    for (i=0; i<argc; i++){
+        if (!strcmp(argv[i], CLAVE_DEPURACION)){
+            res = 0;
+            break;
+        }
+    }
+
+    return res;
+}
+
+int devolverPosicionEntero(int v[], int buscar, int depurar){
+    int res = -1,
+        i;
+
+    for (i=0; i<DIMF; i++){
+        if (v[i]==buscar){
+            res = i;
+            break;
+        }
+    }
+
+    if (!depurar)
+        printf("DEPURACION - Se accedio al vector %d veces\n", i+1);
+
+    return res;
+}
+
+void imprimirVector(int const v[]){
+    if (DIMF>0){
+        int i,
+            tope = DIMF-1;
+        printf("Vector = [");
+        for (i=0; i<tope; i++)
+            printf("%d,", v[i]);
+        printf("%d",v[tope]);
+        printf("]\n");
+    }
 }
