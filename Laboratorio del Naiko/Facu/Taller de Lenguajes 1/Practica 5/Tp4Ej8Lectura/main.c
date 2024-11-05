@@ -1,31 +1,35 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-#define NOMBRE_ARCHIVO2 "numeros.dat"
+int convertirBSSDecimal(int binary) {
+    int decimal = 0;
+    int base = 1;  // 2^0
+
+    while (binary > 0) {
+        int last_digit = binary % 10;
+        binary = binary / 10;
+        decimal += last_digit * base;
+        base = base * 2;
+    }
+
+    return decimal;
+}
 
 int main() {
-    FILE *archNumeroBIN;
-    unsigned char act;  // Use unsigned char for reading single digits
-
-    // Open the binary file for reading
-    archNumeroBIN = fopen(NOMBRE_ARCHIVO2, "rb");
-    if (!archNumeroBIN) {
-        perror("Error opening binary file");
-        return -1;
+    FILE *file = fopen("numeros.dat", "rb");
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
     }
 
-    printf("Contenido de %s:\n", NOMBRE_ARCHIVO2);
+    int number, converted;
 
-    // Read and print the numbers
-    while (fread(&act, sizeof(unsigned char), 1, archNumeroBIN) == 1) {
-        printf("%d ", act);
+    fread(&number, sizeof(int), 1, file);
+    while (!feof(file)) {
+        converted = convertirBSSDecimal(number);
+        printf("Binary: %d => : Decimal %d\n", number, converted);
+        fread(&number, sizeof(int), 1, file);
     }
 
-    // Check for read error
-    if (ferror(archNumeroBIN)) {
-        perror("Error reading from binary file");
-    }
-
-    fclose(archNumeroBIN);
+    fclose(file);
     return 0;
 }

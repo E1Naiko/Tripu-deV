@@ -50,13 +50,15 @@ int main()
         return -2;
     }
 
-    int act;
+    int act, convBSS;
     printf("Introduzca un entero (FIN=-1): ");
     scanf("%d", &act);
     while (act!=FIN){
         if (act>=INT_INF && act<=INT_SUP){
+            convBSS = convertirDecimalBSS(act);
+            printf("\n %d => %d", act, convBSS);
             fprintf(archNumeroTXT, " %d", act);
-            fwrite(&act,sizeof(int),1,archNumeroBIN);
+            fwrite(&convBSS,sizeof(int),1,archNumeroBIN);
         }
         else
             ERROR_MSJ_LECTURA(act);
