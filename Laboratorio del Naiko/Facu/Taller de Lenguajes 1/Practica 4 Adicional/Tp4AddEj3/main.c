@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "UI.h"
+#include "game.h"
 
 #define DEBUG 1
 #define STATUS_GAME_GAMEOVER -1
@@ -10,12 +11,8 @@
 #define DIM_COL 8
 #define AMM_MINES 10
 
-void showTableStatus();
-int play();
 void updateGameStatus();
 
-void printStarterScreen();
-void printGameOver();
 
 int main(){
     int minesFound,
