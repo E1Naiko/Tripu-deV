@@ -6,7 +6,6 @@
 #define DEBUG_STATES 1
 #define DEBUG_PRINT_MATRIX 1
 
-
 #if DEBUG_PRINT_MATRIX
 void debugPrintState(char ** m, int rows, int collumns){
     int i, j;
@@ -68,10 +67,36 @@ void setBombs(char ** result, int rows, int collumns, int totalBombs){
         #endif
     }
 }
-
-void setDistance(char** result, int rows, int collumns){
+void setRowBorderDistance(char** result, int rows, int collumns){
     #if DEBUG_STEPS
-    printf("DEBUG - STEPS - Setting Distances\n\n");
+    printf("DEBUG - STEPS - Setting Side Distances\n\n");
+    #endif
+
+    int i, /*j,*/
+        conv_i, conv_j;
+    char res;
+    
+    // M[0][i+1] innit
+    ROWSIDE(0,0);
+
+    // M[rows][i-1] innit
+    ROWSIDE(rows,1);
+
+    // M[i+1][0] innit
+    COLLSIDE(0,0);
+
+    // M[i+1][collumns] innit
+    COLLSIDE(collumns,1);
+    
+    #undef ROWSIDE
+    #undef COLLSIDE
+    #if DEBUG_PRINT_MATRIX
+        debugPrintState(result, rows, collumns);
+    #endif
+}
+void setInsideDistance(char** result, int rows, int collumns){
+    #if DEBUG_STEPS
+    printf("DEBUG - STEPS - Setting Inside Distances\n\n");
     #endif
     int i, j,
         conv_i, conv_j;
