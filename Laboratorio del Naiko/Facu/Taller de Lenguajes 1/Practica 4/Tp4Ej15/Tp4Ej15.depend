@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1731601352 source:/home/alumnos/Penialba/Tp4Ej15/main.c
+	<stdio.h>
+	<stdlib.h>
+	"UI.h"
+	"TrianguloPascal.h"
+
+1731597821 /home/alumnos/Penialba/Tp4Ej15/UI.h
+
+1731598581 /home/alumnos/Penialba/Tp4Ej15/TrianguloPascal.h
+
+1731601654 source:/home/alumnos/Penialba/Tp4Ej15/UI.c
+	<stdlib.h>
+	<stdio.h>
+
+1731601393 source:/home/alumnos/Penialba/Tp4Ej15/TrianguloPascal.c
+	<stdlib.h>
+	<stdio.h>
+
