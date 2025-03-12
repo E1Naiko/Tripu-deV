@@ -1,0 +1,68 @@
+programa plantillaGeneral
+procesos
+  proceso limpiar(ES cont: numero)
+  comenzar
+    repetir 9
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:= cont+1
+      mover
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:=cont+1
+  fin
+areas
+  areaR1 : AreaP(1,1,1,10)
+  areaR2 : AreaP(2,11,2,20)
+  areaF : AreaP(2,1,2,1)
+robots
+  robot tipoF
+  variables
+    cont1 : numero
+    cont2 : numero
+    dif : numero
+  comenzar
+    cont1 := 0
+    cont2 := 0
+    dif := 0
+    RecibirMensaje(cont1, robot1)
+    RecibirMensaje(cont2, robot2)
+    dif := cont1 - cont2
+    si dif>0
+      EnviarMensaje(dif, robot1)
+      EnviarMensaje(0, robot2)
+    sino
+      si dif<0
+        dif := (-1) * dif
+        EnviarMensaje(0, robot1)
+        EnviarMensaje(dif, robot2)
+      sino
+        EnviarMensaje(0, robot1)
+        EnviarMensaje(0, robot2)
+  fin
+  robot tipoR
+  variables
+    cont : numero
+    dif : numero
+  comenzar
+    cont := 0
+    dif := 0
+    limpiar(cont)
+    EnviarMensaje(cont,robotF)
+    RecibirMensaje(dif,robotF)
+    si dif>0
+      Informar(cont)
+  fin
+variables
+  robot1: tipoR
+  robot2: tipoR
+  robotF: tipoF
+comenzar
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robotF,areaF)
+  Iniciar(robot1, 1, 1)
+  Iniciar(robot2, 2, 11)
+  Iniciar(robotF, 2, 1)
+fin
+fin

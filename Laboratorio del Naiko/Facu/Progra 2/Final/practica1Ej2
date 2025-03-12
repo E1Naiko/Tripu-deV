@@ -1,0 +1,50 @@
+programa practica1Ej1
+procesos
+  proceso procesarEsquina(ES sinFlor:numero ES cont:numero)
+  comenzar
+    si HayFlorEnLaEsquina
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont := cont + 1
+    sino
+      sinFlor := sinFlor + 1
+  fin
+  proceso depositarFlores(E cont:numero)
+  comenzar
+    mientras (cont>0)
+      depositarFlor
+      cont:= cont - 1
+  fin
+areas
+  areaR1: AreaP(1,1,100,100)
+robots
+  robot tipo1
+  variables
+    sinFlor: numero
+    cont: numero
+  comenzar
+    Pos(1,1)
+    repetir 4
+      sinFlor := 0
+      cont := 0
+      repetir 99
+        procesarEsquina(sinFlor, cont)
+        mover
+      procesarEsquina(sinFlor, cont)
+      depositarFlores(cont)
+      Informar(cont)
+      Informar(sinFlor)
+      Pos(PosAv+2, 1)
+    repetir 99
+      procesarEsquina(sinFlor, cont)
+      mover
+    procesarEsquina(sinFlor, cont)
+    depositarFlores(cont)
+  fin
+variables
+  robot1: tipo1
+comenzar
+  AsignarArea(robot1, areaR1)
+  Iniciar(robot1, 1, 1)
+fin
+fin

@@ -1,0 +1,72 @@
+programa practica1Ej3b
+procesos
+  proceso recargar
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+  fin
+  proceso par
+  comenzar
+    mientras (HayPapelEnLaBolsa) & (PosAv<>100)
+      depositarPapel
+      mover
+    si (PosAv=100) & (HayPapelEnLaBolsa)
+      depositarPapel
+  fin
+  proceso impar
+  comenzar
+    mientras (HayFlorEnLaBolsa) & (PosAv<>100)
+      depositarFlor
+      mover
+    si (PosAv=100) & (HayFlorEnLaBolsa)
+      depositarFlor
+  fin
+areas
+  areaR1 : AreaP(1,1,100,1)
+  areaR2 : AreaP(1,2,100,2)
+  areaR3 : AreaP(1,3,100,3)
+  areaR4 : AreaP(1,4,100,4)
+  areaRC : AreaP(100,5,100,5)
+robots
+  robot tipoC
+  comenzar
+    EnviarMensaje(1, robot1)
+    EnviarMensaje(2, robot2)
+    EnviarMensaje(3, robot3)
+    EnviarMensaje(4, robot4)
+  fin
+  robot tipoGen
+  variables
+    id: numero
+  comenzar
+    RecibirMensaje(id, robotC)
+    recargar
+    Pos(1,id)
+    derecha
+    si ((id = 2) | (id = 4))
+      par
+    sino
+      impar
+    Pos(1,id)
+  fin
+variables
+  robotC: tipoC
+  robot1: tipoGen
+  robot2: tipoGen
+  robot3: tipoGen
+  robot4: tipoGen
+comenzar
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robot3,areaR3)
+  AsignarArea(robot4,areaR4)
+  AsignarArea(robotC,areaRC)
+  Iniciar(robot1, 100, 1)
+  Iniciar(robot2, 100, 2)
+  Iniciar(robot3, 100, 3)
+  Iniciar(robot4, 100, 4)
+  Iniciar(robotC, 100,5)
+fin
+fin

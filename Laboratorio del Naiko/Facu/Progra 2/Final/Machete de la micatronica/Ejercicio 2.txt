@@ -1,0 +1,63 @@
+programa Ejercicio4_1
+procesos
+  proceso hacerRectangulo(E altura: numero; E base:numero; ES flores:numero)  
+  comenzar
+    flores:=0
+    repetir 2
+      repetir altura
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+          flores:=flores+1
+        mover
+      derecha 
+      repetir base
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+          flores:=flores+1
+        mover
+      derecha 
+  fin
+  proceso dejarFlor(E f:numero)
+  comenzar
+    mientras (f <> 0)
+      depositarFlor
+      f:= f - 1
+  fin
+  
+areas
+  esquina : AreaC(10,10,10,10)
+  areaR1  : AreaP(15,15,30,35)
+  areaR2  : AreaP(40,40,55,60)
+
+robots 
+  robot tipo1
+  variables
+    f:numero
+    miAv:numero
+    miCa:numero
+  comenzar
+    f:= 0
+    miAv:= PosAv
+    miCa:= PosCa
+    hacerRectangulo(20,15,f)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    dejarFlor(f)
+    Pos(miAv,miCa)
+    LiberarEsquina(10,10)
+    Informar(f)
+  fin
+
+variables 
+  robot1: tipo1
+  robot2: tipo1
+    
+comenzar 
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robot1,esquina)
+  AsignarArea(robot2,esquina)
+  Iniciar(robot1, 15,15)
+  Iniciar(robot2, 40, 40) 
+  
+fin

@@ -1,0 +1,112 @@
+{1-  Realice un programa para que 1 robot recolector de flores (florero) y 1 robot recolector de papeles (papelero) recorran el perímetro de la ciudad juntando los elementos que encuentren en todas las esquinas. Al finalizar, deben informar la cantidad de elementos recolectados. Los robots recolectores inician en (49,50) y (50,49).}
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso limpiarPapeles(ES cont: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+  fin
+  proceso limpiarFlores(ES cont: numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cont:=cont+1
+  fin
+  proceso siguiente(E esCalle: boolean E baja: boolean)
+  comenzar
+    si esCalle
+      si baja
+        BloquearEsquina(PosAv-1,PosCa)
+        mover
+        LiberarEsquina(PosAv+1,PosCa)
+      sino
+        BloquearEsquina(PosAv+1,PosCa)
+        mover
+        LiberarEsquina(PosAv-1,PosCa)
+    sino
+      si baja
+        BloquearEsquina(PosAv,PosCa-1)
+        mover
+        LiberarEsquina(PosAv,PosCa+1)
+      sino
+        BloquearEsquina(PosAv,PosCa+1)
+        mover
+        LiberarEsquina(PosAv,PosCa-1)
+        
+  fin
+  proceso recorrido(ES cont: numero E esFlor: boolean)
+  variables
+    baja: boolean
+  comenzar
+    si esFlor
+      baja:=V
+      repetir 2
+        repetir 99
+          limpiarFlores(cont)
+          siguiente(V,baja)
+        limpiarFlores(cont)
+        izquierda
+        repetir 99
+          limpiarFlores(cont)
+          siguiente(F, baja)
+        limpiarFlores(cont)
+        izquierda
+        baja:=F
+    sino
+      baja:=F
+      repetir 2
+        repetir 99
+          limpiarPapeles(cont)
+          siguiente(V,baja)
+        limpiarPapeles(cont)
+        izquierda
+        repetir 99
+          limpiarPapeles(cont)
+          siguiente(F,baja)
+        limpiarPapeles(cont)
+        izquierda
+        baja:=V
+  fin
+areas
+  areaG : AreaP(1,1,100,100)
+robots
+  robot tipoFlorero
+  variables
+    cont : numero
+  comenzar
+    cont:=0
+    BloquearEsquina(100,100)
+    Pos(100,100)
+    izquierda
+    recorrido(cont, V)
+    Pos(49,50)
+    Informar(cont)
+  fin 
+  robot tipoPapelero
+  variables
+    cont: numero
+  comenzar
+    cont:=0
+    BloquearEsquina(1,1)
+    Pos(1,1)
+    derecha
+    recorrido(cont, F)
+    Pos(50,49)
+    Informar(cont)
+  fin
+variables
+  florero: tipoFlorero
+  papelero: tipoPapelero
+comenzar
+  AsignarArea(florero,areaG)
+  AsignarArea(papelero,areaG)
+  Iniciar(florero, 49, 50)
+  Iniciar(papelero, 50, 49)
+fin
+fin

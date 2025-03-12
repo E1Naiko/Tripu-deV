@@ -1,0 +1,45 @@
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso limpiar(ES cont: numero)
+  comenzar
+    repetir 99
+      mientras (HayPapelEnLaEsquina)
+        tomarPapel
+        cont:= cont+1
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:= cont+1
+      mover
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:=cont+1
+    Informar(cont)
+  fin
+areas
+  areaR0 : AreaP(1,1,1,1)
+  areaR1 : AreaP(2,2,2,2)
+robots
+  robot tipo0
+  comenzar
+  fin 
+  robot tipo1
+  comenzar
+  fin
+variables
+  robot0: tipo0
+  robot1: tipo1
+comenzar
+  AsignarArea(robot0,areaR0)
+  AsignarArea(robot1,areaR1)
+  Iniciar(robot0, 1, 1)
+  Iniciar(robot1, 2, 2)
+fin
+fin

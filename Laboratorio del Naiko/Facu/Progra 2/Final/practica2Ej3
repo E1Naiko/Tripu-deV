@@ -1,0 +1,77 @@
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso limpiarAltoEscalon(E alto: numero ES contF: numero ES contP: numero)
+  comenzar
+    repetir alto
+      mientras (HayPapelEnLaEsquina)
+        tomarPapel
+        contP:= contP+1
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        contF:= contF+1
+      mover
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      contP:= contP+1
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      contF:=contF+1
+  fin
+areas
+  areaJ : AreaC(1,1,1,1)
+  areaR1 : AreaC(2,1,6,25)
+  areaR2 : AreaC(7,1,11,25)
+  areaR3 : AreaC(12,1,16,25)
+robots
+  robot tipoE
+  variables
+    alto: numero
+    contC: numero
+    contF: numero
+    contP: numero
+  comenzar
+    contC:= 0
+    repetir 4
+      contF:= 0
+      contP:= 0
+      Random(alto,1,5)
+      limpiarAltoEscalon(alto, contF, contP)
+      derecha
+      mover
+      izquierda
+      si contF>contP
+        contC:= contC+1
+    EnviarMensaje(contC, robotJ)
+  fin 
+  robot tipoJ
+  variables
+    aux: numero
+    suma: numero
+  comenzar
+    suma:=0
+    repetir 3
+      RecibirMensaje(aux, *)
+      suma := suma + aux
+    Informar(suma)
+  fin
+variables
+  robotJ: tipoJ
+  robot1: tipoE
+  robot2: tipoE
+  robot3: tipoE
+comenzar
+  AsignarArea(robotJ,areaJ)
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robot3,areaR3)
+  Iniciar(robotJ, 1, 1)
+  Iniciar(robot1, 2, 1)
+  Iniciar(robot2, 7, 1)
+  Iniciar(robot3, 12, 1)
+fin
+fin

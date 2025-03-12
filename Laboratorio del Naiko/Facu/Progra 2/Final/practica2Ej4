@@ -1,0 +1,100 @@
+programa plantillaGeneral
+procesos
+  proceso limpiar(ES cont: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:=cont+1
+  fin
+areas
+  areaC : AreaP(1,1,1,1)
+  areaR1 : AreaP(2,1,2,1)
+  areaR2 : AreaP(3,1,3,1)
+  areaR3 : AreaP(4,1,4,1)
+  areaG : AreaPC(5,5,50,30)
+robots
+  robot tipoC
+  variables
+    turno : numero
+    sigue : boolean
+    idAct : numero
+    totalAct : numero
+    idMax : numero
+    totalMax : numero
+  comenzar
+    idMax := 0
+    totalMax := 0
+    EnviarMensaje(1, robot1)
+    EnviarMensaje(2, robot2)
+    EnviarMensaje(3, robot3)
+    repetir 20
+      Random(turno,1,3)
+      si turno = 1
+        EnviarMensaje(1, robot1)
+      sino
+        si turno = 2
+          EnviarMensaje(1, robot2)
+        sino
+          EnviarMensaje(1, robot3)
+      RecibirMensaje(sigue, *)
+    EnviarMensaje(0, robot1)
+    EnviarMensaje(0, robot2)
+    EnviarMensaje(0, robot3)
+    repetir 3
+      idAct := idAct+1
+      si idAct=1
+        RecibirMensaje(totalAct, robot1)
+      sino
+        si idAct=2
+          RecibirMensaje(totalAct, robot2)
+        sino
+          RecibirMensaje(totalAct, robot3)
+      si totalMax<totalAct
+        idMax := idAct
+        totalMax := totalAct
+    si idMax>0
+      Informar(idMax, totalMax)
+  fin
+  robot tipoF
+  variables
+    id : numero
+    turno : numero
+    Av : numero
+    Ca : numero
+    contT: numero
+  comenzar
+    contT := 0
+    RecibirMensaje(id, robotC)
+    RecibirMensaje(turno, robotC)
+    mientras turno>0
+      Random(Av,5,50)
+      Random(Ca,5,30)
+      Pos(Av,Ca)
+      limpiar(contT)
+      Pos(id+1,1)
+      EnviarMensaje(1, robotC)
+      RecibirMensaje(turno, robotC)
+    EnviarMensaje(contT, robotC)
+  fin
+variables
+  robotC: tipoC
+  robot1: tipoF
+  robot2: tipoF
+  robot3: tipoF
+comenzar
+  AsignarArea(robotC,areaC)
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robot3,areaR3)
+  AsignarArea(robot1,areaG)
+  AsignarArea(robot2,areaG)
+  AsignarArea(robot3,areaG)
+  Iniciar(robotC, 1, 1)
+  Iniciar(robot1, 2, 1)
+  Iniciar(robot2, 3, 1)
+  Iniciar(robot3, 4, 1)
+fin
+fin
