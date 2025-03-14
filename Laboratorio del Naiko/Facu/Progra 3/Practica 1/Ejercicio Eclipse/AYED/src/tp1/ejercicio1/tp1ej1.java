@@ -1,7 +1,5 @@
 package tp1.ejercicio1;
 
-
-
 public class tp1ej1 {
 	static void pedidoFor(int a, int b) {
 		for (int i=a;i<=b; i++) {
