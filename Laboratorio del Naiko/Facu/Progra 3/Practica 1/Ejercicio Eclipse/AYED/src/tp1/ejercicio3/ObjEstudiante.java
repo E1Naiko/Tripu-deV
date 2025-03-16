@@ -15,14 +15,14 @@ package tp1.ejercicio3;
 	definidos.
 */
 
-public class Estudiante {
+public class ObjEstudiante {
 	private String nombre;
 	private String apellido;
 	private int comision;
 	private String email;
 	private String direccion;
 		
-	public Estudiante(String nombre, String apellido, int comision, String email, String direccion) {
+	public ObjEstudiante(String nombre, String apellido, int comision, String email, String direccion) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.comision = comision;
@@ -85,9 +85,21 @@ public class Estudiante {
 		this.apellido = apellido;
 	}
 
-
-
+	
+	
 	public String tusDatos(){
+		return "Datos - Estudiante: " +
+				getNombre() + " - " +
+				getApellido() + " - " +
+				getComision() + " - " +
+				getEmail() + " - " +
+				getDireccion();
+	}
+	
+	
+	
+	@Override
+	public String toString() {
 		return "Datos - Estudiante: " +
 				getNombre() + " - " +
 				getApellido() + " - " +

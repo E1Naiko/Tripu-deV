@@ -16,8 +16,8 @@ public class Test {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		Estudiante [] estus = new Estudiante[CAP_ESTU];
-		Profesor [] profes = new Profesor[CAP_PROFE];
+		ObjEstudiante [] estus = new ObjEstudiante[CAP_ESTU];
+		ObjProfesor [] profes = new ObjProfesor[CAP_PROFE];
 		String nombre;
 		String apellido;
 		int comision;
@@ -41,7 +41,7 @@ public class Test {
 			System.out.println(" - Ingrese direccion: ");
 			direccion = /*input.next();*/ String.valueOf(aux);
 			 
-			estus[i] = new Estudiante(nombre, apellido, comision, email, direccion);
+			estus[i] = new ObjEstudiante(nombre, apellido, comision, email, direccion);
 			aux+=1;
 		}
 		
@@ -57,7 +57,7 @@ public class Test {
 			System.out.println(" - Ingrese facultad: ");
 			facultad = /*input.next();*/ String.valueOf(aux);
 			
-			profes[i] = new Profesor(nombre, apellido, email, catedra, facultad);
+			profes[i] = new ObjProfesor(nombre, apellido, email, catedra, facultad);
 			aux += 1;
 		}
 		

@@ -15,12 +15,19 @@ public class tp1ej1 {
 		}
 	}
 	
-	static void pedido(int a,int b) {
+	static void pedido(int a, int b) {
 		int i=a;
 		if (i<=b) {
 			System.out.print(i);
 			i++;
 			pedido(i,b);
+		}
+	}
+	
+	static void pedido2(int a, int b) { // Luchito
+		if (b!=0) {
+			System.out.print(a);
+			pedido(a+1, b-1);
 		}
 	}
 	

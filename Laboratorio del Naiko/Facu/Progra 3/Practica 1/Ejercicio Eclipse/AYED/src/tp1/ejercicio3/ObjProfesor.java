@@ -16,14 +16,14 @@ package tp1.ejercicio3;
 	definidos.
 */
 
-public class Profesor {
+public class ObjProfesor {
 	private String nombre;
 	private String apellido;
 	private String email;
 	private String catedra;
 	private String facultad;
 	
-	public Profesor(String nombre, String apellido, String email, String catedra, String facultad) {
+	public ObjProfesor(String nombre, String apellido, String email, String catedra, String facultad) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;

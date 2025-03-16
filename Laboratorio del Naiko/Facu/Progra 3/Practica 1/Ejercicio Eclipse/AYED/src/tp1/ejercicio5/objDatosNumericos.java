@@ -1,8 +1,8 @@
 package tp1.ejercicio5;
 
 public class objDatosNumericos {
-	private int minimo;
-	private int maximo;
+	private int minimo = Integer.MAX_VALUE;
+	private int maximo = Integer.MIN_VALUE;
 	private double promedio;
 	
 	public objDatosNumericos(int minimo, int maximo, int promedio) {
@@ -24,6 +24,10 @@ public class objDatosNumericos {
 			minimo = a;
 		if (a>maximo)
 			maximo = a;
+	}
+	
+	public void calcPromedio(int sumatoria, int total) {
+		promedio = (double) sumatoria / total;
 	}
 
 	public int getMinimo() {
@@ -49,8 +53,11 @@ public class objDatosNumericos {
 	public void setPromedio(int promedio) {
 		this.promedio = promedio;
 	}
-	
-	public void calcPromedio(int sumatoria, int total) {
-		promedio = (double) sumatoria / total;
+
+	@Override
+	public String toString() {
+		return "objDatosNumericos [minimo=" + minimo + ", maximo=" + maximo + ", promedio=" + promedio + "]";
 	}
+	
+	
 }
