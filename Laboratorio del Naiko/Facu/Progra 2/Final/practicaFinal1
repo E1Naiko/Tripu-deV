@@ -1,0 +1,94 @@
+programa plantillaGeneral
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso limpiar(ES cont: numero)
+  comenzar
+    repetir 99
+      mientras (HayPapelEnLaEsquina)
+        tomarPapel
+        cont:= cont+1
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cont:= cont+1
+      mover
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cont:=cont+1
+  fin
+  proceso limpiarPapeles(ES cont: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+  fin
+  proceso limpiarFlores(ES cont: numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cont:=cont+1
+  fin
+areas
+  inicioArbitro : AreaP(5,1,5,1)
+  inicioR1 : AreaP(1,1,1,1)
+  inicioR2 : AreaP(2,1,2,1)
+  inicioR3 : AreaP(3,1,3,1)
+  inicioR4 : AreaP(4,1,4,1)
+  area1 : AreaP(1,3,4,7)
+  area2 : AreaP(90,3,93,7)
+  area3 : AreaP(1,90,4,94)
+  area4 : AreaP(90,90,93,94)
+  deposito1 : AreaPC(25,25,25,25)
+  deposito2 : AreaPC(50,50,50,50)
+robots
+  robot tipoArbitro
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+  fin
+  robot tipoLimpiador
+  variables
+    id : numero
+  comenzar
+    cont:=0
+    RecibirMensaje(id,arbitro)
+  fin
+variables
+  arbitro: tipoArbitro
+  R1: tipoLimpiador
+  R2: tipoLimpiador
+  R3: tipoLimpiador
+  R4: tipoLimpiador
+comenzar
+  AsignarArea(arbitro,inicioArbitro)
+  AsignarArea(R1,inicioR1)
+  AsignarArea(R2,inicioR2)
+  AsignarArea(R3,inicioR3)
+  AsignarArea(R4,inicioR4)
+  AsignarArea(R1,area1)
+  AsignarArea(R2,area2)
+  AsignarArea(R3,area3)
+  AsignarArea(R4,area4)
+  AsignarArea(R1,deposito1)
+  AsignarArea(R1,deposito2)
+  AsignarArea(R2,deposito1)
+  AsignarArea(R2,deposito2)
+  AsignarArea(R3,deposito1)
+  AsignarArea(R3,deposito2)
+  AsignarArea(R4,deposito1)
+  AsignarArea(R4,deposito2)
+  Iniciar(R1, 1, 1)
+  Iniciar(R2, 2, 1)
+  Iniciar(R3, 3, 1)
+  Iniciar(R4, 4, 1)
+  Iniciar(arbitro, 5, 1)
+fin
+fin

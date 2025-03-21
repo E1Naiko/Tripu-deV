@@ -1,0 +1,100 @@
+programa practica4Ej4
+procesos
+  proceso equiparFlor(ES sePudo : boolean)
+  variables
+    av: numero
+    ca: numero
+  comenzar
+    av := PosAv
+    ca := PosCa
+    sePudo := F
+    BloquearEsquina(11,11)
+    Pos(11,11)
+    si(HayPapelEnLaEsquina)
+      sePudo := V
+      tomarPapel
+    Pos(av,ca)
+    LiberarEsquina(11,11)
+  fin
+areas
+  areaCoordinador : AreaP(1,1,1,1)
+  areaG : AreaPC(11,11,11,11)
+  areaR1 : AreaP(4,1,4,100)
+  areaR2 : AreaP(6,1,6,100)
+  areaR3 : AreaP(8,1,8,100)
+  areaR4 : AreaP(10,1,10,100)
+robots
+  robot tipoRacist
+  variables
+    id: numero
+    ca: numero
+    continuar: boolean
+  comenzar
+    RecibirMensaje(id, robotCoordinador)
+    continuar := V
+    mientras((PosCa<100) & continuar)
+      equiparFlor(continuar)
+      si (continuar)
+        depositarPapel
+        mover
+    {Envio de info}
+    BloquearEsquina(11,11)
+    ca := PosCa
+    EnviarMensaje(id,robotCoordinador)
+    EnviarMensaje(ca,robotCoordinador)
+    RecibirMensaje(continuar,robotCoordinador)
+    LiberarEsquina(11,11)
+  fin
+  robot tipoCoordinador
+  variables
+    auxMejor, auxMejorId: numero
+    act, actId: numero
+  comenzar
+    auxMejor := 0
+    auxMejorId := 0
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    repetir 4
+      RecibirMensaje(actId,*)
+      RecibirMensaje(act,*)
+      si (auxMejor<act)
+        auxMejor := act
+        auxMejorId := actId
+      si (actId=1)
+        EnviarMensaje(V,robot1)
+      sino
+        si (actId=2)
+          EnviarMensaje(V,robot2)
+        sino
+          si (actId=3)
+            EnviarMensaje(V,robot3)
+          sino
+            EnviarMensaje(V,robot4)
+    Informar('mejorPos',auxMejor)
+    Informar('mejorID',auxMejorId)
+  fin
+variables
+  robotCoordinador: tipoCoordinador
+  robot1: tipoRacist
+  robot2: tipoRacist
+  robot3: tipoRacist
+  robot4: tipoRacist
+comenzar
+  AsignarArea(robot1,areaR1)
+  AsignarArea(robot1,areaG)
+  AsignarArea(robot2,areaR2)
+  AsignarArea(robot2,areaG)
+  AsignarArea(robot3,areaR3)
+  AsignarArea(robot3,areaG)
+  AsignarArea(robot4,areaR4)
+  AsignarArea(robot4,areaG)
+  AsignarArea(robotCoordinador,areaCoordinador)
+  Iniciar(robot1, 4, 1)
+  Iniciar(robot2, 6, 1)
+  Iniciar(robot3, 8, 1)
+  Iniciar(robot4, 10, 1)
+  Iniciar(robotCoordinador, 1, 1)
+fin
+fin
