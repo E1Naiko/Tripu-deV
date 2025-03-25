@@ -1,3 +1,4 @@
+<h3 align ="center">TripuDev</h3>
 # ¿CANSADO DE NO PONERLA?
 
 ## FELICIDADES, ENCONTRASTE LA EVOLUCION, NI INTENTARLO.
@@ -128,4 +129,4 @@ Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta e
 
 [![El codigo del Naikito](https://user-images.githubusercontent.com/74038190/243328563-d0cfe7d1-0b8c-4e4a-9a66-875290ba6065.gif "El codigo del Naikito")](https://user-images.githubusercontent.com/74038190/243328563-d0cfe7d1-0b8c-4e4a-9a66-875290ba6065.gif "El codigo del Naikito")
 <br><hr>
-<- [ Que vas a hacer? ↑](#top)
+<- [ Que vas a hacer? ↑](#TripuDev)
