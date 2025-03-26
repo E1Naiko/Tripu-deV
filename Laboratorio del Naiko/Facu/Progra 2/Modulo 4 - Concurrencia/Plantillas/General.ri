@@ -1,11 +1,11 @@
 programa plantillaGeneral
 procesos
-  proceso izquierda
+  proceso izquierda {Gira a la derecha hasta que se demuestre lo contrario}
   comenzar
     repetir 3
       derecha
   fin
-  proceso limpiar(ES cont: numero)
+  proceso limpiar(ES cont: numero) {Limpia todas las avenidas de todo lo que no se mueva}
   comenzar
     repetir 99
       mientras (HayPapelEnLaEsquina)
@@ -22,13 +22,13 @@ procesos
       tomarFlor
       cont:=cont+1
   fin
-proceso limpiarPapeles(ES cont: numero)
+proceso limpiarPapeles(ES cont: numero) {Limpia todos los papeles de una esquina}
   comenzar
     mientras (HayPapelEnLaEsquina)
       tomarPapel
       cont:= cont+1
   fin
-  proceso limpiarFlores(ES cont: numero)
+  proceso limpiarFlores(ES cont: numero) {Limpia todas las flores de una esquina}
   comenzar
     mientras HayFlorEnLaEsquina
       tomarFlor
@@ -60,19 +60,50 @@ areas
   areaR0 : AreaP(1,1,1,1)
   areaR1 : AreaP(2,2,2,2)
 robots
-  robot tipo0
+  robot tipoCoordinador
+  variables
+    id : numero
+    aux : numero
   comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    EnviarMensaje(5,robot5)
+    aux:=0
+    mientras aux<5
+      RecibirMensaje(id,*)
+      Informar(id)
+      aux:=aux+1
   fin 
-  robot tipo1
+  robot tipo
+  variables
+    id : numero
   comenzar
+    RecibirMensaje(id,robotCoordinador)
+    BloquearEsquina(100,100)
+    EnviarMensaje(id,robotCoordinador)
+    LiberarEsquina(100,100)
   fin
 variables
-  robot0: tipo0
-  robot1: tipo1
+  robotCoordinador: tipoCoordinador
+  robot1: tipo
+  robot2: tipo
+  robot3: tipo
+  robot4: tipo
+  robot5: tipo
 comenzar
-  AsignarArea(robot0,areaR0)
-  AsignarArea(robot1,areaR1)
-  Iniciar(robot0, 1, 1)
-  Iniciar(robot1, 2, 2)
+  AsignarArea(robotCoordinador,areaG)
+  AsignarArea(robot1,areaG)
+  AsignarArea(robot2,areaG)
+  AsignarArea(robot3,areaG)
+  AsignarArea(robot4,areaG)
+  AsignarArea(robot5,areaG)
+  Iniciar(robotCoordinador, 1, 2)
+  Iniciar(robot1, 1, 1)
+  Iniciar(robot2, 2, 1)
+  Iniciar(robot3, 3, 1)
+  Iniciar(robot4, 4, 1)
+  Iniciar(robot5, 5, 1)
 fin
 fin

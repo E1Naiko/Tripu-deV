@@ -1,0 +1,4 @@
+    BloquearEsquina(999,999) {CAMBIAR DESTINO}
+    EnviarMensaje(id,robotCoordinador)
+    RecibirMensaje(continuar,robotCoordinador)
+    LiberarEsquina(999,999) {CAMBIAR DESTINO}
