@@ -1,0 +1,168 @@
+programa plantillaGeneral
+procesos
+  proceso limpiarPapeles(ES cont: numero) {Limpia todos los papeles de una esquina}
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont+1
+  fin
+  proceso limpiarFlores(ES cont: numero) {Limpia todas las flores de una esquina}
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cont:=cont+1
+  fin
+areas
+  areaInicialJefe : AreaP(50, 1, 50, 1)
+  areaInicialCos1 : AreaP(6, 13, 6, 13)
+  areaInicialCos2 : AreaP(8, 13, 8, 13)
+  areaInicialCos3 : AreaP(10, 13, 10, 13)
+  areaInicialSem1 : AreaP(99, 99, 99, 99)
+  areaInicialSem2 : AreaP(99, 100, 99, 100)
+  areaDeposito : AreaPC(100, 1, 100, 1)
+  areaSiembra : AreaC(2, 1, 2, 100)
+  areaCosecha : AreaC(15, 15, 75, 40)
+robots
+  robot tipoJefe
+  variables
+    id : numero
+    cantFloresDepo , auxSumaFlores : numero
+    maxElementos, idMax, idAct, act, suma : numero
+  comenzar
+    cantFloresDepo := 0
+    auxSumaFlores := 0
+    maxElementos := 0
+    idMax := 0
+    {Recibo cantidad de flores de cosechadores}
+    repetir 3
+      RecibirMensaje(auxSumaFlores,*)
+      cantFloresDepo := cantFloresDepo + auxSumaFlores
+    Informar('CantidadTotalDeFlores',cantFloresDepo)
+    {Envio ids a sembradores para que comienzen}
+    EnviarMensaje(1,robotS1)
+    EnviarMensaje(2,robotS2)
+    mientras (cantFloresDepo>0)
+      RecibirMensaje(id, *)
+      si id = 1
+        EnviarMensaje(V, robotS1)
+      sino
+        EnviarMensaje(V, robotS2)
+      cantFloresDepo := cantFloresDepo - 1
+    EnviarMensaje(F, robotS1)
+    EnviarMensaje(F, robotS2)
+    repetir 2
+      suma:=0
+      act:=0
+      RecibirMensaje(idAct,*)
+      RecibirMensaje(act,*)
+      suma := act
+      RecibirMensaje(act,*)
+      suma := suma + act
+      si idAct = 1
+        EnviarMensaje(V, robotS1)
+      sino
+        EnviarMensaje(V, robotS2)
+      si suma>maxElementos
+        idMax := idAct
+        maxElementos := suma
+    Informar('IdMayorCantidadDeElementos',idMax)
+  fin 
+  robot tipoCosechador
+  variables
+    avInicial : numero
+    av, ca : numero
+    cantFlores : numero
+  comenzar
+    avInicial := PosAv
+    av := 0
+    ca := 0
+    cantFlores := 0
+    repetir 5
+      Random(av, 15, 75)
+      Random(ca, 15, 40)
+      BloquearEsquina(av, ca)
+      Pos(av,ca)
+      limpiarFlores(cantFlores)
+      Pos(avInicial, 13)
+      LiberarEsquina(av, ca)
+    BloquearEsquina(100,1)
+    Pos(100,1)
+    repetir cantFlores
+      depositarFlor
+    Pos(avInicial, 13)
+    EnviarMensaje(cantFlores, robotJefe)
+    LiberarEsquina(100,1)
+  fin      
+  robot tipoSembrador
+  variables
+    id : numero
+    caInicial : numero
+    ca : numero
+    cantFlores, cantPapeles : numero
+    continuo : boolean
+  comenzar
+    RecibirMensaje(id,robotJefe)
+    cantFlores := 0
+    cantPapeles := 0
+    caInicial := PosCa
+    {Voy a utilizar al robot jefe para coordinar cuantas flores tengo disponibles (cuantas coseche)}
+    EnviarMensaje(id, robotJefe)
+    RecibirMensaje(continuo, robotJefe)
+    mientras(continuo)
+      BloquearEsquina(100,1)
+      Pos(100,1)
+      tomarFlor
+      Random(ca,1,100)
+      Pos(2,ca)
+      LiberarEsquina(100, 1)
+      limpiarFlores(cantFlores)
+      limpiarPapeles(cantPapeles)
+      EnviarMensaje(id, robotJefe)
+      RecibirMensaje(continuo, robotJefe)
+      Pos(99, caInicial)
+      LiberarEsquina(2, ca)
+    BloquearEsquina(100, 1)
+    Informar('CantidadPapeles',cantPapeles)
+    Informar('CantidadFlores',cantFlores)
+    EnviarMensaje(id, robotJefe)
+    EnviarMensaje(cantPapeles, robotJefe)
+    EnviarMensaje(cantFlores, robotJefe)
+    RecibirMensaje(continuo, robotJefe)
+    LiberarEsquina(100,1)
+  fin
+variables
+  robotJefe: tipoJefe
+  robotC1: tipoCosechador
+  robotC2: tipoCosechador
+  robotC3: tipoCosechador
+  robotS1: tipoSembrador
+  robotS2: tipoSembrador
+comenzar
+  AsignarArea(robotJefe, areaInicialJefe)
+  {Seccion de cosechadores}
+  AsignarArea(robotC1, areaInicialCos1)
+  AsignarArea(robotC2, areaInicialCos2)
+  AsignarArea(robotC3, areaInicialCos3)
+  AsignarArea(robotC1, areaCosecha)
+  AsignarArea(robotC2, areaCosecha)
+  AsignarArea(robotC3, areaCosecha)
+  AsignarArea(robotC1, areaDeposito)
+  AsignarArea(robotC2, areaDeposito)
+  AsignarArea(robotC3, areaDeposito)
+  {Seccion de sembradores}
+  AsignarArea(robotS1, areaInicialSem1)
+  AsignarArea(robotS2, areaInicialSem2)
+  AsignarArea(robotS1, areaSiembra)
+  AsignarArea(robotS2, areaSiembra)
+  AsignarArea(robotS1, areaDeposito)
+  AsignarArea(robotS2, areaDeposito)
+  {Iniciadores}
+  Iniciar(robotJefe, 50, 1)
+  Iniciar(robotC1, 6, 13)
+  Iniciar(robotC2, 8, 13)
+  Iniciar(robotC3, 10, 13)
+  Iniciar(robotS1, 99, 99)
+  Iniciar(robotS2, 99, 100)
+fin
+fin
+
