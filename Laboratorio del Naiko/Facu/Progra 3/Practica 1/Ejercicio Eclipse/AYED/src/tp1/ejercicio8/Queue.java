@@ -14,7 +14,8 @@
 
 package tp1.ejercicio8;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Queue<T> extends Sequence {
 	List<T> data;

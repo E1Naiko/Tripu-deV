@@ -7,8 +7,13 @@
 
 package tp1.ejercicio8;
 
-
-
-public class CircularQueue {
-	
+public class CircularQueue<T> extends Queue<T>{ // RETORNA NULL SI ESTÁ VACIA
+	public T shift() {
+		T dato = null;
+		if (!isEmpty()) {
+			dato = dequeue();
+			enqueue(dato);
+		}
+		return dato;
+	}
 }
