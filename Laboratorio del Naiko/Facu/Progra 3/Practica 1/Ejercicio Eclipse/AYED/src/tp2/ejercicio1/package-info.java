@@ -27,6 +27,12 @@ package tp2.ejercicio1;
  * 
  * b) espejo(): BinaryTree<T> Devuelve el árbol binario espejo del árbol receptor.
  * 
+ * new binT
+ * aux := rama izq
+ * rama izq -> rama dr
+ * rama dr -> rama izq
+ * recu
+ * 
  * c) entreNiveles(int n, m) Imprime el recorrido por niveles de los elementos del árbol
  * receptor entre los niveles n y m (ambos inclusive). (0≤n<m≤altura del árbol)
  */

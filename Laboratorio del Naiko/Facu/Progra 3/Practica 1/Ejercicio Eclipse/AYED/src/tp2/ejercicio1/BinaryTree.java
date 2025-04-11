@@ -1,14 +1,14 @@
 package tp2.ejercicio1;
 
-
+import tp1.ejercicio8.Queue;
 
 public class BinaryTree <T> {
-	
+
 	private T data;
 	private BinaryTree<T> leftChild;   
 	private BinaryTree<T> rightChild; 
 
-	
+
 	public BinaryTree() {
 		super();
 	}
@@ -63,7 +63,7 @@ public class BinaryTree <T> {
 		return (!this.hasLeftChild() && !this.hasRightChild());
 
 	}
-		
+
 	public boolean hasLeftChild() {
 		return this.leftChild!=null;
 	}
@@ -83,27 +83,65 @@ public class BinaryTree <T> {
 				cant++;
 			}
 		}
-		
+
 		if (this.hasLeftChild()) {
 			cant += this.leftChild.contarHojas();
 		}
-		
+
 		if (this.hasRightChild()) {
 			cant += this.rightChild.contarHojas();
 		}
-		
+
 		return cant;
 	}
 
-    public BinaryTree<T> espejo(){
-		       		  
- 	   return null;
-    }
+	public BinaryTree<T> espejo() {
+		// Crear una nueva raíz para el árbol espejo
+		BinaryTree<T> nuevo = new BinaryTree<>(this.getData());
 
-	// 0<=n<=m
-	public void entreNiveles(int n, int m){
-		
-   }
-		
+		// Si el árbol actual tiene hijos, procesarlos recursivamente
+		if (this.hasLeftChild()) {
+			nuevo.addRightChild(this.getLeftChild().espejo()); // Intercambiamos al espejo
+		}
+		if (this.hasRightChild()) {
+			nuevo.addLeftChild(this.getRightChild().espejo()); // Intercambiamos al espejo
+		}
+
+		return nuevo; // Devolver el árbol binario espejo
+	}
+
+	public void entreNiveles(int n, int m) {
+		if (n > m || n < 0) {
+			throw new IllegalArgumentException("Los niveles deben cumplir con 0 ≤ n ≤ m.");
+		}
+
+		Queue<BinaryTree<T>> cola = new Queue<>();
+		cola.enqueue(this); // Insertar la raíz
+		cola.enqueue(null); // Marcador de nivel
+
+		int nivelActual = 0;
+
+		while (!cola.isEmpty() && nivelActual <= m) {
+			BinaryTree<T> nodo = cola.dequeue();
+
+			if (nodo != null) {
+				if (nivelActual >= n && nivelActual <= m) {
+					System.out.print(nodo.getData() + " "); // Imprimir el nodo
+				}
+				// Agregar hijos a la cola para el siguiente nivel
+				if (nodo.hasLeftChild()) {
+					cola.enqueue(nodo.getLeftChild());
+				}
+				if (nodo.hasRightChild()) {
+					cola.enqueue(nodo.getRightChild());
+				}
+			} else if (!cola.isEmpty()) {
+				nivelActual++; // Pasar al siguiente nivel
+				cola.enqueue(null); // Nuevo marcador de nivel
+			}
+		}
+		System.out.println(); // Nueva línea al terminar
+	}
+
 }
 

@@ -1,0 +1,58 @@
+; 5) Contador de vocales
+
+; A. Escribir un programa que lea una cadena de 10 caracteres. Una
+; vez leído completamente, el string se muestra en pantalla, y también
+; se debe mostrar la cantidad de vocales que tiene el string. Para
+; implementar este programa, utilizar una subrutina leer_str_n que
+; recibe por parámetro la dirección donde se guardan los caracteres
+; y la cantidad de caracteres a leer. Usar también la subrutina
+; contar_voc de la práctica anterior.
+
+; B. Idem A) pero ahora la longitud de la cadena no se conoce de
+; antemano; se leen caracteres hasta que llega el caracter “.”
+; (punto). Para ello, implementar la subrutina leer_str_car, que
+; recibe el carácter de fin por parámetro y la dirección de comienzo
+; donde se almacenarán los caracteres..
+
+ORG 1000H
+  NUM10 db '0'
+  NUM1 db '1'
+  MSJ db " elefantes se balanceaban.  "
+  FIN_MSJ db ?
+  ESP db 10
+
+ORG 3000h
+  Imprimir:
+    push cx
+    mov cx, 0
+    
+    bucle: int 7
+      inc NUM1
+      push bx
+      mov bx, offset ESP
+      mov cl, al
+      mov al, 1
+      int 7
+
+      pop bx
+      mov al, cl
+      
+      inc dl
+      cmp dh, dl
+      jnz bucle
+      
+    pop cx
+    ret
+
+ORG 2000H
+  mov cx, 0
+  mov ch, 9
+  
+  mov dx, 0
+  mov dh, 9
+  mov al, offset FIN_MSJ - offset NUM1 - 1
+  mov bx, offset NUM1
+  call Imprimir
+
+  hlt
+  END
