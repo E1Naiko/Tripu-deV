@@ -1,0 +1,24 @@
+        org 1000h
+        NUM1 dw 4H
+        NUM2 dw 2H
+        RES db ? 
+
+        org 3000h 
+MUL:    mov DX, 0
+lazo:   mov BX, AX
+        add DX, [BX]
+        PUSH DX
+        mov BX, CX
+        mov DX, [BX]
+        dec DX
+        mov [BX], DX
+        Pop DX
+        jnz lazo
+        ret
+        
+        org 2000h
+        mov AX, offset NUM1 ;Paso la direccion de 5
+        mov CX, offset NUM2 ;Paso la direccion de 1
+        call MUL
+        hlt
+        end

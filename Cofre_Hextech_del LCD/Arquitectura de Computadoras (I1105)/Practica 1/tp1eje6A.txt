@@ -1,0 +1,25 @@
+;El simulador no posee una instrucción para multiplicar números. Escribir un programa para multiplicar los números
+;NUM1 y NUM2 de 1 byte, y guardar el resultado en la variable RES, también de 1 byte.
+;A. Sin usar subrutinas, implementando todo en el programa principal.
+        
+        org 1000h
+        NUM1 db 2
+        NUM2 db 4
+        RES db ? 
+        
+        org 2000h
+        mov AL, NUM1
+        mov AH, NUM2
+        mov CL, 0
+        mov DL, 0
+        cmp DL, AH
+        jz resul0
+loop:   add CL, AL
+        inc DL
+        cmp DL,AH
+        jnz loop
+        jmp fin
+resul0: mov CL, 0
+fin:    mov RES, CL
+        hlt
+        end

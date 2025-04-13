@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1731275846 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio10\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"Ejer10.h"
+
+1731275784 c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio10\ejer10.h
+
+1731275933 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio10\eje10.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"Ejer10.h"
+

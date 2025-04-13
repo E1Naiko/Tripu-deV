@@ -1,0 +1,31 @@
+;Lectura de datos desde el teclado.
+;El siguiente programa solicita el ingreso de un número (de un dígito) por teclado e inmediatamente lo muestra en la
+;pantalla de comandos, haciendo uso de las interrupciones por software INT 6 e INT 7.
+  ORG 1000H
+    MSJ DB "Tabla de Código ASCII"
+    FIN DB ?
+    ASCI DB 1
+    FIN2 DB 255
+    LINEA DB 10
+    
+  ORG 1500H
+    NUM DB ?
+    
+  ORG 2000H
+    MOV BX, OFFSET MSJ
+    MOV AL, OFFSET FIN-OFFSET MSJ
+    INT 7
+    MOV BX, OFFSET LINEA
+    MOV AL, 1
+    INT 7
+    MOV BX, OFFSET ASCI
+    MOV AL, 1
+LOOP:    
+    CMP BYTE PTR [BX], 255
+    JZ TERMINA
+    INT 7 
+    INC BYTE PTR[BX]
+    JMP LOOP
+TERMINA: 
+    INT 0
+  END

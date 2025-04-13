@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1729080101 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

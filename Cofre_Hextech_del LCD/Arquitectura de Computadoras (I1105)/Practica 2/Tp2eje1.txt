@@ -1,0 +1,19 @@
+;Mostrar mensajes en la pantalla de comandos. El siguiente programa del lenguaje assembler del simulador
+;VonSim muestra en la pantalla de comandos un mensaje previamente almacenado en memoria de datos,
+;plicando la interrupción por software INT 7.
+
+ORG 1000H
+  MSJ DB "ARQUITECTURA DE COMPUTADORAS-"
+  DB "FACULTAD DE INFORMATICA-"
+  DB 55H
+  DB 4EH
+  DB 4CH
+  DB 50H
+  FIN DB ?
+  
+ORG 2000H
+  MOV BX, OFFSET MSJ
+  MOV AL, OFFSET FIN-OFFSET MSJ
+  INT 7
+  INT 0
+  END

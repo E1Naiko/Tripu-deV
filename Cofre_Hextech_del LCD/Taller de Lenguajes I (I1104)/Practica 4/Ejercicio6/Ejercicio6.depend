@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1730897001 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio6\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+
+1730893711 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio6\funceje6.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+
+1730893472 c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 4\ejercicio6\funciones.h
+

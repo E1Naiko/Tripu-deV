@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1730471326 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 5\ejercicio7\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Ejerci7.h"
+
+1730471244 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 5\ejercicio7\ejerci7.c
+	<stdio.h>
+	<string.h>
+
+1730468680 c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 5\ejercicio7\ejerci7.h
+

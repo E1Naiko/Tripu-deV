@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1733623968 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\repaso mod i\ejercicio_1_adicional\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

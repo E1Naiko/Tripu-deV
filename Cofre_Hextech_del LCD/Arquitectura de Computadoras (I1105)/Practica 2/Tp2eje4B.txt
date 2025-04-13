@@ -1,0 +1,62 @@
+  ORG 1000H
+    MSJ DB " Elefante se balanceaban"
+    FIN DB ?
+    NUM DB '0'
+    NUM2 DB '0'
+    LINEA DB 10
+
+  ORG 3000H
+INCREMENTAR:
+    ;MOSTRAR SALTO DE LINEA
+    MOV BX, OFFSET LINEA    ;MOSTRAR SALTO DE LINEA
+    MOV AL, 1
+    INT 7
+    MOV AL, DL
+    ADD AL, '0'
+    MOV NUM, AL
+    MOV BX, OFFSET NUM      ;IMPRIME EL PRIMER DIGITO   
+    MOV AL, 1
+    INT 7 
+    MOV AL, DH
+    ADD AL, '0'
+    MOV NUM2, AL
+    MOV BX, OFFSET NUM2
+    MOV AL, 1
+    INT 7
+    MOV BX, OFFSET MSJ
+    MOV AL, OFFSET FIN-OFFSET MSJ
+    INT 7
+    INC DH
+    CMP DH,10
+    JC CONTINUAR
+    MOV DH, 0
+    INC DL
+    CMP DL,10
+    JZ RETORNO
+CONTINUAR:
+    JMP INCREMENTAR
+RETORNO:
+    ret
+    
+  ORG 2000H
+    XOR DL,DL
+    XOR DH,DH
+    MOV AL,DL
+    ADD AL, '0'
+    MOV NUM, AL
+    MOV BX, OFFSET NUM
+    MOV AL, 1
+    INT 7
+    MOV AL,DH
+    ADD AL, '0'
+    MOV NUM2, AL
+    MOV BX, OFFSET NUM2
+    MOV AL,1
+    INT 7
+    MOV BX, OFFSET MSJ
+    MOV AL, OFFSET FIN-OFFSET MSJ
+    INT 7 
+    CALL INCREMENTAR
+    INT 0
+    hlt
+  END

@@ -1,0 +1,36 @@
+;Lectura de datos desde el teclado.
+;El siguiente programa solicita el ingreso de un número (de un dígito) por teclado e inmediatamente lo muestra en la
+;pantalla de comandos, haciendo uso de las interrupciones por software INT 6 e INT 7.
+  ORG 1000H
+    MSJ DB "Los números '0' hasta '9'"
+    FIN DB ?
+    NUM DB '0'
+    FIN2 DB '9'
+    LINEA DB 10
+    
+  ORG 2000H
+    MOV BX, OFFSET MSJ
+    MOV AL, OFFSET FIN-OFFSET MSJ
+    INT 7
+    MOV BX, OFFSET LINEA
+    MOV AL, 1
+    INT 7
+    MOV BX, OFFSET NUM
+    MOV AL, 1
+    MOV AH, FIN2
+    INC AH
+LOOP:    
+    CMP BYTE PTR [BX], AH
+    JZ TERMINA
+    INT 7 
+    INC BYTE PTR[BX]
+    PUSH BX
+    MOV BX, OFFSET LINEA
+    INT 7
+    POP BX
+    JMP LOOP
+TERMINA: 
+    INT 0
+    hlt
+  END
+

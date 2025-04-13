@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1730431523 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 5\ejercicio8\main.c
+	<stdio.h>
+	<stdlib.h>
+	"RecorrerXD.h"
+
+1730431454 c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 5\ejercicio8\recorrerxd.h
+
+1730431523 source:c:\users\matia\onedrive\escritorio\universidad\taller de lenguajes i (i104)\practica 5\ejercicio8\recorrer.c
+	<stdio.h>
+

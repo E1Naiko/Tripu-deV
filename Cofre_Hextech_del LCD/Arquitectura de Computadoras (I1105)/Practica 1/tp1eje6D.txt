@@ -1,0 +1,36 @@
+ org 1000h
+        NUM1 db 5
+        NUM2 db 2
+        RES dw ? 
+
+        org 3000h 
+MUL:    mov BX, SP
+        add BX, 4
+        mov CX, [BX] ; traigo los numeros 
+        ; en AL esta NUM1 y en AH esta NUM2
+        mov DL, 0 ; en DL el contador de suma
+        mov DH, 0 ; inicializo el registro del resul
+loop:   add DH, CL; en DH guardo el resultado
+        inc DL
+        cmp DL, CH
+        jnz loop
+        ret
+        
+        org 2000h
+        mov AL, NUM1 
+        mov AH, NUM2 
+        mov CL, 0
+        cmp CL,AH
+        jz resul0
+        cmp CL,AL
+        jz resul0
+        push AX
+        push CX
+        call MUL
+        pop CX
+        pop AX
+        jmp fin
+resul0: mov DX, 0
+fin:    mov RES, DX
+        hlt
+        end
