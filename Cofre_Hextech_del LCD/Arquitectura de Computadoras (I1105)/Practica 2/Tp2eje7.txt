@@ -1,0 +1,48 @@
+  ORG 1000H
+    INGRESO DB "Ingrese clave:"
+    ACC_OK DB "Acceso permitido"
+    ACC_FAIL DB "Acceso denegado"
+    ACC_OUT DB "Acceso BLOQUEADO"
+    ERRORES DB 0
+    CLAVE DB "pass"
+    CLAVEING DB ?
+    LINEA DB 10
+  ORG 2000H
+INICIO: MOV BX, OFFSET INGRESO
+        MOV AL, OFFSET ACC_OK - OFFSET INGRESO
+        INT 7
+        MOV CL, 4
+        MOV BX, OFFSET CLAVEING
+LEER:   INT 6
+        INC BX
+        DEC CL
+        JNZ LEER
+        MOV DX, 3
+COMP:   MOV BX, OFFSET CLAVE
+        ADD BX, DX
+        MOV AL, [BX]
+        MOV BX, OFFSET CLAVEING
+        ADD BX, DX
+        CMP [BX], AL
+        JNZ ERROR
+        DEC DX
+        JNZ COMP
+        MOV BX, OFFSET ACC_OK
+        MOV AL, OFFSET ACC_FAIL - OFFSET ACC_OK
+        INT 7
+        MOV BX, OFFSET LINEA
+        MOV AL, 1
+        INT 7
+        JMP FINAL
+ERROR:  INC ERRORES
+        CMP ERRORES, 5
+        JZ ECHAR
+        MOV BX, OFFSET ACC_FAIL
+        MOV AL, OFFSET ACC_OUT - OFFSET ACC_FAIL
+        INT 7
+        JMP INICIO
+ECHAR:  MOV BX, OFFSET ACC_OUT
+        MOV AL, OFFSET ERRORES - OFFSET ACC_OUT
+        INT 7
+FINAL:  HLT
+    END
