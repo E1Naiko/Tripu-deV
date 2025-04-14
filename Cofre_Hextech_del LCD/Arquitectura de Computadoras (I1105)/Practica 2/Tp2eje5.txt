@@ -2,11 +2,13 @@
 ;El siguiente programa solicita el ingreso de un número (de un dígito) por teclado e inmediatamente lo muestra en la
 ;pantalla de comandos, haciendo uso de las interrupciones por software INT 6 e INT 7.
   ORG 1000H
-    CADENA DB ".........."
+    CADENA DB "..."
     FIN DB ?
-    MSJ DB "CANTIDAD DE VOCALES"
+    MSJ DB "CANTIDAD DE VOCALES",00
     LINEA DB 10
-    VOCALES DB "AaEeIiOoUu"
+    VOCALES DB "AaEeIiOoUu",00
+    CANT DB 0
+    
   ORG 1500H
     CHAR DB ?
     
@@ -49,34 +51,69 @@ ES_VOCAL:
   PUSH AX
   PUSH BX
   PUSH CX
-  MOV DL,0
-  MOV DH, AL
+  MOV DH, CL    ; en DH pongo el char correspondiente 
+  MOV DL, 0
   MOV BX, OFFSET VOCALES
-  MOV CL, OFFSET FIN-OFFSET VOCALES
+  MOV AH, 10
 LOOP:  
-  CMP BYTE PTR [BX], AL
+  CMP [BX], DH
   JZ ES
-  DEC CL
+  INC BX
+  DEC AH
+  CMP AH,0
+  JZ FINVOCAL
   JMP LOOP
 ES:
   MOV DL,1
+FINVOCAL:
+  POP CX
+  POP BX
+  POP AX
   RET
+
 CONTAR_VOC:
-
-RET
-
+  PUSH AX
+  PUSH BX
+  PUSH CX
+  PUSH DX
+  MOV DH,AL      ; INICIALIZO CONTADOR DE CADENA
+  MOV CH,0      ; INICIALIZO CONTADOR DE VOCALES
+LOOP_CVOCAL:
+  CMP DH,0
+  JZ FIN_CONTADOR
+  MOV CL,[BX]
+  CALL ES_VOCAL 
+  CMP DL,1
+  INC BX
+  JZ CONTAR
+  DEC DH
+  JMP LOOP_CVOCAL
+CONTAR:
+  INC CH
+FIN_CONTADOR:
+  MOV CANT,CH
+  POP DX
+  POP CX
+  POP BX
+  POP AX
+  RET
 
   ORG 2000H
   MOV BX, OFFSET CADENA
-  MOV CL, 10
+  MOV CL, 3
+  PUSH BX
   CALL LEER_CADENA
-  MOV BX, OFFSET CADENA
-  MOV AL, OFFSET FIN-OFFSET CADENA
+  POP BX
+  MOV AL, 3
   INT 7
   CALL CONTAR_VOC
   CALL SALTO
   MOV BX, OFFSET MSJ
   MOV AL, OFFSET FIN-OFFSET MSJ
+  INT 7
+  CALL SALTO
+  MOV BX, OFFSET CANT
+  MOV AL,1
   INT 7
   INT 0
   HLT  
