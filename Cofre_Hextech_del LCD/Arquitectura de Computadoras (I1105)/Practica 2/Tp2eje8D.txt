@@ -1,0 +1,17 @@
+ 
+        org 2000h
+        mov cl, 0
+        mov al, 00000000b
+        out 33h, al
+        mov al, 11111111b
+        out 32h ,al
+loop:   cmp cl, 11111111b
+        jz finp
+        mov al, cl
+        out 31h, al
+        in al,30h
+        inc cl
+        jmp loop
+finp:   
+        hlt
+        end

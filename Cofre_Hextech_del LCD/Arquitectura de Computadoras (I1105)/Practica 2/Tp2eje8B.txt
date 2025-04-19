@@ -1,0 +1,31 @@
+        org 1000h
+msj1  db "Llave prendida",10
+msj2  db "Llave apagada",10
+fin   db ?
+ 
+        org 2000h
+        mov al, 00000000b
+        out 33h, al
+        mov al, 11111111b
+        out 32h ,al
+        mov dl, 100
+        mov cl, 10000000b
+loop:   cmp dl, 0
+        jz finp
+        dec dl
+        in al, 30h
+        mov ah,al
+        cmp ah, cl
+        jz apagado
+        mov bx, offset msj2
+        mov al, offset fin-offset msj2
+        int 7
+        jmp loop
+apagado: mov bx, offset msj1
+        mov al, offset msj2 -offset msj1
+        int 7
+        jmp loop
+finp:
+        int 0
+        hlt
+        end

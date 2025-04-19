@@ -1,0 +1,10 @@
+        org 1000h
+inicio  db 1
+
+        org 2000h
+        mov al, 00000000b
+        out 33h, al
+        mov al, 10000011b
+        out 31h, al
+        hlt
+        end

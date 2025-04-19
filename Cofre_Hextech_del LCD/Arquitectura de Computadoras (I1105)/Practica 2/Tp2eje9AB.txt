@@ -1,0 +1,38 @@
+PA equ 30h
+PB equ 31h
+CA equ 32h
+CB equ 33h
+
+        org 1000h
+msj  db "Hola tu nariz contra mis bolas"
+fin  db ?
+ 
+        org 2000h
+        mov al, 11111101b
+        out CA,al
+        mov al, 0
+        out CB, al
+        mov bx, offset msj
+        ;Recorro el mensaje
+loop:   
+        in al,PA
+        and al, 1
+        jnz loop ; mientras la impresora no esta libre, consultamos
+        ; La impresora esta libre
+        mov al, [bx]
+        out PB, al
+        ; mando Strobe a 1
+        in al, PA
+        or al ,2 
+        out PA, al
+        ; mando Strobe a 0
+        in al, PA
+        and al, 0FDH
+        out PA, al
+        ; Paso al sgte char
+        inc bx
+        cmp bx, offset fin
+        jnz loop
+        int 0
+        hlt
+        end
