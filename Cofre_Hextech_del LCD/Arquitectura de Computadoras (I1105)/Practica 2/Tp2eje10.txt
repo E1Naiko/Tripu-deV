@@ -1,0 +1,23 @@
+DATO_HAND equ 40h
+ESTADO_HAND equ 41H
+
+        org 1000h
+msj  db "INGENIERIA E INFORMATICA"
+fin  db ?
+ 
+        org 2000h
+        in al, ESTADO_HAND    ; Leo estado inicial del handshake
+        and al, 01111111b ; Fuerzo a que el bit de interrupcion sea 0
+        out ESTADO_HAND, al ; y lo Paso al estado del handshake
+        ; Recorremos el mensaje
+        mov bx, offset msj
+loop:   in al, ESTADO_HAND    ; Leo el estado
+        and al, 1     ; chequeo el primer bit
+        jnz loop      ; si es 1 sigo en el loop
+        mov al, [bx]  ; Tomo el caracter
+        out DATO_HAND, al   ; Envio el caracter al dato del handshake
+        inc bx
+        cmp bx, offset fin
+        jnz loop
+        int 0
+        end
