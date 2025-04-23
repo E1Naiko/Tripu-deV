@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import tp2.ejercicio1.BinaryTree;
 
 public class ContadorArbol {
-	private BinaryTree<Integer> arbol;
+	public BinaryTree<Integer> arbol;
 
 	private void inOrder(LinkedList<Integer> res, BinaryTree<Integer> arbol) {
 		if (arbol != null) {
