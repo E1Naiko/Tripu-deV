@@ -59,6 +59,39 @@ public class GeneralTree<T> {
 		}
 	}
 
-	
+	private int alturaPreOrden(GeneralTree<T> a, int profundidad) {
+		int res = 0;
 
+		if (a!=null) {
+			int profundidadAct = 1;
+			if (a.hasChildren()) {
+				List<GeneralTree<T>> children = a.getChildren();
+				for(GeneralTree<T> child: children) {
+					profundidadAct = 1 + alturaPreOrden(child, profundidadAct);
+				}
+			}
+		}
+
+		return res;
+	}
+
+	public int altura() {
+		// devuelve la altura del árbol, es decir, la longitud del camino más
+		// largo desde el nodo raíz hasta una hoja.
+		int res = 0;
+
+		res = alturaPreOrden(this, 0);
+
+		return res;
+	}
+
+	public int nivel(T dato) {
+		int res = 0;
+		return res;
+	}
+
+	public int ancho() {
+		int res = 0;
+		return res;
+	}
 }

@@ -25,4 +25,19 @@ package tp3.ejercicio1;
  * 
  * Los métodos altura(), nivel(T) y ancho() se resolverán en el ejercicio 3.
  * Analice la implementación en JAVA de las clases GeneralTree brindada por la cátedra.*
+ *
+ */
+
+/* Ejercicio 3
+ * Implemente en la clase GeneralTree los siguientes métodos
+ * 
+ * a) public int altura(): int devuelve la altura del árbol, es decir, la longitud del camino más largo
+ * desde el nodo raíz hasta una hoja.
+ * 
+ * b) public int nivel(T dato) devuelve la profundidad o nivel del dato en el árbol. El nivel de un nodo
+ * es la longitud del único camino de la raíz al nodo.
+ * 
+ * c) public int ancho(): int la amplitud (ancho) de un árbol se define como la cantidad de nodos que
+ * se encuentran en el nivel que posee la mayor cantidad de nodos.
+ *
  */

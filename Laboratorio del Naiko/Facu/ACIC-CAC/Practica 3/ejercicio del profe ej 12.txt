@@ -1,0 +1,38 @@
+PIC EQU 20H 
+EOI EQU 20H 
+N_F10 EQU 10 ; id de la interrupcion, id*4= subrutina EN DECIMAL
+
+ORG 40 ; direccion de vector de interrupciones
+  IP_F10 DW RUT_F10 ; direccion de subrutina
+
+ORG 1000H
+  FRENO db 10
+  
+ORG 2000H 
+  ; configuro la interrupcion
+  CLI
+  MOV AL, 0FEH ; 0111 1111
+  OUT PIC+1, AL ; PIC: registro IMR, desenmascaro las interrupciones
+  MOV AL, N_F10
+  OUT PIC+4, AL ; PIC: registro INTO, envio la id de la subrutina al registro
+  STI
+
+  MOV DX, 0 ; inicializo un contador, no tiene nada que ver con la config
+  LAZO:
+    mov dh, FRENO
+    cmp dl, dh
+    JNZ LAZO 
+    hlt
+  
+ORG 3000H 
+  RUT_F10:
+    PUSH AX ; ax se puede llegar a usar, lo guardo por las dudas
+    INC DX ; contador que uso en el programa
+    
+    ; manejo de la pio
+    MOV AL, EOI ; se termina la interrupcion
+    OUT EOI, AL ;PIC: registro EOI 
+    
+    POP AX 
+    IRET  
+END 
