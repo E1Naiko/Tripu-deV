@@ -11,10 +11,10 @@ ORG 1000H
 ORG 2000H 
   ; configuro la interrupcion
   CLI
-  MOV AL, 0FEH ; 0111 1111
-  OUT PIC+1, AL ; PIC: registro IMR, desenmascaro las interrupciones
-  MOV AL, N_F10
-  OUT PIC+4, AL ; PIC: registro INTO, envio la id de la subrutina al registro
+    MOV AL, 0FEH ; 0111 1111
+    OUT PIC+1, AL ; PIC: registro IMR, desenmascaro las interrupciones
+    MOV AL, N_F10
+    OUT PIC+4, AL ; PIC: registro INTO, envio la id de la subrutina al registro
   STI
 
   MOV DX, 0 ; inicializo un contador, no tiene nada que ver con la config

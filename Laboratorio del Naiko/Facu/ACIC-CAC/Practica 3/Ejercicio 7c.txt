@@ -1,0 +1,103 @@
+; 7) HANDSHAKE con interrupciones
+; c) Modificar b) de modo que cuando se presione F10 se cancele
+;   la impresión. En tal caso, deben desactivarse las interrupciones
+;   del HANDSHAKE para evitar que se envíen más caracteres a imprimir.
+
+PIC EQU 20H
+HAND EQU 40H
+N_HND EQU 10
+N_F10 EQU 15
+
+ORG 40
+  ID_HND DW RUT_HND
+
+ORG 60
+  ID_F10 DW RUT_F10
+
+ORG 1000H
+  CADENA DB ".........."
+  FIN_CADENA DB ?
+  FRENO DB 0H
+
+ORG 3000H
+  LEER_CADENA:
+    PUSH BX
+    PUSH CX
+
+    BUCLE_LEER_CADENA:
+      INT 6
+      INC BX
+      DEC CL
+      CMP CL, 0
+      JNZ BUCLE_LEER_CADENA
+
+    POP CX
+    POP BX
+  RET
+
+  DESACTIVAR_HANDSHAKE:
+    ; CIERRO EL HANDSHAKE
+    IN AL, HAND+1
+    AND AL, 01111111B
+    OUT HAND+1, AL
+  RET
+  
+  RUT_HND:
+    PUSH AX
+    ; ENVIO EL VALOR ACTUAL DE LA CADENA CON HANDSHAKE
+    MOV AL, [BX]
+    OUT HAND, AL
+
+    ; ACTUALIZO VALOR ACTUAL DE LA CADENA
+    INC BX
+    DEC CL
+    
+    ; DESHABILITO LAS INTERRUPCIONES
+    MOV AL, 00100000B
+    OUT PIC, AL
+    
+    POP AX
+  IRET
+
+  RUT_F10:
+    PUSH AX
+    mov al, PIC
+    out PIC, al
+    POP AX
+    CALL DESACTIVAR_HANDSHAKE
+    MOV CL, 0
+  IRET
+  
+ORG 2000H
+  MOV BX, OFFSET CADENA
+  MOV CL, OFFSET FIN_CADENA - OFFSET CADENA
+
+  CALL LEER_CADENA
+  
+  CLI
+    ; ABRO EL HANDSHAKE POR INTERRUPCION Y LA TECLA F10
+    MOV AL, 11111010B
+    OUT PIC+1, AL
+
+    ; ENVIO LA DIRECCION DE LA SUBRUTINA AL VECTOR DE INT
+    MOV AL, N_HND
+    OUT PIC+6, AL
+    MOV AL, N_F10
+    OUT PIC+4, AL
+    
+    ; ABRO EL HANDSHAKE
+    MOV AL, 10000000B
+    OUT HAND+1, AL
+  STI
+  
+  BUCLE:
+    CMP CL, 0
+    JNZ BUCLE
+  
+  CMP FRENO, 0H
+  JNZ FIN
+    CALL DESACTIVAR_HANDSHAKE
+    
+  FIN:
+  HLT
+END
