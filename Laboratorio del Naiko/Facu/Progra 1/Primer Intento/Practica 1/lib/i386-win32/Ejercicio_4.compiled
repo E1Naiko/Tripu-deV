@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\i386-win32\fpc.exe" Date="1331391085"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiC:\Users\matad\Desktop\Progra 1\Practica 1\lib\i386-win32&quot; &quot;-FuC:\Users\matad\Desktop\Progra 1\Practica 1\&quot; &quot;-FUC:\Users\matad\Desktop\Progra 1\Practica 1\lib\i386-win32\&quot; &quot;-FEC:\Users\matad\Desktop\Progra 1\Practica 1\&quot; &quot;-oC:\Users\matad\Desktop\Progra 1\Practica 1\Ejercicio_4.exe&quot; Ejercicio_4.pas"/>
+</CONFIG>

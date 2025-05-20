@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1331391477"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiD:\Escritorio\Progra 1\Practica 4\Ejercicio 5\lib\x86_64-win64&quot; &quot;-FuD:\Escritorio\Progra 1\Practica 4\Ejercicio 5\&quot; &quot;-FUD:\Escritorio\Progra 1\Practica 4\Ejercicio 5\lib\x86_64-win64\&quot; &quot;-FED:\Escritorio\Progra 1\Practica 4\Ejercicio 5\&quot; &quot;-oD:\Escritorio\Progra 1\Practica 4\Ejercicio 5\Tp4Pt1Ej5.exe&quot; Tp4Pt1Ej5.pas"/>
+</CONFIG>

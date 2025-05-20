@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="12"/>
+        <CursorPos Y="52"/>
+        <FoldState Value=" TC2E6 T3C0Bp"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="33" Column="16" TopLine="3"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="16" Column="14" TopLine="3"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="33" Column="9" TopLine="7"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="20" Column="11" TopLine="7"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="6" Column="14"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="10" Column="35"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="16" Column="16"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="32" Column="24" TopLine="6"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="27" Column="29" TopLine="3"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="18" Column="39" TopLine="3"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="27" Column="32" TopLine="6"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="12" Column="43"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="14" Column="43"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="25" Column="4"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="19" Column="97"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="13" Column="46"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="27"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="31" Column="17" TopLine="4"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="8" Column="20"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="16" Column="23"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="18" Column="35"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="50" Column="14" TopLine="12"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Tp4Pt1Ej5.pas"/>
+        <Caret Line="36" Column="39" TopLine="12"/>
+      </Position23>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

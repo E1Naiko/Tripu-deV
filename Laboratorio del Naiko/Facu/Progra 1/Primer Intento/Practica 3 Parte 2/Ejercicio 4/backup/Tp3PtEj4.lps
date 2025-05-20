@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="15" Y="5"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="13" HistoryIndex="12">
+      <Position1>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="20" Column="18" TopLine="3"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="13" Column="13" TopLine="4"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="20" Column="20" TopLine="4"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="15" Column="18" TopLine="4"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="21" Column="17" TopLine="5"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="19" Column="22"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="3" Column="12"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="18" Column="41" TopLine="8"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="12" Column="9" TopLine="2"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="10" Column="20"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="9" Column="11"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="6" Column="14"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Tp3PtEj4.lpr"/>
+        <Caret Line="16" Column="27"/>
+      </Position13>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

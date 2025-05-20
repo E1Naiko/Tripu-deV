@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Ejercicio2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="24" Y="15"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="5" Column="24"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="20" Column="31"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="22" Column="14"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="19"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="27" Column="15"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="5" Column="12"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="6" Column="28"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="26" Column="55"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="8" Column="6" TopLine="3"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="29" Column="15" TopLine="4"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Ejercicio2.lpr"/>
+        <Caret Line="13" Column="33" TopLine="4"/>
+      </Position11>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
