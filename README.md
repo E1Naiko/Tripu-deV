@@ -22,6 +22,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Amigo, baja un cambio con el lore](https://overapi.com/) (OverAPI): cheat sheets de mas de 300 lenguajes, sistemas y estructuras.
    - [El verdadero Senpain't](https://chat.openai.com "El verdadero Senpain't") (ChatGPT).
    - [Morcilla Feroz](https://developer.mozilla.org/es/) (Mozilla).
+   - [Lore Multiuso](https://www.freelibros.net/): libros gratirula (FreeLibros.net).
 
 #### Compiladores piolas:
    - [Geany](https://www.geany.org/ "Geany") ([lenguajes admitidos](https://bit.ly/3EYd2b3 "lenguajes admitidos")): un genio la verdad.
