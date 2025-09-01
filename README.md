@@ -60,6 +60,7 @@ Aclaración: si te cobran, es mala tuya, y avisa que deberian ser gratis todos e
    - [Perfiles en VSC](https://code.visualstudio.com/docs/editor/profiles): visual studio admite distintos perfiles de configuración, con esto se pueden hacer perfiles segun el lenguaje y extensiones que necesitemos repetidamente.
    - [Blog de virgenes](https://kentcdodds.com/blog/first-timers-only), perdon el chiste se hacia solo.
    - [Repo recomendado por la pepa (piggen't)](https://github.com/MunGell/awesome-for-beginners), [Instagram de la pepa](https://www.instagram.com/peperinadev/).
+   - [Mermelada editor](https://mermaid.live/): editor de mermaid del profe.
 
 ------------------------------------------------------------------------------------------------
 
