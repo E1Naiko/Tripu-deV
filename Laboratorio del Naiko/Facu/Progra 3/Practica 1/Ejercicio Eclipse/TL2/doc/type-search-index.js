@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"taller2.plataformatdl2","l":"Administrador"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"taller2.plataformatdl2","l":"Contenido"},{"p":"taller2.plataformatdl2","l":"PlataformaTDL2"},{"p":"taller2.plataformatdl2","l":"Reproductor"},{"p":"taller2.plataformatdl2","l":"Usuario"}];updateSearchResults();
