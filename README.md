@@ -84,6 +84,7 @@ Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta e
 
 #### PajaSquirt (javascript):
  - [Compresor de Codigo](https://www.minifier.org/).
+ - [PajaSquirt esta re loco](https://jsisweird.com). <- <ins>Hay que hacer esto una vez al año minimo</ins>
 
 #### Cagon Salta Solo (CSS):
  - :rainbow: [COLORES](https://cssgradient.io) :rainbow:.
