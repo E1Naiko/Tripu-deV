@@ -122,6 +122,7 @@ Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta e
  - [El pelado parte 2](https://www.youtube.com/shorts/m0x7HxP8cRI?si=_v8ThcOhLZ4eKVFz "El pelado parte 2").
  - [Nos paso a todos pa, tranquilo 1](https://www.instagram.com/reel/CxqHOx0gEIV/?igshid=YWYwM2I1ZDdmOQ%3D%3D "Puede fallar. - Tusam").
  - [Nos paso a todos pa, tranquilo 2](https://www.instagram.com/reel/CwTq3y8uU6E/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==).
+ - [Neveru Givu Apuru](https://www.youtube.com/watch?v=tYzMYcUty6s).
 
  ![El Mejor Meme de la Historia](https://github.com/E1Naiko/Tripu-deV/blob/main/Laboratorio%20del%20Naiko/El%20Mejor%20meme.png)
 
