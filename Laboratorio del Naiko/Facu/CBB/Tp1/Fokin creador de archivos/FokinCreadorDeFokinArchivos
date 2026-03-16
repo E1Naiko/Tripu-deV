@@ -1,0 +1,26 @@
+
+program FokinCreadorDeFokinArchivos;
+
+uses crt;
+
+type
+	Archivo = File of integer;
+
+var 
+	act, i, top: integer;
+	arch: Archivo;
+
+BEGIN
+	Randomize;
+	assign(arch, 'tp1ej2arch');
+	rewrite(arch);
+	top:= Random(20)+10;
+	
+	for i:=1 to top do begin
+		act:= Random(100);
+		writeln(act);
+		write(arch, act);
+	end;
+	
+END.
+
