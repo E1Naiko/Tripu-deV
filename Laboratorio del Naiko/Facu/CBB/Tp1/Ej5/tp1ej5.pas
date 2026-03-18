@@ -16,9 +16,11 @@
 	LISTO
 	b) Listar todo el contenido del archivo de a una especie por línea.
 	
+	LISTO
 	c) Modificar el nombre científico de la especie flores cargada como: Victoria
 	amazonia a: Victoria amazónica.
 	
+	LISTO
 	d) Añadir una o más especies al final del archivo con sus datos obtenidos por
 	teclado. La carga finaliza al recibir especie “zzz”.
 	
@@ -26,8 +28,10 @@
 	e) Listar todo el contenido del archivo, en un archivo de texto llamado “flores.txt”.
 	El archivo de texto se tiene que poder reutilizar.
 	
+	LISTO
 	f) ¿Qué cambiaría en la escritura del archivo de texto si no fuera necesario
 	utilizarlo?
+		Si no fuese necesario utilizarlo no haria falta que sea un formato de texto
    
 }
 
@@ -38,6 +42,8 @@ const
 	FIN : String = 'zzz';
 	NOMBRE_GUARDADO : String = 'tp1ej5arch';
 	NOMBRE_SALIDA : String = 'flores.txt';
+	BUSQUEDA_REEMPLAZO : String = 'Victoria amazonia';
+	RESULTADO_REEMPLAZO : String = 'Victoria amazónica';
 
 type
 	tipoEspecie = record
@@ -76,50 +82,58 @@ function lecturaEspecie(): tipoEspecie;
 		lecturaEspecie:= res;
 	end;
 	
-procedure importarTxt(var archIn: Archivo);
+procedure importarTxt();
 	var
 		archOut: text;
-		pos: integer;
 		act: tipoEspecie;
+		var archIn: Archivo;
 	begin
+		Assign(archIn, NOMBRE_GUARDADO);
+		Reset(archIn);
+		
 		Assign(archOut, NOMBRE_SALIDA);
 		rewrite(archOut);
 		
-		pos:= FilePos(archIn);
 		seek(archIn, 0);
 		
-		read(archIn, act);
 		while (not eof(archIn)) do begin
+			read(archIn, act);
 			writeln(archOut, act.nombreCientifico);
 			writeln(archOut, act.nombreVulgar);
 			writeln(archOut, act.numEspecie);
 			writeln(archOut, act.color);
-			writeln(archOut, act.alturaMax);
-			read(archIn, act);
+			writeln(archOut, act.alturaMax:5:5);
 		end;
 		
-		seek(archIn, pos);
-		
+		close(archIn);
 		close(archOut);
 	end;
 
-procedure imprimir(var archIn: Archivo);
+procedure imprimir();
+	{
+	Listar todo el contenido del archivo de a una especie por línea.
+	}
 	var
-		pos: integer;
 		act: tipoEspecie;
+		var archIn: Archivo;
 	begin
-		pos:= FilePos(archIn);
-		seek(archIn, 0);
+		Assign(archIn, NOMBRE_GUARDADO);
+		Reset(archIn);
 		
+		Writeln('imprimiendo');
 		while (not eof(archIn)) do begin
 			read(archIn, act);
-			if (not eof(archIn)) then writeln(act.nombreCientifico, ' || ', act.nombreVulgar, ' || ', act.numEspecie, ' || ', act.color, ' || ', act.alturaMax);
+			writeln(act.nombreCientifico, ' || ', act.nombreVulgar, ' || ', act.numEspecie, ' || ', act.color, ' || ', act.alturaMax:2:2);
 		end;
 		
-		seek(archIn, pos);	
+		close(archIn);
 	end;
 
-procedure reportarStats(var archIn: Archivo);
+procedure reportarStats();
+	{
+		Reportar en pantalla la cantidad total de especies y la especie de menor y de
+	mayor altura a alcanzar.
+	}
 	function checkMin(act: real; min: real): real;
 		var
 			res: real;
@@ -142,13 +156,15 @@ procedure reportarStats(var archIn: Archivo);
 			checkMax:= res;
 		end;
 	var
-		pos, i: integer;
+		i: integer;
 		act: tipoEspecie;
 		min, max: real;
+		archIn: Archivo;
 		
 	begin
-		pos:= FilePos(archIn);
-		seek(archIn, 0);
+		Assign(archIn, NOMBRE_GUARDADO);
+		Reset(archIn);
+		
 		i:= 0;
 		min:= 9999;
 		max:=-1;
@@ -162,15 +178,17 @@ procedure reportarStats(var archIn: Archivo);
 		
 		writeln(' - Total: ', i, ', min: ', min, ', max: ', max,'.');
 		
-		seek(archIn, pos);
+		close(archIn);
 	end;
 	
-procedure agregarAlFinal(var archIn: Archivo);
+procedure agregarAlFinal();
 	var
-		pos: integer;
 		act: tipoEspecie;
+		archIn: Archivo;
 	begin
-		pos:= FilePos(archIn);
+		Assign(archIn, NOMBRE_GUARDADO);
+		Reset(archIn);
+		
 		seek(archIn, FileSize(archIn));
 		
 		act:= lecturaEspecie();
@@ -179,22 +197,25 @@ procedure agregarAlFinal(var archIn: Archivo);
 			act:= lecturaEspecie();
 		end;
 		
-		seek(archIn, pos);
+		close(archIn);
 	end;
 	
-procedure modificarNombreCientifico(var archIn: Archivo);
+procedure modificarNombreCientifico();
 	var
-		pos: integer;
 		act: tipoEspecie;
 		busca, reemplazo: String;
+		archIn: Archivo;
 	begin
-		pos:= FilePos(archIn);
-		seek(archIn, 0);
+		Assign(archIn, NOMBRE_GUARDADO);
+		Reset(archIn);
 		
-		writeln('Introduzca el elemento a reemplazar:');
-		readln(busca);
-		writeln('Introduzca el reemplazo:');
-		readln(reemplazo);
+		busca:= BUSQUEDA_REEMPLAZO;
+		reemplazo:= RESULTADO_REEMPLAZO;
+		
+		//writeln('Introduzca el elemento a reemplazar:');
+		//readln(busca);
+		//writeln('Introduzca el reemplazo:');
+		//readln(reemplazo);
 		
 		repeat begin
 			read(archIn, act);
@@ -208,8 +229,7 @@ procedure modificarNombreCientifico(var archIn: Archivo);
 				end
 			else
 				writeln('Error: elemento no encontrado.');
-		
-		seek(archIn, pos);
+		close(archIn);
 	end;
 	
 function interfazEntrada(): char;
@@ -244,25 +264,25 @@ function interfazEntrada(): char;
 // ------------ PPAL ------------
 var
 	act: char;
-	arch: Archivo;
 
 BEGIN
-	Assign(arch, NOMBRE_GUARDADO);
-	Rewrite(arch);
-	
 	act:= interfazEntrada();
 	while ((act<>'F') and (act<>'f')) do begin
 		case act of
-			'A','a': reportarStats(arch);
-			'B','b': imprimir(arch);
-			'C','c': modificarNombreCientifico(arch);
-			'D','d': agregarAlFinal(arch);
-			'E','e': importarTxt(arch);
+			'A','a': reportarStats();
+			'B','b': imprimir();
+			'C','c': modificarNombreCientifico();
+			'D','d': agregarAlFinal();
+			'E','e': importarTxt();
 		end;
+		
+		writeln();
+		writeln(' Volviendo a menu principal');
+		writeln('--------------');
+		writeln();
 
 		act:= interfazEntrada();
 	end;
-	close(arch);
 END.
 
  
