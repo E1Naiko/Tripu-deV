@@ -66,6 +66,7 @@ Aclaración: si te cobran, es mala tuya, y avisa que deberian ser gratis todos e
 
 # La Bodega del Lore
 [![A](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")](https://media.giphy.com/media/ToMjGpRhf96j23aTc5i/giphy.gif "A")
+[Principios solidos](https://www.freecodecamp.org/espanol/news/los-principios-solid-explicados-en-espanol/): conocimiento del Franquito Estrada.
 
 ### Librerias Random y herramientas especificas:
 Aclaración: hay algunos campos que tienen los mismos nombres, cada campo esta especializado para cada lenguaje.
