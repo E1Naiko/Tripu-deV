@@ -28,7 +28,7 @@
 
 
 program tp2ej1;
-uses crt;
+//uses crt;
 
 const
 	VALOR_ALTO = 9999;
@@ -79,17 +79,17 @@ type
 	end;
 	
 	archMaestro = File of tipoMaestro;
-	archDetalle = File of [1..10] of archDetalle;
+	archDetalle = File of archDetalle;
 	arregloDetalle = array [1..10] of tipoDetalle;
 	
 // ------------------------ Modulos ------------------------
 	
 procedure leerDetalle(var archivo: archDetalle; var dato:tipoDetalle);
 	begin
-		if (not eof(archivo)) then
-			read(archivo, dato)
+		if (not eof(archivo)) then begin
+			read(archivo, dato);
 			writeln(dato);
-		else
+		end else
 			dato.codEmpleado:= VALOR_ALTO;
 	end;	
 
@@ -132,5 +132,6 @@ BEGIN
 	
 	close(maestro);
 	for i:=1 to 10 do close(detalles[i]);
+END;
 END.
 

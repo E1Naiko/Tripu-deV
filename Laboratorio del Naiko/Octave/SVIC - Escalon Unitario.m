@@ -9,6 +9,7 @@ u = double(t > 0);  % Escalón unitario: 1 si t>0, 0 si t<=0
 plot(t, u, 'LineWidth', 2);
 xlabel('t');
 ylabel('u(t)');
+asdsad
 title('Escalón unitario continuo');
 grid on;
 axis([a b -0.2 1.2]);
