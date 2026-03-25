@@ -30,7 +30,7 @@ Bienvenido al espacio de codeo de la Tripu V, efectivamente nosotros tampoco sab
    - [Visual Studio Code](https://code.visualstudio.com "Visual Studio Code"): tranquilo, yo tampoco lo entedi al principio.
    - [StackBlitz](https://stackblitz.com "StackBlitz"): nah, este menos.
    - [Python Tutor](https://pythontutor.com) (Python, Java, C, C++ and JavaScript).
-   - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown").
+   - [Editor de Markdown](https://pandao.github.io/editor.md/en.html "Editor de Markdown"): el chiste esta entre la silla y el monitor.
    - [Big Black Code](https://bbcode.ilma.dev/ "Big Black Code") (BBCode).
    - [Sublime loco](https://www.sublimetext.com/ "Sublime Text") (SublimeText): lector de archivos y editor de texto con acceso a consola.
 
